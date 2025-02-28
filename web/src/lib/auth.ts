@@ -1,5 +1,6 @@
 import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
+import apiKeyPlugin from "./plugins/apiKeyPlugin";
 
 export const auth = betterAuth({
   database: new Database("./sqlite.db"),
@@ -11,5 +12,8 @@ export const auth = betterAuth({
       }
       return { valid: false, error: 'Only @albion.edu emails are allowed' };
     }
-  }
+  },
+  plugins: [
+    apiKeyPlugin()
+  ]
 }); 
