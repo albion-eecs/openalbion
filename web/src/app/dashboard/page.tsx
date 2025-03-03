@@ -6,7 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import React from 'react';
-import { Settings, LogOut, ChevronDown } from 'lucide-react';
+import { Settings, LogOut, ChevronDown, ExternalLink } from 'lucide-react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 
 function HomeButton() {
@@ -62,6 +62,8 @@ export default function DashboardPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
+  const [stats, setStats] = useState<any>(null);
+  const [statsLoading, setStatsLoading] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
@@ -70,6 +72,30 @@ export default function DashboardPage() {
       router.push('/');
     }
   }, [user, loading, router]);
+
+  useEffect(() => {
+    if (user) {
+      const fetchStats = async () => {
+        try {
+          setStatsLoading(true);
+          const response = await fetch(`/api/dashboard/stats?userId=${user.id}`);
+          
+          if (response.ok) {
+            const data = await response.json();
+            setStats(data);
+          } else {
+            console.error('Failed to fetch dashboard stats');
+          }
+        } catch (error) {
+          console.error('Error fetching dashboard stats:', error);
+        } finally {
+          setStatsLoading(false);
+        }
+      };
+      
+      fetchStats();
+    }
+  }, [user]);
 
   if (loading || !isClient) {
     return (
@@ -85,6 +111,19 @@ export default function DashboardPage() {
   if (!user) {
     return null;
   }
+
+  const formatRelativeTime = (timestamp: number) => {
+    const now = Math.floor(Date.now() / 1000);
+    const seconds = now - timestamp;
+    
+    if (seconds < 60) return 'Just now';
+    if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes ago`;
+    if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`;
+    if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`;
+    
+    const date = new Date(timestamp * 1000);
+    return date.toLocaleDateString();
+  };
 
   return (
     <div className="container mx-auto py-8"> 
@@ -130,8 +169,16 @@ export default function DashboardPage() {
                 <CardDescription>Available research data sets</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold">12</p>
-                <p className="text-sm text-muted-foreground">3 added this month</p>
+                {statsLoading ? (
+                  <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
+                ) : (
+                  <>
+                    <p className="text-3xl font-bold">{stats?.totalDatasets || 0}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {stats?.newDatasetsThisMonth || 0} available datasets
+                    </p>
+                  </>
+                )}
               </CardContent>
             </Card>
             <Card className="border-secondary/20 overflow-hidden relative group">
@@ -141,8 +188,16 @@ export default function DashboardPage() {
                 <CardDescription>Monthly API usage</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold">1,248</p>
-                <p className="text-sm text-muted-foreground">↑ 12% from last month</p>
+                {statsLoading ? (
+                  <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
+                ) : (
+                  <>
+                    <p className="text-3xl font-bold">{stats?.apiCallStats?.monthly || 0}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {stats?.apiCallStats?.daily || 0} in the last 24 hours
+                    </p>
+                  </>
+                )}
               </CardContent>
             </Card>
             <Card className="border-secondary/20 overflow-hidden relative group">
@@ -152,8 +207,14 @@ export default function DashboardPage() {
                 <CardDescription>Active API keys</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-3xl font-bold">2</p>
-                <p className="text-sm text-muted-foreground">Up to 5 allowed</p>
+                {statsLoading ? (
+                  <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
+                ) : (
+                  <>
+                    <p className="text-3xl font-bold">{stats?.apiKeyCount || 0}</p>
+                    <p className="text-sm text-muted-foreground">Unlimited amount allowed</p>
+                  </>
+                )}
               </CardContent>
             </Card>
           </div>
@@ -165,32 +226,60 @@ export default function DashboardPage() {
               Recent Activity
               <span className="decorative-overlay absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-secondary to-purple-400"></span>
             </h2>
-            <Button variant="outline" size="sm" className="text-xs border-secondary/30 hover:bg-secondary/10 hover:border-secondary/50">View All</Button>
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="text-xs border-secondary/30 hover:bg-secondary/10 hover:border-secondary/50"
+              onClick={() => router.push('/dashboard/activity')}
+            >
+              View All
+            </Button>
           </div>
           <Card className="border-secondary/20">
             <CardContent className="p-0">
-              <div className="divide-y divide-border/40">
-                {[
-                  { action: 'API Key Created', time: '2 hours ago', description: 'New API key created for Research Project' },
-                  { action: 'Dataset Access', time: 'Yesterday', description: 'Accessed Climate Data API' },
-                  { action: 'Account Created', time: '3 days ago', description: 'Account created and verified' }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start justify-between p-4 hover:bg-secondary/5 transition-colors duration-200">
-                    <div className="flex items-start space-x-4">
-                      <div className="h-9 w-9 rounded-full bg-gradient-to-br from-secondary/20 to-purple-500/20 flex items-center justify-center">
-                        <svg className="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+              {statsLoading ? (
+                <div className="p-8">
+                  <div className="space-y-4">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="animate-pulse flex items-start space-x-4">
+                        <div className="h-9 w-9 rounded-full bg-gray-200/20"></div>
+                        <div className="flex-1 space-y-2">
+                          <div className="h-4 bg-gray-200/20 rounded w-1/4"></div>
+                          <div className="h-3 bg-gray-200/20 rounded w-3/4"></div>
+                        </div>
                       </div>
-                      <div>
-                        <p className="font-medium">{item.action}</p>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
-                      </div>
-                    </div>
-                    <span className="text-xs text-muted-foreground">{item.time}</span>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ) : (
+                <div className="divide-y divide-border/40">
+                  {(stats?.recentActivities || []).length > 0 ? (
+                    stats.recentActivities.map((item: any, i: number) => (
+                      <div key={i} className="flex items-start justify-between p-4 hover:bg-secondary/5 transition-colors duration-200">
+                        <div className="flex items-start space-x-4">
+                          <div className="h-9 w-9 rounded-full bg-gradient-to-br from-secondary/20 to-purple-500/20 flex items-center justify-center">
+                            <svg className="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <p className="font-medium">{item.action}</p>
+                            <p className="text-sm text-muted-foreground">
+                              {item.resourceType && `${item.resourceType}${item.resourceId ? ` (#${item.resourceId})` : ''}`}
+                              {item.details && <span>{item.details}</span>}
+                            </p>
+                          </div>
+                        </div>
+                        <span className="text-xs text-muted-foreground">{formatRelativeTime(item.createdAt)}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="p-8 text-center text-muted-foreground">
+                      No recent activity to display
+                    </div>
+                  )}
+                </div>
+              )}
             </CardContent>
           </Card>
         </section>
@@ -210,10 +299,12 @@ export default function DashboardPage() {
               <CardContent>
                 <p className="text-sm mb-4">Access to student headcount data by demographics, program, and enrollment status.</p>
                 <Button 
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                  title="https://docs.openalbion.org"
                 >
                   Access API
+                  <ExternalLink size={14} className="ml-1" />
                 </Button>
               </CardContent>
             </Card>
@@ -226,10 +317,12 @@ export default function DashboardPage() {
               <CardContent>
                 <p className="text-sm mb-4">Detailed information about class sizes, capacity, and enrollment statistics for courses at Albion College.</p>
                 <Button 
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                  title="https://docs.openalbion.org"
                 >
                   Access API
+                  <ExternalLink size={14} className="ml-1" />
                 </Button>
               </CardContent>
             </Card>
@@ -244,10 +337,12 @@ export default function DashboardPage() {
               <CardContent>
                 <p className="text-sm mb-4">Aggregated data about faculty characteristics including rank, diversity, and departmental distribution.</p>
                 <Button 
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                  title="https://docs.openalbion.org"
                 >
                   Access API
+                  <ExternalLink size={14} className="ml-1" />
                 </Button>
               </CardContent>
             </Card>
@@ -260,10 +355,12 @@ export default function DashboardPage() {
               <CardContent>
                 <p className="text-sm mb-4">Comprehensive enrollment data including admission rates, retention, and graduation statistics over time.</p>
                 <Button 
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                  title="https://docs.openalbion.org"
                 >
                   Access API
+                  <ExternalLink size={14} className="ml-1" />
                 </Button>
               </CardContent>
             </Card>

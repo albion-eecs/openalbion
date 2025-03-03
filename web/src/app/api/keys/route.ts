@@ -1,6 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { apiKeyService } from '@/lib/db-service';
+import { apiKeyService, userLogService } from '@/lib/db-service';
 import { getUser } from '@/lib/auth';
+
+type ApiKey = {
+  id: number;
+  userId: string;
+  apiKey: string;
+  name: string;
+  createdAt: number;
+  expiresAt: number | null;
+  lastUsedAt: number | null;
+  isActive: boolean;
+};
 
 export async function GET(req: NextRequest) {
   try {
@@ -13,7 +24,7 @@ export async function GET(req: NextRequest) {
       );
     }
     
-    const apiKeys = apiKeyService.getApiKeysByUserId(user.id);
+    const apiKeys = apiKeyService.getApiKeysByUserId(user.id) as ApiKey[];
     
     return NextResponse.json({
       success: true,
@@ -62,6 +73,14 @@ export async function POST(req: NextRequest) {
       );
     }
     
+    userLogService.createLog({
+      userId: user.id,
+      action: 'create_api_key',
+      resourceType: 'api_key',
+      resourceId: apiKey.id.toString(),
+      details: `Created API key: ${name}`
+    });
+    
     return NextResponse.json({
       success: true,
       data: apiKey
@@ -99,10 +118,34 @@ export async function DELETE(req: NextRequest) {
     const action = searchParams.get('action') || 'revoke';
     let success = false;
     
+    const apiKeys = apiKeyService.getApiKeysByUserId(user.id) as ApiKey[];
+    const apiKey = apiKeys.find(k => k.id === parseInt(keyId, 10));
+    const keyName = apiKey ? apiKey.name : 'Unknown';
+    
     if (action === 'delete') {
       success = apiKeyService.deleteApiKey(parseInt(keyId, 10), user.id);
+      
+      if (success) {
+        userLogService.createLog({
+          userId: user.id,
+          action: 'delete_api_key',
+          resourceType: 'api_key',
+          resourceId: keyId,
+          details: `Deleted API key: ${keyName}`
+        });
+      }
     } else {
       success = apiKeyService.revokeApiKey(parseInt(keyId, 10), user.id);
+      
+      if (success) {
+        userLogService.createLog({
+          userId: user.id,
+          action: 'revoke_api_key',
+          resourceType: 'api_key',
+          resourceId: keyId,
+          details: `Revoked API key: ${keyName}`
+        });
+      }
     }
     
     if (!success) {
@@ -120,6 +163,70 @@ export async function DELETE(req: NextRequest) {
     console.error('Error managing API key:', error);
     return NextResponse.json(
       { success: false, error: 'Failed to manage API key' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PUT(req: NextRequest) {
+  try {
+    const user = await getUser();
+    
+    if (!user) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+    
+    const { searchParams } = req.nextUrl;
+    const keyId = searchParams.get('id');
+    
+    if (!keyId) {
+      return NextResponse.json(
+        { success: false, error: 'API key ID is required' },
+        { status: 400 }
+      );
+    }
+    
+    const action = searchParams.get('action');
+    
+    if (action !== 'unrevoke') {
+      return NextResponse.json(
+        { success: false, error: 'Invalid action' },
+        { status: 400 }
+      );
+    }
+    
+    const apiKeys = apiKeyService.getApiKeysByUserId(user.id) as ApiKey[];
+    const apiKey = apiKeys.find(k => k.id === parseInt(keyId, 10));
+    const keyName = apiKey ? apiKey.name : 'Unknown';
+    
+    const success = apiKeyService.unrevokeApiKey(parseInt(keyId, 10), user.id);
+    
+    if (!success) {
+      return NextResponse.json(
+        { success: false, error: 'Failed to unrevoke API key' },
+        { status: 404 }
+      );
+    }
+    
+    userLogService.createLog({
+      userId: user.id,
+      action: 'unrevoke_api_key',
+      resourceType: 'api_key',
+      resourceId: keyId,
+      details: `Unrevoked API key: ${keyName}`
+    });
+    
+    return NextResponse.json({
+      success: true,
+      message: 'API key unrevoked successfully'
+    });
+  } catch (error) {
+    console.error('Error unrevoking API key:', error);
+    return NextResponse.json(
+      { success: false, error: 'Failed to unrevoke API key' },
       { status: 500 }
     );
   }

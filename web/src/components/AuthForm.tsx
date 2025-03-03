@@ -79,7 +79,7 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
 
       <div className="text-center mt-6 relative z-10">
         <p className="text-xs text-muted-foreground">
-          Only @albion.edu email addresses are allowed
+          Only @albion.edu email addresses allowed
         </p>
       </div>
       

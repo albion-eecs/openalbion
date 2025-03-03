@@ -443,30 +443,36 @@ export const apiKeyService = {
   },
   
   createApiKey: (userId: string, name: string, expiresInDays?: number) => {
-    const apiKey = apiKeyService.generateApiKey();
-    const createdAt = Math.floor(Date.now() / 1000);
-    const expiresAt = expiresInDays ? createdAt + (expiresInDays * 86400) : null;
-    
-    const stmt = db.prepare(`
-      INSERT INTO api_keys (user_id, api_key, name, created_at, expires_at, is_active)
-      VALUES (?, ?, ?, ?, ?, 1)
-    `);
-    
-    const result = stmt.run(userId, apiKey, name, createdAt, expiresAt);
-    
-    if (result.changes === 1) {
-      return {
-        id: result.lastInsertRowid,
-        userId,
-        apiKey,
-        name,
-        createdAt,
-        expiresAt,
-        isActive: true
-      };
+    try {
+      const apiKey = apiKeyService.generateApiKey();
+      const createdAt = Math.floor(Date.now() / 1000);
+      const expiresAt = expiresInDays ? createdAt + (expiresInDays * 86400) : null;
+      
+      const stmt = db.prepare(`
+        INSERT INTO api_keys (user_id, api_key, name, created_at, expires_at, is_active)
+        VALUES (?, ?, ?, ?, ?, 1)
+      `);
+      
+      const result = stmt.run(userId, apiKey, name, createdAt, expiresAt);
+      
+      if (result.changes === 1) {
+        return {
+          id: result.lastInsertRowid,
+          userId,
+          apiKey,
+          name,
+          createdAt,
+          expiresAt,
+          lastUsedAt: null,
+          isActive: true
+        };
+      }
+      
+      return null;
+    } catch (error) {
+      console.error("Error creating API key:", error);
+      return null;
     }
-    
-    return null;
   },
   
   getApiKeysByUserId: (userId: string) => {
@@ -509,9 +515,409 @@ export const apiKeyService = {
     return result.changes === 1;
   },
   
+  unrevokeApiKey: (id: number, userId: string) => {
+    const stmt = db.prepare('UPDATE api_keys SET is_active = 1 WHERE id = ? AND user_id = ?');
+    const result = stmt.run(id, userId);
+    return result.changes === 1;
+  },
+  
   deleteApiKey: (id: number, userId: string) => {
     const stmt = db.prepare('DELETE FROM api_keys WHERE id = ? AND user_id = ?');
     const result = stmt.run(id, userId);
     return result.changes === 1;
+  }
+};
+
+export const userLogService = {
+  createLog: (logData: {
+    userId: string;
+    action: string;
+    resourceType?: string;
+    resourceId?: string;
+    details?: string;
+    ipAddress?: string;
+    userAgent?: string;
+  }) => {
+    const now = Math.floor(Date.now() / 1000);
+    
+    const stmt = db.prepare(`
+      INSERT INTO user_logs (
+        user_id, action, resource_type, resource_id, details, 
+        ip_address, user_agent, created_at
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `);
+    
+    const result = stmt.run(
+      logData.userId,
+      logData.action,
+      logData.resourceType || null,
+      logData.resourceId || null,
+      logData.details || null,
+      logData.ipAddress || null,
+      logData.userAgent || null,
+      now
+    );
+    
+    return result.lastInsertRowid;
+  },
+  
+  getLogsByUserId: (userId: string, options: PaginationOptions = {}) => {
+    const { 
+      page = 1, 
+      limit = 20, 
+      sortBy = 'created_at', 
+      sortOrder = 'desc' 
+    } = options;
+    
+    const offset = (page - 1) * limit;
+    
+    const query = `
+      SELECT 
+        id, user_id as userId, action, resource_type as resourceType,
+        resource_id as resourceId, details, ip_address as ipAddress,
+        user_agent as userAgent, created_at as createdAt
+      FROM user_logs
+      WHERE user_id = ?
+      ORDER BY ${sortBy} ${sortOrder}
+      LIMIT ? OFFSET ?
+    `;
+    
+    const data = db.prepare(query).all(userId, limit, offset);
+    
+    const countQuery = 'SELECT COUNT(*) as count FROM user_logs WHERE user_id = ?';
+    const totalCount = db.prepare(countQuery).get(userId) as { count: number };
+    
+    return {
+      data,
+      pagination: {
+        total: totalCount.count,
+        page,
+        limit,
+        totalPages: Math.ceil(totalCount.count / limit)
+      }
+    };
+  },
+  
+  getRecentUserActivities: (userId: string, limit: number = 5) => {
+    const query = `
+      SELECT 
+        id, user_id as userId, action, resource_type as resourceType,
+        resource_id as resourceId, details, created_at as createdAt
+      FROM user_logs
+      WHERE user_id = ?
+      ORDER BY created_at DESC
+      LIMIT ?
+    `;
+    
+    return db.prepare(query).all(userId, limit);
+  }
+};
+
+export const apiCallService = {
+  recordApiCall: (callData: {
+    userId: string;
+    apiKeyId?: number;
+    endpoint: string;
+    method: string;
+    statusCode?: number;
+    responseTime?: number;
+  }) => {
+    const now = Math.floor(Date.now() / 1000);
+    
+    const stmt = db.prepare(`
+      INSERT INTO api_calls (
+        user_id, api_key_id, endpoint, method, 
+        status_code, response_time, created_at
+      )
+      VALUES (?, ?, ?, ?, ?, ?, ?)
+    `);
+    
+    const result = stmt.run(
+      callData.userId,
+      callData.apiKeyId || null,
+      callData.endpoint,
+      callData.method,
+      callData.statusCode || null,
+      callData.responseTime || null,
+      now
+    );
+    
+    return result.lastInsertRowid;
+  },
+  
+  getApiCallsByUserId: (userId: string, options: PaginationOptions = {}) => {
+    const { 
+      page = 1, 
+      limit = 20, 
+      sortBy = 'created_at', 
+      sortOrder = 'desc' 
+    } = options;
+    
+    const offset = (page - 1) * limit;
+    
+    const query = `
+      SELECT 
+        id, user_id as userId, api_key_id as apiKeyId, endpoint, method,
+        status_code as statusCode, response_time as responseTime, 
+        created_at as createdAt
+      FROM api_calls
+      WHERE user_id = ?
+      ORDER BY ${sortBy} ${sortOrder}
+      LIMIT ? OFFSET ?
+    `;
+    
+    const data = db.prepare(query).all(userId, limit, offset);
+    
+    const countQuery = 'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ?';
+    const totalCount = db.prepare(countQuery).get(userId) as { count: number };
+    
+    return {
+      data,
+      pagination: {
+        total: totalCount.count,
+        page,
+        limit,
+        totalPages: Math.ceil(totalCount.count / limit)
+      }
+    };
+  },
+  
+  getApiCallCount: (userId: string, timeframe?: { start: number; end: number }) => {
+    let query = 'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ?';
+    let params: (string | number)[] = [userId];
+    
+    if (timeframe) {
+      query += ' AND created_at BETWEEN ? AND ?';
+      params.push(timeframe.start, timeframe.end);
+    }
+    
+    const result = db.prepare(query).get(...params) as { count: number };
+    return result.count;
+  },
+  
+  getApiCallStatistics: (userId: string) => {
+    const now = Math.floor(Date.now() / 1000);
+    const oneDayAgo = now - 86400; 
+    const oneWeekAgo = now - 604800; 
+    const oneMonthAgo = now - 2592000; 
+    
+    const dailyCount = db.prepare(
+      'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ? AND created_at > ?'
+    ).get(userId, oneDayAgo) as { count: number };
+    
+    const weeklyCount = db.prepare(
+      'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ? AND created_at > ?'
+    ).get(userId, oneWeekAgo) as { count: number };
+    
+    const monthlyCount = db.prepare(
+      'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ? AND created_at > ?'
+    ).get(userId, oneMonthAgo) as { count: number };
+    
+    const endpointStats = db.prepare(`
+      SELECT endpoint, COUNT(*) as count 
+      FROM api_calls 
+      WHERE user_id = ? AND created_at > ? 
+      GROUP BY endpoint 
+      ORDER BY count DESC 
+      LIMIT 5
+    `).all(userId, oneMonthAgo);
+    
+    return {
+      daily: dailyCount.count,
+      weekly: weeklyCount.count,
+      monthly: monthlyCount.count,
+      topEndpoints: endpointStats
+    };
+  }
+};
+
+export const userPreferenceService = {
+  getPreferences: (userId: string) => {
+    const prefs = db.prepare(
+      'SELECT * FROM user_preferences WHERE user_id = ?'
+    ).get(userId) as {
+      user_id: string;
+      api_usage_alerts: number;
+      security_alerts: number;
+      data_update_alerts: number;
+      updated_at: number;
+    } | undefined;
+    
+    if (!prefs) {
+      const now = Math.floor(Date.now() / 1000);
+      
+      db.prepare(`
+        INSERT INTO user_preferences (
+          user_id, api_usage_alerts, security_alerts, 
+          data_update_alerts, updated_at
+        )
+        VALUES (?, 1, 1, 0, ?)
+      `).run(userId, now);
+      
+      return {
+        userId,
+        apiUsageAlerts: true,
+        securityAlerts: true,
+        dataUpdateAlerts: false,
+      };
+    }
+    
+    return {
+      userId: prefs.user_id,
+      apiUsageAlerts: Boolean(prefs.api_usage_alerts),
+      securityAlerts: Boolean(prefs.security_alerts),
+      dataUpdateAlerts: Boolean(prefs.data_update_alerts),
+    };
+  },
+  
+  updatePreferences: (userId: string, preferences: Record<string, boolean>) => {
+    const now = Math.floor(Date.now() / 1000);
+    const currentPrefs = userPreferenceService.getPreferences(userId);
+    
+    const updatedPrefs = {
+      ...currentPrefs,
+      ...preferences,
+    };
+    
+    const columns = [];
+    const values = [];
+    
+    if ('apiUsageAlerts' in preferences) {
+      columns.push('api_usage_alerts = ?');
+      values.push(preferences.apiUsageAlerts ? 1 : 0);
+    }
+    
+    if ('securityAlerts' in preferences) {
+      columns.push('security_alerts = ?');
+      values.push(preferences.securityAlerts ? 1 : 0);
+    }
+    
+    if ('dataUpdateAlerts' in preferences) {
+      columns.push('data_update_alerts = ?');
+      values.push(preferences.dataUpdateAlerts ? 1 : 0);
+    }
+    
+    if (columns.length === 0) {
+      return updatedPrefs;
+    }
+    
+    columns.push('updated_at = ?');
+    values.push(now);
+    values.push(userId);
+    
+    db.prepare(`
+      UPDATE user_preferences 
+      SET ${columns.join(', ')} 
+      WHERE user_id = ?
+    `).run(...values);
+    
+    return updatedPrefs;
+  }
+};
+
+export const statisticsService = {
+  getDashboardStats: (userId: string) => {
+    const apiKeyCount = db.prepare(
+      'SELECT COUNT(*) as count FROM api_keys WHERE user_id = ? AND is_active = 1'
+    ).get(userId) as { count: number };
+    
+    const apiCallStats = apiCallService.getApiCallStatistics(userId);
+    
+    const recentActivities = userLogService.getRecentUserActivities(userId, 5);
+    
+    const datasetInfo = datasetService.getDatasetInfo();
+    
+    return {
+      apiKeyCount: apiKeyCount.count,
+      apiCallStats,
+      totalDatasets: datasetInfo.totalDatasets,
+      recentActivities,
+      datasetAccess: datasetInfo.datasets.map(dataset => ({
+        name: dataset.name,
+        available: dataset.available,
+        endpoint: dataset.endpoint
+      })),
+      newDatasetsThisMonth: datasetInfo.datasets.filter(d => d.available).length
+    };
+  }
+};
+
+export const datasetService = {
+  getDatasetInfo: () => {
+    const headcountsCount = db.prepare(
+      'SELECT COUNT(*) as count FROM headcounts'
+    ).get() as { count: number };
+    
+    const headcountsYearRange = db.prepare(
+      'SELECT MIN(year) as minYear, MAX(year) as maxYear FROM headcounts'
+    ).get() as { minYear: number; maxYear: number };
+    
+    const classSizesCount = db.prepare(
+      'SELECT COUNT(*) as count FROM class_sizes'
+    ).get() as { count: number };
+    
+    const classTerms = db.prepare(
+      'SELECT DISTINCT term FROM class_sizes ORDER BY term'
+    ).all() as { term: string }[];
+    
+    const facultyCount = db.prepare(
+      'SELECT COUNT(*) as count FROM faculty'
+    ).get() as { count: number };
+    
+    const facultyYears = db.prepare(
+      'SELECT DISTINCT year FROM faculty ORDER BY year'
+    ).all() as { year: string }[];
+    
+    const enrollmentCount = db.prepare(
+      'SELECT COUNT(*) as count FROM enrollment_report'
+    ).get() as { count: number };
+    
+    const academicYears = db.prepare(
+      'SELECT DISTINCT academic_year FROM enrollment_report ORDER BY academic_year'
+    ).all() as { academic_year: string }[];
+    
+    const departmentCount = db.prepare(
+      'SELECT COUNT(*) as count FROM departments'
+    ).get() as { count: number };
+    
+    return {
+      totalDatasets: 4, 
+      datasets: [
+        {
+          name: 'Headcount Data',
+          recordCount: headcountsCount.count,
+          available: headcountsCount.count > 0,
+          timeRange: headcountsCount.count > 0 
+            ? `${headcountsYearRange.minYear} - ${headcountsYearRange.maxYear}` 
+            : 'N/A',
+          endpoint: '/api/data/headcounts'
+        },
+        {
+          name: 'Class Sizes',
+          recordCount: classSizesCount.count,
+          available: classSizesCount.count > 0,
+          terms: classTerms.map(t => t.term),
+          departmentCount: departmentCount.count,
+          endpoint: '/api/data/class-sizes'
+        },
+        {
+          name: 'Faculty',
+          recordCount: facultyCount.count,
+          available: facultyCount.count > 0,
+          years: facultyYears.map(y => y.year),
+          departmentCount: departmentCount.count,
+          endpoint: '/api/data/faculty'
+        },
+        {
+          name: 'Enrollment Reports',
+          recordCount: enrollmentCount.count,
+          available: enrollmentCount.count > 0,
+          academicYears: academicYears.map(y => y.academic_year),
+          endpoint: '/api/data/enrollment'
+        }
+      ],
+      lastUpdate: Math.floor(Date.now() / 1000) 
+    };
   }
 };

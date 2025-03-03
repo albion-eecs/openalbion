@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --font-sans: var(--font-inter);
+    --font-sans: var(--font-jakarta);
     --font-heading: var(--font-sora);
     --font-mono: var(--font-jetbrains-mono);
     

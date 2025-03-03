@@ -12,26 +12,38 @@ export function Footer() {
         </div>
         <div className="flex gap-6 text-sm">
           <Link 
-            href="#" 
-            className="text-muted-foreground hover:text-secondary transition-colors duration-200"
+            href="/security" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
+          >
+            Security
+          </Link>
+          <Link 
+            href="/privacy" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
           >
             Privacy
           </Link>
           <Link 
-            href="#" 
-            className="text-muted-foreground hover:text-secondary transition-colors duration-200"
+            href="/terms" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
           >
             Terms
           </Link>
           <Link 
-            href="#" 
-            className="text-muted-foreground hover:text-secondary transition-colors duration-200"
+            href="/contact" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
           >
             Contact
           </Link>
           <Link 
-            href="#" 
-            className="text-muted-foreground hover:text-secondary transition-colors duration-200"
+            href="/changelog" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
+          >
+            Changelog
+          </Link>
+          <Link 
+            href="https://docs.openalbion.org" 
+            className="text-muted-foreground hover:text-white/90 transition-colors duration-200"
           >
             API Docs
           </Link>

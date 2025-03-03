@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Copy, Check, Trash, X, ArrowLeft, Settings, Key, Infinity } from 'lucide-react';
+import { Loader2, Copy, Check, Trash, X, ArrowLeft, Settings, Key, Infinity, User } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
 import { Checkbox } from "@/components/ui/checkbox";
@@ -25,51 +25,82 @@ type ApiKey = {
 
 export default function SettingsPage() {
   const router = useRouter();
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
+  const [isClient, setIsClient] = useState(false);
+  
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [apiKeysLoading, setApiKeysLoading] = useState(true);
   const [newKeyName, setNewKeyName] = useState('');
   const [expiresInDays, setExpiresInDays] = useState('30');
   const [neverExpires, setNeverExpires] = useState(false);
-  const [isCreating, setIsCreating] = useState(false);
-  const [newApiKey, setNewApiKey] = useState<string | null>(null);
-  const [copied, setCopied] = useState(false);
-  const [apiUsageAlerts, setApiUsageAlerts] = useState(true);
-  const [securityAlerts, setSecurityAlerts] = useState(true);
-
+  const [apiKeyCreated, setApiKeyCreated] = useState<{ name: string; key: string } | null>(null);
+  const [formError, setFormError] = useState<string | null>(null);
+  
+  const [notificationPrefs, setNotificationPrefs] = useState({
+    apiUsageAlerts: true,
+    securityAlerts: true,
+    dataUpdateAlerts: false,
+  });
+  const [prefsLoading, setPrefsLoading] = useState(true);
+  
   useEffect(() => {
-    async function fetchApiKeys() {
-      try {
-        const response = await fetch('/api/keys');
-        const data = await response.json();
-        
-        if (data.success) {
-          setApiKeys(data.data || []);
-        } else {
-          setError(data.error || 'Failed to fetch API keys');
-        }
-      } catch (err) {
-        setError('An error occurred while fetching API keys');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
+    if (user) {
+      fetchApiKeys();
+      fetchNotificationPreferences(); 
     }
-    
-    fetchApiKeys();
-  }, []);
+  }, [user]);
+
+  const fetchApiKeys = async () => {
+    try {
+      setApiKeysLoading(true);
+      const response = await fetch('/api/keys');
+      const data = await response.json();
+      
+      if (data.success) {
+        setApiKeys(data.data || []);
+      } else {
+        console.error(data.error || 'Failed to fetch API keys');
+      }
+    } catch (err) {
+      console.error('An error occurred while fetching API keys', err);
+    } finally {
+      setApiKeysLoading(false);
+    }
+  };
+
+  const fetchNotificationPreferences = async () => {
+    try {
+      setPrefsLoading(true);
+      const response = await fetch('/api/user/preferences');
+      
+      if (response.ok) {
+        const data = await response.json();
+        setNotificationPrefs({
+          apiUsageAlerts: data.apiUsageAlerts,
+          securityAlerts: data.securityAlerts,
+          dataUpdateAlerts: data.dataUpdateAlerts,
+        });
+      } else {
+        console.error('Failed to fetch notification preferences');
+      }
+    } catch (error) {
+      console.error('Error fetching notification preferences:', error);
+    } finally {
+      setPrefsLoading(false);
+    }
+  };
 
   const handleCreateApiKey = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    setFormError(null);
+    
     if (!newKeyName.trim()) {
-      setError('API key name is required');
+      setFormError("API key name is required");
       return;
     }
     
-    setIsCreating(true);
-    setError(null);
+    setApiKeysLoading(true);
     
     try {
       const response = await fetch('/api/keys', {
@@ -86,7 +117,7 @@ export default function SettingsPage() {
       const data = await response.json();
       
       if (data.success) {
-        setNewApiKey(data.data.apiKey);
+        setApiKeyCreated({ name: newKeyName, key: data.data.apiKey });
         
         setApiKeys([data.data, ...apiKeys]);
         
@@ -94,13 +125,13 @@ export default function SettingsPage() {
         setExpiresInDays('30');
         setNeverExpires(false);
       } else {
-        setError(data.error || 'Failed to create API key');
+        setFormError(data.error || 'Failed to create API key');
       }
     } catch (err) {
-      setError('An error occurred while creating API key');
-      console.error(err);
+      console.error('An error occurred while creating API key', err);
+      setFormError('An error occurred while creating API key');
     } finally {
-      setIsCreating(false);
+      setApiKeysLoading(false);
     }
   };
 
@@ -121,11 +152,30 @@ export default function SettingsPage() {
           key.id === id ? { ...key, isActive: false } : key
         ));
       } else {
-        setError(data.error || 'Failed to revoke API key');
+        console.error(data.error || 'Failed to revoke API key');
       }
     } catch (err) {
-      setError('An error occurred while revoking API key');
-      console.error(err);
+      console.error('An error occurred while revoking API key', err);
+    }
+  };
+
+  const handleUnrevokeApiKey = async (id: number) => {
+    try {
+      const response = await fetch(`/api/keys?id=${id}&action=unrevoke`, {
+        method: 'PUT',
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        setApiKeys(apiKeys.map(key => 
+          key.id === id ? { ...key, isActive: true } : key
+        ));
+      } else {
+        console.error(data.error || 'Failed to unrevoke API key');
+      }
+    } catch (err) {
+      console.error('An error occurred while unrevoking API key', err);
     }
   };
 
@@ -144,23 +194,53 @@ export default function SettingsPage() {
       if (data.success) {
         setApiKeys(apiKeys.filter(key => key.id !== id));
       } else {
-        setError(data.error || 'Failed to delete API key');
+        console.error(data.error || 'Failed to delete API key');
       }
     } catch (err) {
-      setError('An error occurred while deleting API key');
-      console.error(err);
+      console.error('An error occurred while deleting API key', err);
     }
   };
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    alert('API key copied to clipboard!');
+    setTimeout(() => setApiKeyCreated(null), 2000);
   };
 
   const formatDate = (timestamp: number | null) => {
     if (!timestamp) return 'Never';
     return new Date(timestamp * 1000).toLocaleString();
+  };
+
+  const handlePreferenceChange = async (preference: string, value: boolean) => {
+    try {
+      setNotificationPrefs(prev => ({
+        ...prev,
+        [preference]: value
+      }));
+      
+      const response = await fetch('/api/user/preferences', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ [preference]: value }),
+      });
+      
+      if (!response.ok) {
+        setNotificationPrefs(prev => ({
+          ...prev,
+          [preference]: !value
+        }));
+        console.error('Failed to update notification preferences');
+      }
+    } catch (error) {
+      setNotificationPrefs(prev => ({
+        ...prev,
+        [preference]: !value
+      }));
+      console.error('Error updating notification preferences:', error);
+    }
   };
 
   return (
@@ -176,19 +256,10 @@ export default function SettingsPage() {
         <h1 className="text-3xl font-bold">Settings</h1>
       </div>
       
-      {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 flex justify-between items-center">
-          <span>{error}</span>
-          <button onClick={() => setError(null)} className="text-red-700">
-            <X size={18} />
-          </button>
-        </div>
-      )}
-      
-      <Tabs defaultValue="apikeys" className="space-y-6">
-        <TabsList className="mb-4">
+      <Tabs defaultValue="account" className="space-y-6">
+        <TabsList className="grid grid-cols-2 w-full max-w-md">
           <TabsTrigger value="account" className="flex items-center gap-2">
-            <Settings className="h-4 w-4" />
+            <User className="h-4 w-4" />
             Account
           </TabsTrigger>
           <TabsTrigger value="apikeys" className="flex items-center gap-2">
@@ -200,60 +271,83 @@ export default function SettingsPage() {
         <TabsContent value="account" className="space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle>Profile Information</CardTitle>
-              <CardDescription>Update your account profile information</CardDescription>
+              <CardTitle>Account Settings</CardTitle>
+              <CardDescription>Manage your account settings</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" defaultValue={user?.name || ''} placeholder="Your name" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" defaultValue={user?.email} disabled />
-                  <p className="text-sm text-muted-foreground">Your email is linked to your authentication provider</p>
+            <CardContent className="space-y-6">
+              <div>
+                <h3 className="text-lg font-medium mb-4">Profile Information</h3>
+                <div className="flex items-center space-x-4">
+                  <div className="relative">
+                    <div className="h-16 w-16 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-lg font-bold text-white">
+                      {user?.name ? user.name.charAt(0).toUpperCase() : user?.email.charAt(0).toUpperCase()}
+                    </div>
+                    <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
+                  </div>
+                  <div>
+                    <p className="font-medium">{user?.name || 'User'}</p>
+                    <p className="text-sm text-muted-foreground">{user?.email}</p>
+                  </div>
                 </div>
               </div>
-            </CardContent>
-            <CardFooter>
-              <Button>Update Profile</Button>
-            </CardFooter>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <CardTitle>Notification Preferences</CardTitle>
-              <CardDescription>Manage your notification settings</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium">API Usage Alerts</h4>
-                    <p className="text-sm text-muted-foreground">Receive notifications when API usage nears limits</p>
+              
+              <div className="border-t pt-6">
+                <h3 className="text-lg font-medium mb-4">Notification Preferences</h3>
+                {prefsLoading ? (
+                  <div className="space-y-6">
+                    {[1, 2].map((i) => (
+                      <div key={i} className="animate-pulse flex items-center justify-between">
+                        <div className="space-y-2">
+                          <div className="h-4 bg-gray-200/20 rounded w-32"></div>
+                          <div className="h-3 bg-gray-200/20 rounded w-48"></div>
+                        </div>
+                        <div className="h-5 w-10 bg-gray-200/20 rounded"></div>
+                      </div>
+                    ))}
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <Switch 
-                      checked={apiUsageAlerts} 
-                      onCheckedChange={setApiUsageAlerts} 
-                      className="data-[state=checked]:bg-purple-600"
-                    />
+                ) : (
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium">API Usage Alerts</h4>
+                        <p className="text-sm text-muted-foreground">Receive notifications when API usage nears limits</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Switch 
+                          checked={notificationPrefs.apiUsageAlerts} 
+                          onCheckedChange={(checked) => handlePreferenceChange('apiUsageAlerts', checked)} 
+                          className="data-[state=checked]:bg-purple-600"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium">Security Alerts</h4>
+                        <p className="text-sm text-muted-foreground">Get notified about suspicious account activity</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Switch 
+                          checked={notificationPrefs.securityAlerts} 
+                          onCheckedChange={(checked) => handlePreferenceChange('securityAlerts', checked)} 
+                          className="data-[state=checked]:bg-purple-600"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h4 className="font-medium">Data Updates</h4>
+                        <p className="text-sm text-muted-foreground">Get notified when new datasets are available</p>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Switch 
+                          checked={notificationPrefs.dataUpdateAlerts} 
+                          onCheckedChange={(checked) => handlePreferenceChange('dataUpdateAlerts', checked)} 
+                          className="data-[state=checked]:bg-purple-600"
+                        />
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h4 className="font-medium">Security Alerts</h4>
-                    <p className="text-sm text-muted-foreground">Get notified about suspicious account activity</p>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Switch 
-                      checked={securityAlerts} 
-                      onCheckedChange={setSecurityAlerts} 
-                      className="data-[state=checked]:bg-purple-600"
-                    />
-                  </div>
-                </div>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -267,7 +361,7 @@ export default function SettingsPage() {
                 Generate a new API key to access the API. Keep your API keys secure!
               </CardDescription>
             </CardHeader>
-            <form onSubmit={handleCreateApiKey}>
+            <form onSubmit={handleCreateApiKey} noValidate>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
@@ -276,16 +370,22 @@ export default function SettingsPage() {
                       id="keyName"
                       placeholder="e.g., Development, Production"
                       value={newKeyName}
-                      onChange={(e) => setNewKeyName(e.target.value)}
+                      onChange={(e) => {
+                        setNewKeyName(e.target.value);
+                        if (formError) setFormError(null);
+                      }}
                       required
+                      className={formError ? "border-red-400" : ""}
                     />
+                    {formError && (
+                      <p className="text-sm text-red-500 mt-1">{formError}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="expiry">Expires In (Days)</Label>
+                    <Label htmlFor="expiresInDays">Expires In (Days)</Label>
                     <div className="relative flex items-center">
                       <Input
-                        id="expiry"
-                        type="text"
+                        id="expiresInDays"
                         inputMode="numeric"
                         pattern="[0-9]*"
                         disabled={neverExpires}
@@ -301,46 +401,46 @@ export default function SettingsPage() {
                           onCheckedChange={(checked) => setNeverExpires(checked === true)}
                           className="h-4 w-4"
                         />
-                        <Label htmlFor="neverExpires" className="cursor-pointer flex items-center text-xs text-muted-foreground whitespace-nowrap">
-                          <Infinity className="w-3 h-3 inline mr-1" />
-                          Never expires
-                        </Label>
+                        <Label htmlFor="neverExpires" className="text-xs">Never expires</Label>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {newApiKey && (
-                  <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
-                    <p className="font-medium text-yellow-800 mb-2">
+                {apiKeyCreated && (
+                  <div className="mt-4 p-4 bg-secondary/10 border border-secondary/20 rounded-md">
+                    <p className="font-medium text-foreground mb-2">
                       Your new API key has been created. Copy it now, you won&apos;t be able to see it again!
                     </p>
                     <div className="flex items-center space-x-2">
-                      <code className="bg-gray-100 p-2 rounded flex-1 overflow-x-auto">
-                        {newApiKey}
+                      <code className="bg-background border border-secondary/20 p-2 rounded flex-1 overflow-x-auto">
+                        {apiKeyCreated.key}
                       </code>
                       <Button
                         type="button"
                         variant="outline"
                         size="sm"
-                        onClick={() => copyToClipboard(newApiKey)}
+                        onClick={() => copyToClipboard(apiKeyCreated.key)}
                       >
-                        {copied ? <Check size={16} /> : <Copy size={16} />}
+                        <Copy size={16} />
                       </Button>
                     </div>
                   </div>
                 )}
               </CardContent>
               <CardFooter>
-                <Button type="submit" disabled={isCreating}>
-                  {isCreating ? (
-                    <>
+                <Button 
+                  type="submit" 
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white"
+                  disabled={apiKeysLoading}
+                >
+                  {apiKeysLoading ? 
+                    <span className="flex items-center">
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                       Creating...
-                    </>
-                  ) : (
+                    </span> : 
                     'Create API Key'
-                  )}
+                  }
                 </Button>
               </CardFooter>
             </form>
@@ -365,14 +465,18 @@ export default function SettingsPage() {
                   {apiKeys.map((key) => (
                     <div 
                       key={key.id} 
-                      className={`border rounded-lg p-4 ${key.isActive ? '' : 'bg-gray-50 opacity-70'}`}
+                      className={`rounded-lg p-4 ${
+                        key.isActive 
+                          ? 'border' 
+                          : 'border border-secondary/30 bg-secondary/20'
+                      }`}
                     >
                       <div className="flex justify-between items-start mb-2">
                         <div>
                           <h3 className="font-semibold flex items-center">
                             {key.name}
                             {!key.isActive && (
-                              <span className="ml-2 text-xs bg-gray-200 text-gray-800 px-2 py-0.5 rounded-full">
+                              <span className="ml-2 text-xs font-medium bg-red-100 text-red-700 px-2 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
                                 Revoked
                               </span>
                             )}
@@ -381,22 +485,31 @@ export default function SettingsPage() {
                             Created: {formatDate(key.createdAt)}
                           </div>
                         </div>
-                        <div className="flex space-x-2">
-                          {key.isActive && (
+                        <div className="flex items-center">
+                          {key.isActive ? (
                             <Button
                               variant="outline"
                               size="sm"
                               onClick={() => handleRevokeApiKey(key.id)}
-                              className="text-yellow-600 border-yellow-200 hover:bg-yellow-50"
+                              className="mr-2 text-yellow-600 border-yellow-200 hover:bg-yellow-50 hover:text-yellow-700"
                             >
                               Revoke
+                            </Button>
+                          ) : (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              onClick={() => handleUnrevokeApiKey(key.id)}
+                              className="mr-2 text-green-600 border-green-200 hover:bg-green-50 hover:text-green-700"
+                            >
+                              Unrevoke
                             </Button>
                           )}
                           <Button
                             variant="outline"
                             size="sm"
                             onClick={() => handleDeleteApiKey(key.id)}
-                            className="text-red-600 border-red-200 hover:bg-red-50"
+                            className="text-red-600 border-red-200 hover:bg-red-50 hover:text-red-700"
                           >
                             <Trash size={16} />
                           </Button>

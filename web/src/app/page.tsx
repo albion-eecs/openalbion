@@ -1,8 +1,19 @@
+'use client';
+
 import { AuthTabs } from "@/components/AuthTabs";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Footer } from "@/components/Footer";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Download, FileSpreadsheet, FileJson, FileCode } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
+  const handleDownload = (filePath: string) => {
+    window.open(`/cleaned/${filePath}`, '_blank');
+  };
+
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       <div className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '8s' }}></div>
@@ -33,7 +44,7 @@ export default function Home() {
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-purple-600 text-white font-medium shadow-md shadow-secondary/20">1</div>
                     <div className="z-10">
-                      <h3 className="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">Albion-only Access</h3>
+                      <h3 className="font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">Albion-only Access</h3>
                       <p className="text-muted-foreground leading-relaxed">Only students, faculty, and alumni with @albion.edu emails can register.</p>
                     </div>
                   </div>
@@ -46,7 +57,7 @@ export default function Home() {
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-purple-600 text-white font-medium shadow-md shadow-secondary/20">2</div>
                     <div className="z-10">
-                      <h3 className="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">API-Driven Data Access</h3>
+                      <h3 className="font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">API-Driven Data Access</h3>
                       <p className="text-muted-foreground leading-relaxed">Programmatically access research data through standardized API endpoints.</p>
                     </div>
                   </div>
@@ -58,7 +69,7 @@ export default function Home() {
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-purple-600 text-white font-medium shadow-md shadow-secondary/20">3</div>
                     <div className="z-10">
-                      <h3 className="font-semibold text-lg group-hover:text-secondary transition-colors duration-300">Research Integration</h3>
+                      <h3 className="font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">Research Integration</h3>
                       <p className="text-muted-foreground leading-relaxed">Easily integrate research materials into academic projects and applications.</p>
                     </div>
                   </div>
@@ -83,6 +94,180 @@ export default function Home() {
                 </AuthProvider>
               </div>
             </div>
+          </div>
+          
+          {/* Dataset Download Section */}
+          <div className="mt-20 relative">
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl opacity-30"></div>
+            
+            <h2 className="text-3xl font-bold tracking-tight mb-6 text-center">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+                Download Datasets
+              </span>
+            </h2>
+            
+            <p className="text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              Access our cleaned datasets directly for your research projects. The following datasets are available for download in various formats.
+            </p>
+            
+            <div className="text-sm text-center text-muted-foreground mb-8 max-w-2xl mx-auto relative z-10">
+              <p>Data was originally gathered from <Link href="https://www.albion.edu/offices/registrar/institutional-data/" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white hover:underline inline-block">Albion College Registrar&apos;s Office Institutional Data</Link> and cleaned for research purposes.</p>
+            </div>
+            
+            <Tabs defaultValue="csv" className="w-full">
+              <div className="flex justify-center mb-6">
+                <TabsList className="bg-background/30 backdrop-blur-sm border border-secondary/20">
+                  <TabsTrigger value="csv" className="data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary">
+                    <FileSpreadsheet className="h-4 w-4 mr-2" />
+                    CSV
+                  </TabsTrigger>
+                  <TabsTrigger value="json" className="data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary" disabled>
+                    <FileJson className="h-4 w-4 mr-2" />
+                    JSON
+                  </TabsTrigger>
+                  <TabsTrigger value="xml" className="data-[state=active]:bg-secondary/20 data-[state=active]:text-secondary" disabled>
+                    <FileCode className="h-4 w-4 mr-2" />
+                    XML
+                  </TabsTrigger>
+                </TabsList>
+              </div>
+              
+              <TabsContent value="csv" className="mt-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Headcounts Dataset */}
+                  <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg z-0"></div>
+                    <CardHeader className="relative z-10">
+                      <CardTitle className="transition-colors duration-300">Headcount Data</CardTitle>
+                      <CardDescription>Student enrollment demographics</CardDescription>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Comprehensive data on student enrollment by demographics, program, and status.
+                      </p>
+                      <div className="text-xs flex items-center text-muted-foreground">
+                        <span className="font-semibold mr-2">Format:</span> 
+                        <FileSpreadsheet className="h-3 w-3 mr-1" />
+                        CSV
+                      </div>
+                    </CardContent>
+                    <CardFooter className="relative z-10">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 relative z-10"
+                        onClick={() => handleDownload('headcounts.csv')}
+                      >
+                        <Download className="h-4 w-4 mr-2" /> Download Dataset
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                  
+                  {/* Class Sizes Dataset */}
+                  <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg z-0"></div>
+                    <CardHeader className="relative z-10">
+                      <CardTitle className="transition-colors duration-300">Class Size Data</CardTitle>
+                      <CardDescription>Course capacity and enrollment</CardDescription>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Detailed information about class sizes, capacity, and enrollment statistics.
+                      </p>
+                      <div className="text-xs flex items-center text-muted-foreground">
+                        <span className="font-semibold mr-2">Format:</span> 
+                        <FileSpreadsheet className="h-3 w-3 mr-1" />
+                        CSV
+                      </div>
+                    </CardContent>
+                    <CardFooter className="relative z-10">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 relative z-10"
+                        onClick={() => handleDownload('class_sizes.csv')}
+                      >
+                        <Download className="h-4 w-4 mr-2" /> Download Dataset
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                  
+                  {/* Faculty Dataset */}
+                  <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg z-0"></div>
+                    <CardHeader className="relative z-10">
+                      <CardTitle className="transition-colors duration-300">Faculty Data</CardTitle>
+                      <CardDescription>Faculty demographic information</CardDescription>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Aggregated data about faculty characteristics including rank and departmental distribution.
+                      </p>
+                      <div className="text-xs flex items-center text-muted-foreground">
+                        <span className="font-semibold mr-2">Format:</span> 
+                        <FileSpreadsheet className="h-3 w-3 mr-1" />
+                        CSV
+                      </div>
+                    </CardContent>
+                    <CardFooter className="relative z-10">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 relative z-10"
+                        onClick={() => handleDownload('faculty_characteristics.csv')}
+                      >
+                        <Download className="h-4 w-4 mr-2" /> Download Dataset
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                  
+                  {/* Enrollment Report Dataset */}
+                  <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg z-0"></div>
+                    <CardHeader className="relative z-10">
+                      <CardTitle className="transition-colors duration-300">Enrollment Report</CardTitle>
+                      <CardDescription>Comprehensive enrollment statistics</CardDescription>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <p className="text-sm text-muted-foreground mb-2">
+                        Detailed enrollment reports across academic years and programs.
+                      </p>
+                      <div className="text-xs flex items-center text-muted-foreground">
+                        <span className="font-semibold mr-2">Format:</span> 
+                        <FileSpreadsheet className="h-3 w-3 mr-1" />
+                        CSV
+                      </div>
+                    </CardContent>
+                    <CardFooter className="relative z-10">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 relative z-10"
+                        onClick={() => handleDownload('enrollment_report.csv')}
+                      >
+                        <Download className="h-4 w-4 mr-2" /> Download Dataset
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="json" className="mt-4">
+                <div className="flex items-center justify-center p-12 border border-dashed border-secondary/20 rounded-lg bg-card/30">
+                  <div className="text-center">
+                    <FileJson className="h-12 w-12 mx-auto text-muted-foreground mb-4 opacity-50" />
+                    <h3 className="text-lg font-medium mb-2">JSON Format Coming Soon</h3>
+                    <p className="text-muted-foreground max-w-md">
+                      We&apos;re working on providing our datasets in JSON format. Please check back later or use the CSV format in the meantime.
+                    </p>
+                  </div>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="xml" className="mt-4">
+                <div className="flex items-center justify-center p-12 border border-dashed border-secondary/20 rounded-lg bg-card/30">
+                  <div className="text-center">
+                    <FileCode className="h-12 w-12 mx-auto text-muted-foreground mb-4 opacity-50" />
+                    <h3 className="text-lg font-medium mb-2">XML Format Coming Soon</h3>
+                    <p className="text-muted-foreground max-w-md">
+                      We&apos;re working on providing our datasets in XML format. Please check back later or use the CSV format in the meantime.
+                    </p>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </main>

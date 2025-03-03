@@ -70,8 +70,45 @@ export function setupDatabase() {
       created_at INTEGER NOT NULL,
       expires_at INTEGER,
       last_used_at INTEGER,
-      is_active BOOLEAN NOT NULL DEFAULT 1,
-      UNIQUE(user_id, name)
+      is_active BOOLEAN NOT NULL DEFAULT 1
+    )
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS user_logs (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id TEXT NOT NULL,
+      action TEXT NOT NULL,
+      resource_type TEXT,
+      resource_id TEXT,
+      details TEXT,
+      ip_address TEXT,
+      user_agent TEXT,
+      created_at INTEGER NOT NULL
+    )
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS api_calls (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id TEXT NOT NULL,
+      api_key_id INTEGER,
+      endpoint TEXT NOT NULL,
+      method TEXT NOT NULL,
+      status_code INTEGER,
+      response_time INTEGER,
+      created_at INTEGER NOT NULL,
+      FOREIGN KEY (api_key_id) REFERENCES api_keys(id) ON DELETE SET NULL
+    )
+  `);
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS user_preferences (
+      user_id TEXT PRIMARY KEY,
+      api_usage_alerts BOOLEAN NOT NULL DEFAULT 1,
+      security_alerts BOOLEAN NOT NULL DEFAULT 1,
+      data_update_alerts BOOLEAN NOT NULL DEFAULT 1,
+      updated_at INTEGER NOT NULL
     )
   `);
 
@@ -83,6 +120,11 @@ export function setupDatabase() {
     CREATE INDEX IF NOT EXISTS idx_enrollment_academic_year ON enrollment_report(academic_year);
     CREATE INDEX IF NOT EXISTS idx_api_keys_user ON api_keys(user_id);
     CREATE INDEX IF NOT EXISTS idx_api_keys_api_key ON api_keys(api_key);
+    CREATE INDEX IF NOT EXISTS idx_user_logs_user_id ON user_logs(user_id);
+    CREATE INDEX IF NOT EXISTS idx_user_logs_created_at ON user_logs(created_at);
+    CREATE INDEX IF NOT EXISTS idx_api_calls_user_id ON api_calls(user_id);
+    CREATE INDEX IF NOT EXISTS idx_api_calls_api_key_id ON api_calls(api_key_id);
+    CREATE INDEX IF NOT EXISTS idx_api_calls_created_at ON api_calls(created_at);
   `);
 }
 
