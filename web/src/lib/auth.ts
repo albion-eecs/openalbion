@@ -1,6 +1,7 @@
 import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
 import path from "path";
+import { cookies, headers } from "next/headers";
 
 type GoogleProfile = {
   email: string;
@@ -38,4 +39,21 @@ export const auth = betterAuth({
       }
     },
   },
-}); 
+});
+
+export async function getUser() {
+  try {
+    const session = await auth.api.getSession({
+      headers: headers()
+    });
+    
+    if (!session) {
+      return null;
+    }
+    
+    return session.user;
+  } catch (error) {
+    console.error('Error getting user:', error);
+    return null;
+  }
+}

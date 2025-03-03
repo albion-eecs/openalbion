@@ -5,8 +5,9 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import Link from 'next/link';
 import React from 'react';
+import { Settings, LogOut, ChevronDown } from 'lucide-react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 
 function HomeButton() {
   return (
@@ -17,6 +18,43 @@ function HomeButton() {
     >
       Back to Home
     </button>
+  );
+}
+
+function ProfileDropdown({ user }: { user: any }) {
+  const { logout } = useAuth();
+  const router = useRouter();
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" className="p-0 h-auto flex items-center gap-2 hover:bg-transparent">
+          <div className="relative">
+            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-sm font-medium text-white shadow-md shadow-secondary/20">
+              {user.name ? user.name.charAt(0).toUpperCase() : user.email.charAt(0).toUpperCase()}
+            </div>
+            <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
+          </div>
+          <div className="hidden md:flex flex-col items-start">
+            <span className="text-sm font-medium">{user.name || user.email.split('@')[0]}</span>
+            <span className="text-xs text-muted-foreground">{user.email}</span>
+          </div>
+          <ChevronDown className="h-4 w-4 text-muted-foreground hidden md:block" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-56">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => router.push('/dashboard/settings')} className="cursor-pointer">
+          <Settings className="mr-2 h-4 w-4" />
+          <span>Settings</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => logout()} className="cursor-pointer text-red-600">
+          <LogOut className="mr-2 h-4 w-4" />
+          <span>Log out</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
@@ -49,7 +87,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="container mx-auto py-10 px-4 max-w-7xl relative">
+    <div className="container mx-auto py-8"> 
       <div className="decorative-overlay absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30"></div>
       <div className="decorative-overlay absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30"></div>
       
@@ -70,18 +108,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-sm font-medium text-white shadow-md shadow-secondary/20">
-                  {user.name ? user.name.charAt(0).toUpperCase() : user.email.charAt(0).toUpperCase()}
-                </div>
-                <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-white"></span>
-              </div>
-              <div className="hidden md:block">
-                <p className="text-sm font-medium">{user.name || user.email.split('@')[0]}</p>
-                <p className="text-xs text-muted-foreground">{user.email}</p>
-              </div>
-            </div>
+            <ProfileDropdown user={user} />
             <div className="relative" style={{ zIndex: 40 }}>
               <HomeButton />
             </div>
@@ -92,7 +119,7 @@ export default function DashboardPage() {
       <main className="space-y-8">
         <section>
           <h2 className="text-xl font-semibold mb-4 relative">
-            Research Data Overview
+            Overview
             <span className="decorative-overlay absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-secondary to-purple-400"></span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -177,23 +204,67 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
               <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               <CardHeader>
-                <CardTitle>Climate Data API</CardTitle>
-                <CardDescription>Historical climate measurements</CardDescription>
+                <CardTitle>Headcount Data API</CardTitle>
+                <CardDescription>Student headcount reports</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm mb-4">Access to temperature, precipitation, and atmospheric measurements collected by the Albion College weather station.</p>
-                <Button className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300">Access API</Button>
+                <p className="text-sm mb-4">Access to student headcount data by demographics, program, and enrollment status.</p>
+                <Button 
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                >
+                  Access API
+                </Button>
               </CardContent>
             </Card>
             <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
               <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
               <CardHeader>
-                <CardTitle>Research Publications API</CardTitle>
-                <CardDescription>Albion College research papers</CardDescription>
+                <CardTitle>Class Size API</CardTitle>
+                <CardDescription>Course capacity and enrollment</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm mb-4">Programmatic access to research publications, citations, and abstracts from Albion College faculty and students.</p>
-                <Button className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300">Access API</Button>
+                <p className="text-sm mb-4">Detailed information about class sizes, capacity, and enrollment statistics for courses at Albion College.</p>
+                <Button 
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                >
+                  Access API
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <CardHeader>
+                <CardTitle>Faculty API</CardTitle>
+                <CardDescription>Faculty demographic information</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">Aggregated data about faculty characteristics including rank, diversity, and departmental distribution.</p>
+                <Button 
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                >
+                  Access API
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
+              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+              <CardHeader>
+                <CardTitle>Enrollment Reports API</CardTitle>
+                <CardDescription>Enrollment trends and statistics</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">Comprehensive enrollment data including admission rates, retention, and graduation statistics over time.</p>
+                <Button 
+                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300"
+                  onClick={() => window.open('https://docs.openalbion.org', '_blank')}
+                >
+                  Access API
+                </Button>
               </CardContent>
             </Card>
           </div>
