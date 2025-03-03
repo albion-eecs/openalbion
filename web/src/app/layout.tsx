@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
-import { JetBrains_Mono, Space_Grotesk, Outfit } from "next/font/google";
-import "./globals.css";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import { Sora } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
+import { AuthProvider } from '@/contexts/AuthContext';
 
-const spacegrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
   display: "swap",
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -22,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "OpenAlbion",
-  description: "A data portal exclusively for Albion College students, faculty, and alumni to aid in research.",
+  description: "A research data portal exclusively for Albion College students, faculty, and alumni.",
 };
 
 export default function RootLayout({
@@ -33,9 +36,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${spacegrotesk.variable} ${outfit.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
+        className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

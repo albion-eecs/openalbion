@@ -1,19 +1,41 @@
 import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
-import apiKeyPlugin from "./plugins/apiKeyPlugin";
+import path from "path";
+
+type GoogleProfile = {
+  email: string;
+  given_name?: string;
+  family_name?: string;
+  name?: string;
+  picture?: string;
+  [key: string]: any;
+};
 
 export const auth = betterAuth({
-  database: new Database("./sqlite.db"),
+  database: new Database(path.join(process.cwd(), "sqlite.db")),
+  basePath: "/api/auth",
   emailAndPassword: {
-    enabled: true,
-    validateEmail: (email: string) => {
-      if (email.endsWith('@albion.edu')) {
-        return { valid: true };
-      }
-      return { valid: false, error: 'Only @albion.edu emails are allowed' };
-    }
+    enabled: false,
   },
-  plugins: [
-    apiKeyPlugin()
-  ]
+  socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID as string,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      validateProfile: async (profile: GoogleProfile) => {
+        const email = profile.email;
+        
+        if (!email || !email.endsWith('@albion.edu')) {
+          return {
+            success: false,
+            error: {
+              message: 'Only @albion.edu email addresses are allowed',
+              code: 'invalid_email_domain'
+            }
+          };
+        }
+        
+        return { success: true };
+      }
+    },
+  },
 }); 

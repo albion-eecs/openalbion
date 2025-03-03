@@ -1,80 +1,19 @@
 'use client';
 
+import { createAuthClient } from 'better-auth/react';
 
-type User = {
-  id: string;
-  email: string;
-  name: string | null;
-};
+export const authClient = createAuthClient({
+  baseURL: typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000',
+});
 
-type Session = {
-  user: User;
-  expiresAt: Date;
-};
+export const useSession = authClient.useSession;
 
-async function fetchApi(endpoint: string, options?: RequestInit) {
-  const response = await fetch(`/api/auth${endpoint}`, {
-    ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      ...(options?.headers || {}),
-    },
-  });
-
-  if (!response.ok) {
-    const error = await response.json().catch(() => ({}));
-    throw new Error(error.message || 'Authentication error occurred');
-  }
-
-  return response.json();
+export async function signInWithGoogle() {
+  return authClient.signIn.social({ provider: 'google' });
 }
 
-export const authClient = {
-  async getSession(): Promise<Session | null> {
-    try {
-      const data = await fetchApi('/session');
-      return data.session;
-    } catch {
-      return null;
-    }
-  },
+export async function signOut() {
+  return authClient.signOut();
+}
 
-  async signInWithEmailAndPassword({ email, password }: { email: string; password: string }) {
-    const data = await fetchApi('/sign-in', {
-      method: 'POST',
-      body: JSON.stringify({
-        provider: 'emailAndPassword',
-        email,
-        password,
-      }),
-    });
-    return data;
-  },
-
-  async signUpWithEmailAndPassword({
-    email,
-    password,
-    userData,
-  }: {
-    email: string;
-    password: string;
-    userData?: { name: string };
-  }) {
-    const data = await fetchApi('/sign-up', {
-      method: 'POST',
-      body: JSON.stringify({
-        provider: 'emailAndPassword',
-        email,
-        password,
-        userData,
-      }),
-    });
-    return data;
-  },
-
-  async signOut() {
-    await fetchApi('/sign-out', {
-      method: 'POST',
-    });
-  },
-}; 
+export default authClient; 
