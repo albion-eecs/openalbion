@@ -78,7 +78,7 @@ export async function POST(req: NextRequest) {
       action: 'create_api_key',
       resourceType: 'api_key',
       resourceId: apiKey.id.toString(),
-      details: `Created API key: ${name}`
+      details: ` Created API key: ${name}`
     });
     
     return NextResponse.json({
@@ -131,7 +131,7 @@ export async function DELETE(req: NextRequest) {
           action: 'delete_api_key',
           resourceType: 'api_key',
           resourceId: keyId,
-          details: `Deleted API key: ${keyName}`
+          details: ` Deleted API key: ${keyName}`
         });
       }
     } else {
@@ -143,7 +143,7 @@ export async function DELETE(req: NextRequest) {
           action: 'revoke_api_key',
           resourceType: 'api_key',
           resourceId: keyId,
-          details: `Revoked API key: ${keyName}`
+          details: ` Revoked API key: ${keyName}`
         });
       }
     }
@@ -216,7 +216,7 @@ export async function PUT(req: NextRequest) {
       action: 'unrevoke_api_key',
       resourceType: 'api_key',
       resourceId: keyId,
-      details: `Unrevoked API key: ${keyName}`
+      details: ` Unrevoked API key: ${keyName}`
     });
     
     return NextResponse.json({
