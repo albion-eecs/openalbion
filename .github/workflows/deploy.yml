@@ -1,0 +1,78 @@
+name: Production Deployment
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+          
+      - name: Add VPS to known hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+          
+      - name: Create .env file from secrets
+        run: |
+          echo "# Environment configuration created by CI/CD" > .env
+          echo "BETTER_AUTH_SECRET=${{ secrets.BETTER_AUTH_SECRET }}" >> .env
+          echo "BETTER_AUTH_URL=${{ secrets.BETTER_AUTH_URL }}" >> .env
+          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> .env
+          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> .env
+          echo "NODE_ENV=production" >> .env
+          
+      - name: Deploy to VPS
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          DEPLOY_PATH: /var/www/openalbion
+        run: |
+          echo "[DEPLOYMENT] Initiating deployment sequence..."
+          ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH"
+          echo "[TRANSFER] Syncing files to production server..."
+          rsync -avz --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'node_modules' \
+            --exclude '.next' \
+            --exclude 'web/data/*.db' \
+            --exclude 'web/data/*.sqlite' \
+            --exclude 'web/data/*.sqlite3' \
+            --exclude 'web/storage' \
+            ./ $VPS_USER@$VPS_HOST:$DEPLOY_PATH
+
+          echo "[ENV] Securing environment file..."
+          ssh $VPS_USER@$VPS_HOST "chmod 600 $DEPLOY_PATH/.env"
+          
+          echo "[DATA] Ensuring data directories exist..."
+          ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH/web/data"
+          
+          echo "[BUILD] Executing build and deployment protocols..."
+          ssh $VPS_USER@$VPS_HOST "cd $DEPLOY_PATH && \
+            echo '[DOCKER] Starting services with rolling updates...' && \
+            docker-compose pull && \
+            docker-compose up -d --remove-orphans --build && \
+            echo '[MIGRATE] Running any pending database migrations...' && \
+            docker-compose exec -T web npm run db:setup && \
+            echo '[STATUS] Verifying container status...' && \
+            docker-compose ps"
+          
+      - name: Success
+        if: success()
+        run: |
+          echo "[SUCCESS] Deployment completed successfully"
+          echo "[STATUS] Active deployment: https://openalbion.org"          
+      - name: Failure
+        if: failure()
+        run: |
+          echo "[FAILURE] Deployment sequence aborted"
+          echo "[DEBUG] Review logs above for error analysis" 

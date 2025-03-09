@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
+      - BETTER_AUTH_URL=${BETTER_AUTH_URL}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+    volumes:
+      - ./web/data:/app/data
+      - ./web/public:/app/public
+    deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+    networks:
+      - app_network
+
+  docs:
+    build:
+      context: ./docs
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - NODE_ENV=production
+    deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+    networks:
+      - app_network
+  
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - /etc/ssl/openalbion:/etc/ssl/openalbion:ro
+    depends_on:
+      - web
+      - docs
+    deploy:
+      update_config:
+        order: start-first
+        failure_action: rollback
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge 
