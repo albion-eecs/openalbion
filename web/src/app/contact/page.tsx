@@ -79,8 +79,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-foreground">GitHub</h3>
                     <p>
-                      <Link href="https://github.com/eecs/openalbion" className="hover:underline text-purple-300 transition-all duration-300 hover:text-purple-200">
-                        github.com/eecs/openalbion
+                      <Link href="https://github.com/albion-eecs/openalbion" className="hover:underline text-purple-300 transition-all duration-300 hover:text-purple-200">
+                        github.com/albion-eecs/openalbion
                       </Link>
                     </p>
                     <p className="text-xs mt-1 text-muted-foreground">Start a pull request to contribute or open an issue if you find a problem</p>

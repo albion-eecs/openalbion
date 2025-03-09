@@ -155,7 +155,7 @@ export default function SecurityPage() {
                     <div className="rounded-lg border border-secondary/20 p-4 bg-card/30">
                       <h4 className="font-medium mb-2 text-sm">1. Contact Information</h4>
                       <p className="text-sm text-muted-foreground">
-                        Email security concerns to <span className="text-white font-medium">eecs-club-security@albion.edu</span> with detailed information about the potential vulnerability.
+                        Email security concerns to <span className="text-white font-medium">security@openalbion.org</span> with detailed information about the potential vulnerability.
                       </p>
                     </div>
                     

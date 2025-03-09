@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "OpenAlbion",
-  description: "A research data portal exclusively for Albion College students, faculty, and alumni.",
+  description: "A research data portal exclusively for Albion College students, faculty, and alumni",
 };
 
 export default function RootLayout({
