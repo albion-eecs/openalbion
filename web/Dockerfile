@@ -22,6 +22,9 @@ COPY . .
 # Learn more here: https://nextjs.org/telemetry
 ENV NEXT_TELEMETRY_DISABLED 1
 
+# Install tsx globally for database operations
+RUN npm install -g tsx
+
 RUN npm run build
 
 # Production image, copy all the files and run next
@@ -30,6 +33,9 @@ WORKDIR /app
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
+
+# Install tsx for database operations in production
+RUN npm install -g tsx
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
