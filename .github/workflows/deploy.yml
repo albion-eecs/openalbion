@@ -21,20 +21,15 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
           
-      - name: Create .env file from secrets
-        run: |
-          echo "# Environment configuration created by CI/CD" > .env
-          echo "BETTER_AUTH_SECRET=${{ secrets.BETTER_AUTH_SECRET }}" >> .env
-          echo "BETTER_AUTH_URL=${{ secrets.BETTER_AUTH_URL }}" >> .env
-          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> .env
-          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> .env
-          echo "NODE_ENV=production" >> .env
-          
       - name: Deploy to VPS
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USER: ${{ secrets.VPS_USER }}
           DEPLOY_PATH: /var/www/openalbion
+          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+          BETTER_AUTH_URL: ${{ secrets.BETTER_AUTH_URL }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         run: |
           echo "[DEPLOYMENT] Initiating deployment sequence..."
           ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH"
@@ -44,14 +39,12 @@ jobs:
             --exclude '.github' \
             --exclude 'node_modules' \
             --exclude '.next' \
+            --exclude 'web/sqlite.db' \
             --exclude 'web/data/*.db' \
             --exclude 'web/data/*.sqlite' \
             --exclude 'web/data/*.sqlite3' \
             --exclude 'web/storage' \
             ./ $VPS_USER@$VPS_HOST:$DEPLOY_PATH
-
-          echo "[ENV] Securing environment file..."
-          ssh $VPS_USER@$VPS_HOST "chmod 600 $DEPLOY_PATH/.env"
           
           echo "[DATA] Ensuring data directories exist..."
           ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH/web/data"
@@ -60,9 +53,16 @@ jobs:
           ssh $VPS_USER@$VPS_HOST "cd $DEPLOY_PATH && \
             echo '[DOCKER] Starting services with rolling updates...' && \
             docker-compose pull && \
+            BETTER_AUTH_SECRET='$BETTER_AUTH_SECRET' \
+            BETTER_AUTH_URL='$BETTER_AUTH_URL' \
+            GOOGLE_CLIENT_ID='$GOOGLE_CLIENT_ID' \
+            GOOGLE_CLIENT_SECRET='$GOOGLE_CLIENT_SECRET' \
+            NODE_ENV=production \
             docker-compose up -d --remove-orphans --build && \
             echo '[MIGRATE] Running any pending database migrations...' && \
             docker-compose exec -T web npm run db:setup && \
+            echo '[IMPORT] Importing database data...' && \
+            docker-compose exec -T web npm run db:import && \
             echo '[STATUS] Verifying container status...' && \
             docker-compose ps"
           
