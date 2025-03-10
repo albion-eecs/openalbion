@@ -13,8 +13,8 @@ services:
       - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
     volumes:
-      - ./web/data:/app/data
-      - ./web/public:/app/public
+      - web_data:/app/data
+      - web_public:/app/public
     networks:
       - app_network
 
@@ -44,4 +44,8 @@ services:
 
 networks:
   app_network:
-    driver: bridge 
+    driver: bridge
+
+volumes:
+  web_data:
+  web_public:
