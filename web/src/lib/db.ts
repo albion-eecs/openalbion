@@ -12,7 +12,7 @@ function initializeDb() {
   if (dbInstance) return dbInstance;
   
   try {
-    if (process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) {
+    if ((process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) || process.env.NEXT_PHASE === 'phase-production-build') {
       return null;
     }
     

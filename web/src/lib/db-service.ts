@@ -822,28 +822,42 @@ export const userPreferenceService = {
 
 export const statisticsService = {
   getDashboardStats: (userId: string) => {
-    const apiKeyCount = db.prepare(
-      'SELECT COUNT(*) as count FROM api_keys WHERE user_id = ? AND is_active = 1'
-    ).get(userId) as { count: number };
-    
-    const apiCallStats = apiCallService.getApiCallStatistics(userId);
-    
-    const recentActivities = userLogService.getRecentUserActivities(userId, 5);
-    
-    const datasetInfo = datasetService.getDatasetInfo();
-    
-    return {
-      apiKeyCount: apiKeyCount.count,
-      apiCallStats,
-      totalDatasets: datasetInfo.totalDatasets,
-      recentActivities,
-      datasetAccess: datasetInfo.datasets.map(dataset => ({
-        name: dataset.name,
-        available: dataset.available,
-        endpoint: dataset.endpoint
-      })),
-      newDatasetsThisMonth: datasetInfo.datasets.filter(d => d.available).length
-    };
+    try {
+      const apiKeyCount = db.prepare(
+        'SELECT COUNT(*) as count FROM api_keys WHERE user_id = ? AND is_active = 1'
+      ).get(userId) as { count: number };
+      
+      const apiCallStats = apiCallService.getApiCallStatistics(userId);
+      
+      const recentActivities = userLogService.getRecentUserActivities(userId, 5);
+      
+      const datasetInfo = datasetService.getDatasetInfo();
+      
+      return {
+        apiKeyCount: apiKeyCount.count,
+        apiCallStats,
+        totalDatasets: datasetInfo.totalDatasets,
+        recentActivities,
+        datasetAccess: datasetInfo.datasets.map(dataset => ({
+          name: dataset.name,
+          available: dataset.available,
+          endpoint: dataset.endpoint
+        })),
+        newDatasetsThisMonth: datasetInfo.datasets.filter(d => d.available).length
+      };
+    } catch (error) {
+      if (process.env.NEXT_PHASE === 'phase-production-build') {
+        return {
+          apiKeyCount: 0,
+          apiCallStats: { daily: 0, weekly: 0, monthly: 0, topEndpoints: [] },
+          totalDatasets: 0,
+          recentActivities: [],
+          datasetAccess: [],
+          newDatasetsThisMonth: 0
+        };
+      }
+      throw error;
+    }
   }
 };
 
