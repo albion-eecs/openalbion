@@ -40,14 +40,8 @@ jobs:
             --exclude 'node_modules' \
             --exclude '.next' \
             --exclude 'web/sqlite.db' \
-            --exclude 'web/data/*.db' \
-            --exclude 'web/data/*.sqlite' \
-            --exclude 'web/data/*.sqlite3' \
             --exclude 'web/storage' \
             ./ $VPS_USER@$VPS_HOST:$DEPLOY_PATH
-          
-          echo "[DATA] Ensuring data directories exist..."
-          ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH/web/data"
           
           echo "[BUILD] Executing build and deployment protocols..."
           ssh $VPS_USER@$VPS_HOST "cd $DEPLOY_PATH && \

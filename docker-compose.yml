@@ -13,7 +13,6 @@ services:
       - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
     volumes:
-      - ./web/data:/app/data
       - ./web/public:/app/public
       - ./web/sqlite.db:/app/sqlite.db
     deploy:
