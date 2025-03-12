@@ -538,6 +538,10 @@ export const userLogService = {
     ipAddress?: string;
     userAgent?: string;
   }) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return null;
+    }
+
     const now = Math.floor(Date.now() / 1000);
     
     const stmt = db.prepare(`
@@ -563,6 +567,18 @@ export const userLogService = {
   },
   
   getLogsByUserId: (userId: string, options: PaginationOptions = {}) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return {
+        data: [],
+        pagination: {
+          total: 0,
+          page: 1,
+          limit: 20,
+          totalPages: 0
+        }
+      };
+    }
+
     const { 
       page = 1, 
       limit = 20, 
@@ -600,6 +616,10 @@ export const userLogService = {
   },
   
   getRecentUserActivities: (userId: string, limit: number = 5) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return [];
+    }
+
     const query = `
       SELECT 
         id, user_id as userId, action, resource_type as resourceType,
@@ -623,6 +643,10 @@ export const apiCallService = {
     statusCode?: number;
     responseTime?: number;
   }) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return null;
+    }
+
     const now = Math.floor(Date.now() / 1000);
     
     const stmt = db.prepare(`
@@ -647,6 +671,18 @@ export const apiCallService = {
   },
   
   getApiCallsByUserId: (userId: string, options: PaginationOptions = {}) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return {
+        data: [],
+        pagination: {
+          total: 0,
+          page: 1,
+          limit: 20,
+          totalPages: 0
+        }
+      };
+    }
+
     const { 
       page = 1, 
       limit = 20, 
@@ -684,6 +720,10 @@ export const apiCallService = {
   },
   
   getApiCallCount: (userId: string, timeframe?: { start: number; end: number }) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return 0;
+    }
+
     let query = 'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ?';
     let params: (string | number)[] = [userId];
     
@@ -697,6 +737,15 @@ export const apiCallService = {
   },
   
   getApiCallStatistics: (userId: string) => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return {
+        daily: 0,
+        weekly: 0,
+        monthly: 0,
+        topEndpoints: []
+      };
+    }
+
     const now = Math.floor(Date.now() / 1000);
     const oneDayAgo = now - 86400; 
     const oneWeekAgo = now - 604800; 
@@ -863,6 +912,45 @@ export const statisticsService = {
 
 export const datasetService = {
   getDatasetInfo: () => {
+    if (process.env.NEXT_PHASE === 'phase-production-build') {
+      return {
+        totalDatasets: 4,
+        datasets: [
+          {
+            name: 'Headcount Data',
+            recordCount: 0,
+            available: false,
+            timeRange: 'N/A',
+            endpoint: '/api/data/headcounts'
+          },
+          {
+            name: 'Class Sizes',
+            recordCount: 0,
+            available: false,
+            terms: [],
+            departmentCount: 0,
+            endpoint: '/api/data/class-sizes'
+          },
+          {
+            name: 'Faculty',
+            recordCount: 0,
+            available: false,
+            years: [],
+            departmentCount: 0,
+            endpoint: '/api/data/faculty'
+          },
+          {
+            name: 'Enrollment Reports',
+            recordCount: 0,
+            available: false,
+            academicYears: [],
+            endpoint: '/api/data/enrollment'
+          }
+        ],
+        lastUpdate: 0
+      };
+    }
+
     const headcountsCount = db.prepare(
       'SELECT COUNT(*) as count FROM headcounts'
     ).get() as { count: number };
