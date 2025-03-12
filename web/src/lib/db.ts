@@ -54,10 +54,17 @@ function withDb<T>(operation: (db: Database.Database) => T): T | null {
 export function setupDatabase() {
   console.log('Setting up database...');
   
-  const db = new Database(dbPath);
-  db.pragma('foreign_keys = ON');
-  
+  if (process.env.NEXT_PHASE === 'phase-production-build') {
+    console.log('Skipping database setup during build phase');
+    return;
+  }
+
   try {
+    const db = initializeDb();
+    if (!db || db === mockDb) {
+      throw new Error('Failed to initialize database');
+    }
+    
     db.exec(`
       CREATE TABLE IF NOT EXISTS departments (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -175,7 +182,6 @@ export function setupDatabase() {
       CREATE INDEX IF NOT EXISTS idx_api_calls_created_at ON api_calls(created_at);
     `);
     
-    dbInstance = db;
     console.log('Database setup completed successfully');
   } catch (error) {
     console.error('Error setting up database:', error);
