@@ -4,11 +4,11 @@ import fs from 'fs';
 import { parse } from 'csv-parse/sync';
 import { fileURLToPath } from 'url';
 
-const dbPath = path.join(process.cwd(), 'sqlite.db');
+const dbPath = process.env.SQLITE_DB_PATH || 
+  (process.env.NODE_ENV === 'production' ? '/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
 
 let dbInstance: Database.Database | null = null;
 
-// Mock database implementation for build time
 const mockDb = {
   prepare: (sql: string) => ({
     get: () => ({ count: 0 }),
@@ -19,16 +19,28 @@ const mockDb = {
   transaction: (fn: any) => fn(mockDb)
 };
 
+function shouldUseMockDb() {
+  if (process.env.NEXT_PHASE === 'phase-production-build') return true;
+  if (process.env.USE_MOCK_DB === 'true') return true;
+  
+  if (process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) return true;
+  
+  return false;
+}
+
 function initializeDb() {
   if (dbInstance) return dbInstance;
   
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
+  if (shouldUseMockDb()) {
     return mockDb as any;
   }
   
   try {
-    if (process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) {
-      return mockDb as any;
+    if (process.env.NODE_ENV === 'production') {
+      const dbDir = path.dirname(dbPath);
+      if (!fs.existsSync(dbDir)) {
+        fs.mkdirSync(dbDir, { recursive: true });
+      }
     }
     
     dbInstance = new Database(dbPath);
