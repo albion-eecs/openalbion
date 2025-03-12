@@ -116,14 +116,15 @@ export async function DELETE(req: NextRequest) {
     }
     
     const action = searchParams.get('action') || 'revoke';
-    let success = false;
+    let success: boolean = false;
     
     const apiKeys = apiKeyService.getApiKeysByUserId(user.id) as ApiKey[];
     const apiKey = apiKeys.find(k => k.id === parseInt(keyId, 10));
     const keyName = apiKey ? apiKey.name : 'Unknown';
     
     if (action === 'delete') {
-      success = apiKeyService.deleteApiKey(parseInt(keyId, 10), user.id);
+      const result = apiKeyService.deleteApiKey(parseInt(keyId, 10), user.id);
+      success = result === true;
       
       if (success) {
         userLogService.createLog({
@@ -135,7 +136,8 @@ export async function DELETE(req: NextRequest) {
         });
       }
     } else {
-      success = apiKeyService.revokeApiKey(parseInt(keyId, 10), user.id);
+      const result = apiKeyService.revokeApiKey(parseInt(keyId, 10), user.id);
+      success = result === true;
       
       if (success) {
         userLogService.createLog({
