@@ -368,7 +368,7 @@ process.on('exit', () => {
   }
 });
 
-export default {
+const db = {
   prepare: (sql: string) => {
     return withDb(db => db.prepare(sql)) || {
       get: () => null,
@@ -383,3 +383,5 @@ export default {
     return withDb(db => db.transaction(fn));
   }
 };
+
+export default db;

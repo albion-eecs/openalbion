@@ -455,7 +455,7 @@ export const apiKeyService = {
       
       const result = stmt.run(userId, apiKey, name, createdAt, expiresAt);
       
-      if (result.changes === 1) {
+      if (result && result.changes === 1) {
         return {
           id: result.lastInsertRowid,
           userId,
@@ -512,19 +512,19 @@ export const apiKeyService = {
   revokeApiKey: (id: number, userId: string) => {
     const stmt = db.prepare('UPDATE api_keys SET is_active = 0 WHERE id = ? AND user_id = ?');
     const result = stmt.run(id, userId);
-    return result.changes === 1;
+    return result && result.changes === 1;
   },
   
   unrevokeApiKey: (id: number, userId: string) => {
     const stmt = db.prepare('UPDATE api_keys SET is_active = 1 WHERE id = ? AND user_id = ?');
     const result = stmt.run(id, userId);
-    return result.changes === 1;
+    return result && result.changes === 1;
   },
   
   deleteApiKey: (id: number, userId: string) => {
     const stmt = db.prepare('DELETE FROM api_keys WHERE id = ? AND user_id = ?');
     const result = stmt.run(id, userId);
-    return result.changes === 1;
+    return result && result.changes === 1;
   }
 };
 
@@ -559,7 +559,7 @@ export const userLogService = {
       now
     );
     
-    return result.lastInsertRowid;
+    return result ? result.lastInsertRowid : null;
   },
   
   getLogsByUserId: (userId: string, options: PaginationOptions = {}) => {
@@ -643,7 +643,7 @@ export const apiCallService = {
       now
     );
     
-    return result.lastInsertRowid;
+    return result ? result.lastInsertRowid : null;
   },
   
   getApiCallsByUserId: (userId: string, options: PaginationOptions = {}) => {
@@ -806,11 +806,15 @@ export const userPreferenceService = {
     values.push(now);
     values.push(userId);
     
-    db.prepare(`
+    const result = db.prepare(`
       UPDATE user_preferences 
       SET ${columns.join(', ')} 
       WHERE user_id = ?
     `).run(...values);
+    
+    if (!result) {
+      console.error('Failed to update user preferences');
+    }
     
     return updatedPrefs;
   }
