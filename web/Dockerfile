@@ -31,8 +31,10 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
 
-# Install tsx for database scripts
+# Install tsx and production dependencies
 RUN npm install -g tsx
+COPY package.json package-lock.json ./
+RUN npm ci --production
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -47,8 +49,9 @@ RUN chown nextjs:nodejs .next
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Copy TypeScript files needed for database operations
+# Copy TypeScript files and data files needed for database operations
 COPY --from=builder --chown=nextjs:nodejs /app/src/lib ./src/lib
+COPY --from=builder --chown=nextjs:nodejs /app/data ./data
 
 USER nextjs
 
