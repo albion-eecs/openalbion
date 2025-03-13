@@ -12,8 +12,33 @@ type GoogleProfile = {
   [key: string]: any;
 };
 
+const mockDb = {
+  prepare: () => ({
+    get: () => null,
+    all: () => [],
+    run: () => ({ changes: 0, lastInsertRowid: 0 })
+  }),
+  exec: () => {},
+  transaction: (fn: any) => fn(mockDb)
+};
+
+function getDatabase() {
+  if (process.env.NEXT_PHASE === 'phase-production-build') {
+    return mockDb as any;
+  }
+
+  try {
+    const dbPath = process.env.SQLITE_DB_PATH || 
+      (process.env.NODE_ENV === 'production' ? '/data/sqlite.db' : path.join(process.cwd(), "sqlite.db"));
+    return new Database(dbPath);
+  } catch (error) {
+    console.error('Failed to initialize auth database:', error);
+    return mockDb as any;
+  }
+}
+
 export const auth = betterAuth({
-  database: new Database(path.join(process.cwd(), "sqlite.db")),
+  database: getDatabase(),
   basePath: "/api/auth",
   emailAndPassword: {
     enabled: false,
