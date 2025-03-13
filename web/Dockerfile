@@ -34,7 +34,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 # Install tsx and production dependencies
 RUN npm install -g tsx
 COPY package.json package-lock.json ./
-RUN npm ci --production
+RUN npm ci --omit=dev
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -45,13 +45,15 @@ COPY --from=builder /app/public ./public
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
+# Allow database file creation in app root
+RUN touch sqlite.db && chown nextjs:nodejs sqlite.db
+
 # Automatically leverage output traces to reduce image size
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Copy TypeScript files and data files needed for database operations
+# Copy TypeScript files needed for database operations
 COPY --from=builder --chown=nextjs:nodejs /app/src/lib ./src/lib
-COPY --from=builder --chown=nextjs:nodejs /app/data ./data
 
 USER nextjs
 

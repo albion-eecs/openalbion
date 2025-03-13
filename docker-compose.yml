@@ -12,10 +12,10 @@ services:
       - BETTER_AUTH_URL=${BETTER_AUTH_URL}
       - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
       - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
-      - SQLITE_DB_PATH=/data/sqlite.db
+      - SQLITE_DB_PATH=/app/sqlite.db
     volumes:
       - ./web/public:/app/public
-      - sqlite:/data
+      - sqlite:/app/sqlite.db
     deploy:
       update_config:
         order: start-first
