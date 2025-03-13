@@ -15,7 +15,7 @@ services:
       - SQLITE_DB_PATH=/data/sqlite.db
     volumes:
       - ./web/public:/app/public
-      - sqlite_data:/data
+      - sqlite:/data
     deploy:
       update_config:
         order: start-first
@@ -60,5 +60,5 @@ networks:
     driver: bridge
 
 volumes:
-  sqlite_data:
+  sqlite:
     driver: local 

@@ -20,9 +20,7 @@ const mockDb = {
 };
 
 function shouldUseMockDb() {
-  if (process.env.NEXT_PHASE === 'phase-production-build') return true;
   if (process.env.USE_MOCK_DB === 'true') return true;
-  
   if (process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) return true;
   
   return false;
@@ -47,8 +45,8 @@ function initializeDb() {
     dbInstance.pragma('foreign_keys = ON');
     return dbInstance;
   } catch (error) {
-    console.warn('Failed to initialize database:', error);
-    return mockDb as any;
+    console.error('Failed to initialize database:', error);
+    return null;
   }
 }
 
@@ -73,7 +71,7 @@ export function setupDatabase() {
 
   try {
     const db = initializeDb();
-    if (!db || db === mockDb) {
+    if (!db) {
       throw new Error('Failed to initialize database');
     }
     

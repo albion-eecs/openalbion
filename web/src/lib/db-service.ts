@@ -882,6 +882,17 @@ export const statisticsService = {
       
       const datasetInfo = datasetService.getDatasetInfo();
       
+      if (!apiKeyCount || !apiCallStats || !recentActivities || !datasetInfo) {
+        return {
+          apiKeyCount: 0,
+          apiCallStats: { daily: 0, weekly: 0, monthly: 0, topEndpoints: [] },
+          totalDatasets: 0,
+          recentActivities: [],
+          datasetAccess: [],
+          newDatasetsThisMonth: 0
+        };
+      }
+      
       return {
         apiKeyCount: apiKeyCount.count,
         apiCallStats,
@@ -895,135 +906,132 @@ export const statisticsService = {
         newDatasetsThisMonth: datasetInfo.datasets.filter(d => d.available).length
       };
     } catch (error) {
-      if (process.env.NEXT_PHASE === 'phase-production-build') {
-        return {
-          apiKeyCount: 0,
-          apiCallStats: { daily: 0, weekly: 0, monthly: 0, topEndpoints: [] },
-          totalDatasets: 0,
-          recentActivities: [],
-          datasetAccess: [],
-          newDatasetsThisMonth: 0
-        };
-      }
-      throw error;
+      console.error('Error getting dashboard stats:', error);
+      return null;
     }
   }
 };
 
 export const datasetService = {
   getDatasetInfo: () => {
-    if (process.env.NEXT_PHASE === 'phase-production-build') {
+    try {
+      const headcountsCount = db.prepare(
+        'SELECT COUNT(*) as count FROM headcounts'
+      ).get() as { count: number };
+      
+      const headcountsYearRange = db.prepare(
+        'SELECT MIN(year) as minYear, MAX(year) as maxYear FROM headcounts'
+      ).get() as { minYear: number; maxYear: number };
+      
+      const classSizesCount = db.prepare(
+        'SELECT COUNT(*) as count FROM class_sizes'
+      ).get() as { count: number };
+      
+      const classTerms = db.prepare(
+        'SELECT DISTINCT term FROM class_sizes ORDER BY term'
+      ).all() as { term: string }[];
+      
+      const facultyCount = db.prepare(
+        'SELECT COUNT(*) as count FROM faculty'
+      ).get() as { count: number };
+      
+      const facultyYears = db.prepare(
+        'SELECT DISTINCT year FROM faculty ORDER BY year'
+      ).all() as { year: string }[];
+      
+      const enrollmentCount = db.prepare(
+        'SELECT COUNT(*) as count FROM enrollment_report'
+      ).get() as { count: number };
+      
+      const academicYears = db.prepare(
+        'SELECT DISTINCT academic_year FROM enrollment_report ORDER BY academic_year'
+      ).all() as { academic_year: string }[];
+      
+      const departmentCount = db.prepare(
+        'SELECT COUNT(*) as count FROM departments'
+      ).get() as { count: number };
+      
+      if (!headcountsCount || !headcountsYearRange || !classSizesCount || 
+          !facultyCount || !enrollmentCount || !departmentCount) {
+        return {
+          totalDatasets: 4,
+          datasets: [
+            {
+              name: 'Headcount Data',
+              recordCount: 0,
+              available: false,
+              timeRange: 'N/A',
+              endpoint: '/api/data/headcounts'
+            },
+            {
+              name: 'Class Sizes',
+              recordCount: 0,
+              available: false,
+              terms: [],
+              departmentCount: 0,
+              endpoint: '/api/data/class-sizes'
+            },
+            {
+              name: 'Faculty',
+              recordCount: 0,
+              available: false,
+              years: [],
+              departmentCount: 0,
+              endpoint: '/api/data/faculty'
+            },
+            {
+              name: 'Enrollment Reports',
+              recordCount: 0,
+              available: false,
+              academicYears: [],
+              endpoint: '/api/data/enrollment'
+            }
+          ],
+          lastUpdate: 0
+        };
+      }
+      
       return {
         totalDatasets: 4,
         datasets: [
           {
             name: 'Headcount Data',
-            recordCount: 0,
-            available: false,
-            timeRange: 'N/A',
+            recordCount: headcountsCount.count,
+            available: headcountsCount.count > 0,
+            timeRange: headcountsCount.count > 0 
+              ? `${headcountsYearRange.minYear} - ${headcountsYearRange.maxYear}` 
+              : 'N/A',
             endpoint: '/api/data/headcounts'
           },
           {
             name: 'Class Sizes',
-            recordCount: 0,
-            available: false,
-            terms: [],
-            departmentCount: 0,
+            recordCount: classSizesCount.count,
+            available: classSizesCount.count > 0,
+            terms: classTerms.map(t => t.term),
+            departmentCount: departmentCount.count,
             endpoint: '/api/data/class-sizes'
           },
           {
             name: 'Faculty',
-            recordCount: 0,
-            available: false,
-            years: [],
-            departmentCount: 0,
+            recordCount: facultyCount.count,
+            available: facultyCount.count > 0,
+            years: facultyYears.map(y => y.year),
+            departmentCount: departmentCount.count,
             endpoint: '/api/data/faculty'
           },
           {
             name: 'Enrollment Reports',
-            recordCount: 0,
-            available: false,
-            academicYears: [],
+            recordCount: enrollmentCount.count,
+            available: enrollmentCount.count > 0,
+            academicYears: academicYears.map(y => y.academic_year),
             endpoint: '/api/data/enrollment'
           }
         ],
-        lastUpdate: 0
+        lastUpdate: Math.floor(Date.now() / 1000)
       };
+    } catch (error) {
+      console.error('Error getting dataset info:', error);
+      return null;
     }
-
-    const headcountsCount = db.prepare(
-      'SELECT COUNT(*) as count FROM headcounts'
-    ).get() as { count: number };
-    
-    const headcountsYearRange = db.prepare(
-      'SELECT MIN(year) as minYear, MAX(year) as maxYear FROM headcounts'
-    ).get() as { minYear: number; maxYear: number };
-    
-    const classSizesCount = db.prepare(
-      'SELECT COUNT(*) as count FROM class_sizes'
-    ).get() as { count: number };
-    
-    const classTerms = db.prepare(
-      'SELECT DISTINCT term FROM class_sizes ORDER BY term'
-    ).all() as { term: string }[];
-    
-    const facultyCount = db.prepare(
-      'SELECT COUNT(*) as count FROM faculty'
-    ).get() as { count: number };
-    
-    const facultyYears = db.prepare(
-      'SELECT DISTINCT year FROM faculty ORDER BY year'
-    ).all() as { year: string }[];
-    
-    const enrollmentCount = db.prepare(
-      'SELECT COUNT(*) as count FROM enrollment_report'
-    ).get() as { count: number };
-    
-    const academicYears = db.prepare(
-      'SELECT DISTINCT academic_year FROM enrollment_report ORDER BY academic_year'
-    ).all() as { academic_year: string }[];
-    
-    const departmentCount = db.prepare(
-      'SELECT COUNT(*) as count FROM departments'
-    ).get() as { count: number };
-    
-    return {
-      totalDatasets: 4, 
-      datasets: [
-        {
-          name: 'Headcount Data',
-          recordCount: headcountsCount.count,
-          available: headcountsCount.count > 0,
-          timeRange: headcountsCount.count > 0 
-            ? `${headcountsYearRange.minYear} - ${headcountsYearRange.maxYear}` 
-            : 'N/A',
-          endpoint: '/api/data/headcounts'
-        },
-        {
-          name: 'Class Sizes',
-          recordCount: classSizesCount.count,
-          available: classSizesCount.count > 0,
-          terms: classTerms.map(t => t.term),
-          departmentCount: departmentCount.count,
-          endpoint: '/api/data/class-sizes'
-        },
-        {
-          name: 'Faculty',
-          recordCount: facultyCount.count,
-          available: facultyCount.count > 0,
-          years: facultyYears.map(y => y.year),
-          departmentCount: departmentCount.count,
-          endpoint: '/api/data/faculty'
-        },
-        {
-          name: 'Enrollment Reports',
-          recordCount: enrollmentCount.count,
-          available: enrollmentCount.count > 0,
-          academicYears: academicYears.map(y => y.academic_year),
-          endpoint: '/api/data/enrollment'
-        }
-      ],
-      lastUpdate: Math.floor(Date.now() / 1000) 
-    };
   }
 };

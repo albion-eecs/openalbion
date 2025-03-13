@@ -44,3 +44,6 @@ const handler = async (req: ApiRequest) => {
 };
 
 export const GET = withApiKeyValidation(handler);
+
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
