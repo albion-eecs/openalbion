@@ -182,7 +182,7 @@ export default function SecurityPage() {
                     className="w-full bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 relative z-10"
                     asChild
                   >
-                    <Link href="mailto:eecs-club-security@albion.edu">
+                    <Link href="mailto:security@openalbion.org">
                       <AlertTriangle className="h-4 w-4 mr-2" /> Report a Vulnerability
                     </Link>
                   </Button>
