@@ -27,7 +27,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           DEPLOY_PATH: /var/www/openalbion
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
-          BETTER_AUTH_URL: ${{ secrets.BETTER_AUTH_URL }}
+          BETTER_AUTH_URL: https://openalbion.org
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         run: |
@@ -53,10 +53,6 @@ jobs:
             GOOGLE_CLIENT_SECRET='$GOOGLE_CLIENT_SECRET' \
             NODE_ENV=production \
             docker-compose up -d --remove-orphans --build && \
-            echo '[MIGRATE] Running any pending database migrations...' && \
-            docker-compose exec -T web npm run db:setup && \
-            echo '[IMPORT] Importing database data...' && \
-            docker-compose exec -T web npm run db:import && \
             echo '[STATUS] Verifying container status...' && \
             docker-compose ps"
           
