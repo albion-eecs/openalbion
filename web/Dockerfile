@@ -48,14 +48,15 @@ RUN chown nextjs:nodejs .next
 # Create data directory for SQLite database
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
 
-# Create entrypoint script to manage database location
-RUN echo '#!/bin/sh\n\
-if [ -f /app/sqlite.db ] && [ ! -f /app/data/sqlite.db ]; then\n\
-  mv /app/sqlite.db /app/data/sqlite.db\n\
-fi\n\
-exec "$@"' > /app/entrypoint.sh && \
-chmod +x /app/entrypoint.sh && \
-chown nextjs:nodejs /app/entrypoint.sh
+# Create entrypoint script properly
+RUN set -e && \
+    echo '#!/bin/sh' > /app/entrypoint.sh && \
+    echo 'if [ -f /app/sqlite.db ] && [ ! -f /app/data/sqlite.db ]; then' >> /app/entrypoint.sh && \
+    echo '    mv /app/sqlite.db /app/data/sqlite.db' >> /app/entrypoint.sh && \
+    echo 'fi' >> /app/entrypoint.sh && \
+    echo 'exec "$@"' >> /app/entrypoint.sh && \
+    chmod +x /app/entrypoint.sh && \
+    chown nextjs:nodejs /app/entrypoint.sh
 
 # Automatically leverage output traces to reduce image size
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
