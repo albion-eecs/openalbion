@@ -5,33 +5,12 @@ import { parse } from 'csv-parse/sync';
 import { fileURLToPath } from 'url';
 
 const dbPath = process.env.SQLITE_DB_PATH || 
-  (process.env.NODE_ENV === 'production' ? '/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
+  (process.env.NODE_ENV === 'production' ? '/app/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
 
 let dbInstance: Database.Database | null = null;
 
-const mockDb = {
-  prepare: (sql: string) => ({
-    get: () => ({ count: 0 }),
-    all: () => [],
-    run: () => ({ changes: 0, lastInsertRowid: 0 })
-  }),
-  exec: () => {},
-  transaction: (fn: any) => fn(mockDb)
-};
-
-function shouldUseMockDb() {
-  if (process.env.USE_MOCK_DB === 'true') return true;
-  if (process.env.NODE_ENV === 'production' && !fs.existsSync(dbPath)) return true;
-  
-  return false;
-}
-
 function initializeDb() {
   if (dbInstance) return dbInstance;
-  
-  if (shouldUseMockDb()) {
-    return mockDb as any;
-  }
   
   try {
     if (process.env.NODE_ENV === 'production') {
@@ -63,11 +42,6 @@ function withDb<T>(operation: (db: Database.Database) => T): T | null {
 
 export function setupDatabase() {
   console.log('Setting up database...');
-  
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    console.log('Skipping database setup during build phase');
-    return;
-  }
 
   try {
     const db = initializeDb();
@@ -198,8 +172,6 @@ export function setupDatabase() {
     throw error;
   }
 }
-
-// Data import functions
 function parseCSV(filePath: string) {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   return parse(fileContent, {

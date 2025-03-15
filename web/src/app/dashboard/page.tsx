@@ -226,14 +226,6 @@ export default function DashboardPage() {
               Recent Activity
               <span className="decorative-overlay absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-secondary to-purple-400"></span>
             </h2>
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="text-xs border-secondary/30 hover:bg-secondary/10 hover:border-secondary/50"
-              onClick={() => router.push('/dashboard/activity')}
-            >
-              View All
-            </Button>
           </div>
           <Card className="border-secondary/20">
             <CardContent className="p-0">

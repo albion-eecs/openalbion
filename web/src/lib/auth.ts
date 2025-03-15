@@ -1,40 +1,20 @@
 import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
 import path from "path";
-import { cookies, headers } from "next/headers";
+import { headers } from "next/headers";
+import { APIError } from "better-auth/api";
 
-type GoogleProfile = {
+type User = {
+  id?: string;
   email: string;
-  given_name?: string;
-  family_name?: string;
-  name?: string;
-  picture?: string;
-  [key: string]: any;
-};
-
-const mockDb = {
-  prepare: () => ({
-    get: () => null,
-    all: () => [],
-    run: () => ({ changes: 0, lastInsertRowid: 0 })
-  }),
-  exec: () => {},
-  transaction: (fn: any) => fn(mockDb)
+  name?: string | null;
+  image?: string | null;
 };
 
 function getDatabase() {
-  if (process.env.NEXT_PHASE === 'phase-production-build') {
-    return mockDb as any;
-  }
-
-  try {
-    const dbPath = process.env.SQLITE_DB_PATH || 
-      (process.env.NODE_ENV === 'production' ? '/data/sqlite.db' : path.join(process.cwd(), "sqlite.db"));
-    return new Database(dbPath);
-  } catch (error) {
-    console.error('Failed to initialize auth database:', error);
-    return mockDb as any;
-  }
+  const dbPath = process.env.SQLITE_DB_PATH || 
+    (process.env.NODE_ENV === 'production' ? '/app/data/sqlite.db' : path.join(process.cwd(), "sqlite.db"));
+  return new Database(dbPath);
 }
 
 export const auth = betterAuth({
@@ -43,25 +23,19 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: false,
   },
+  onBeforeCreateUser: async (user: User) => {
+    if (!user.email || !user.email.endsWith('@albion.edu')) {
+      throw new APIError("UNAUTHORIZED", { 
+        message: "Only @albion.edu email addresses are allowed",
+        code: "invalid_email_domain"
+      });
+    }
+    return user;
+  },
   socialProviders: {
     google: {
       clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      validateProfile: async (profile: GoogleProfile) => {
-        const email = profile.email;
-        
-        if (!email || !email.endsWith('@albion.edu')) {
-          return {
-            success: false,
-            error: {
-              message: 'Only @albion.edu email addresses are allowed',
-              code: 'invalid_email_domain'
-            }
-          };
-        }
-        
-        return { success: true };
-      }
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
     },
   },
 });
