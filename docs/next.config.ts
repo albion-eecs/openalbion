@@ -8,7 +8,9 @@ const nextConfig: NextConfig = {
 };
 
 const withNextra = nextra({
-
+  search: {
+    codeblocks: false
+  }
 })
 
 export default withNextra(nextConfig)
