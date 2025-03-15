@@ -1,4 +1,4 @@
-export default {
+const meta = {
   index: "Introduction",
   'api-endpoints': 'API Endpoints',
   reference: {
@@ -12,4 +12,6 @@ export default {
     href: 'https://openalbion.org/dashboard'
   },
 }
+
+export default meta;
  

@@ -43,8 +43,8 @@ export default async function RootLayout({
           hue: 0,
           saturation: 0,
           lightness: {
-            light: 100,
-            dark: 20
+            light: 20,
+            dark: 100
           }
         }}
       />
