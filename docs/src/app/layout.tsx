@@ -28,7 +28,7 @@ const navbar = (
     }
   />
 )
-const footer = <Footer className="text-sm">MIT {new Date().getFullYear()} © Albion EECS Club</Footer>
+const footer = <Footer className="text-sm">MIT {new Date().getFullYear()} © Albion College EECS Club</Footer>
 
 
 export default async function RootLayout({
