@@ -16,10 +16,6 @@ services:
     volumes:
       - ./web/public:/app/public
       - sqlite_data:/app/data
-    deploy:
-      update_config:
-        order: start-first
-        failure_action: rollback
     networks:
       - app_network
 
@@ -30,10 +26,6 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
-    deploy:
-      update_config:
-        order: start-first
-        failure_action: rollback
     networks:
       - app_network
   
@@ -48,10 +40,6 @@ services:
     depends_on:
       - web
       - docs
-    deploy:
-      update_config:
-        order: start-first
-        failure_action: rollback
     networks:
       - app_network
 

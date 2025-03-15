@@ -64,7 +64,9 @@ jobs:
         if: success()
         run: |
           echo "[SUCCESS] Deployment completed successfully"
-          echo "[STATUS] Active deployment: https://openalbion.org"          
+          echo "[STATUS] Active deployments:"
+          echo "         - https://openalbion.org"
+          echo "         - https://docs.openalbion.org"
       - name: Failure
         if: failure()
         run: |
