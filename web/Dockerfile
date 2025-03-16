@@ -18,9 +18,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 ENV SQLITE_DB_PATH=/app/data/sqlite.db
 
 RUN mkdir -p /app/data && \
-    npx @better-auth/cli migrate -y && \
-    npm run db:setup && \
-    npm run db:import && \
+    npm run db:all && \
     chown -R node:node /app/data
 
 RUN npm run build
