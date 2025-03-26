@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 import { departmentService } from '@/lib/db-service';
-import { withApiKeyValidation, ApiRequest } from '@/lib/api-middleware';
+import { withApiKeyValidation } from '@/lib/api-middleware';
 
-const handler = async (req: ApiRequest) => {
+const handler = async () => {
   try {
     const departments = departmentService.getAll();
     
