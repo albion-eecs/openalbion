@@ -64,6 +64,7 @@ export default function DashboardPage() {
   const [isClient, setIsClient] = useState(false);
   const [stats, setStats] = useState<any>(null);
   const [statsLoading, setStatsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setIsClient(true);
@@ -76,18 +77,21 @@ export default function DashboardPage() {
   useEffect(() => {
     if (user) {
       const fetchStats = async () => {
+        setStatsLoading(true);
         try {
-          setStatsLoading(true);
-          const response = await fetch(`/api/dashboard/stats?userId=${user.id}`);
+          const response = await fetch(`/api/dashboard/stats?userId=${user.id}`, {
+            cache: 'no-store'
+          });
           
           if (response.ok) {
             const data = await response.json();
             setStats(data);
           } else {
-            console.error('Failed to fetch dashboard stats');
+            setError('Failed to load dashboard data');
           }
         } catch (error) {
           console.error('Error fetching dashboard stats:', error);
+          setError('An error occurred while loading dashboard data');
         } finally {
           setStatsLoading(false);
         }

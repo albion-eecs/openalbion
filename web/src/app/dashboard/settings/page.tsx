@@ -53,16 +53,18 @@ export default function SettingsPage() {
   const fetchApiKeys = async () => {
     try {
       setApiKeysLoading(true);
-      const response = await fetch('/api/keys');
-      const data = await response.json();
+      const response = await fetch('/api/keys', {
+        cache: 'no-store'
+      });
       
-      if (data.success) {
-        setApiKeys(data.data || []);
+      if (response.ok) {
+        const data = await response.json();
+        setApiKeys(data.data);
       } else {
-        console.error(data.error || 'Failed to fetch API keys');
+        console.error('Failed to fetch API keys');
       }
-    } catch (err) {
-      console.error('An error occurred while fetching API keys', err);
+    } catch (error) {
+      console.error('Error fetching API keys:', error);
     } finally {
       setApiKeysLoading(false);
     }
@@ -71,7 +73,9 @@ export default function SettingsPage() {
   const fetchNotificationPreferences = async () => {
     try {
       setPrefsLoading(true);
-      const response = await fetch('/api/user/preferences');
+      const response = await fetch('/api/user/preferences', {
+        cache: 'no-store'
+      });
       
       if (response.ok) {
         const data = await response.json();
@@ -112,6 +116,7 @@ export default function SettingsPage() {
           name: newKeyName,
           expiresInDays: neverExpires ? null : parseInt(expiresInDays, 10),
         }),
+        cache: 'no-store'
       });
       
       const data = await response.json();
@@ -136,13 +141,11 @@ export default function SettingsPage() {
   };
 
   const handleRevokeApiKey = async (id: number) => {
-    if (!confirm('Are you sure you want to revoke this API key? This action cannot be undone.')) {
-      return;
-    }
-    
     try {
+      setApiKeysLoading(true);
       const response = await fetch(`/api/keys?id=${id}&action=revoke`, {
-        method: 'DELETE',
+        method: 'PUT',
+        cache: 'no-store'
       });
       
       const data = await response.json();
@@ -152,17 +155,21 @@ export default function SettingsPage() {
           key.id === id ? { ...key, isActive: false } : key
         ));
       } else {
-        console.error(data.error || 'Failed to revoke API key');
+        console.error('Failed to revoke API key');
       }
-    } catch (err) {
-      console.error('An error occurred while revoking API key', err);
+    } catch (error) {
+      console.error('Error revoking API key:', error);
+    } finally {
+      setApiKeysLoading(false);
     }
   };
 
   const handleUnrevokeApiKey = async (id: number) => {
     try {
+      setApiKeysLoading(true);
       const response = await fetch(`/api/keys?id=${id}&action=unrevoke`, {
         method: 'PUT',
+        cache: 'no-store'
       });
       
       const data = await response.json();
@@ -172,21 +179,21 @@ export default function SettingsPage() {
           key.id === id ? { ...key, isActive: true } : key
         ));
       } else {
-        console.error(data.error || 'Failed to unrevoke API key');
+        console.error('Failed to unrevoke API key');
       }
-    } catch (err) {
-      console.error('An error occurred while unrevoking API key', err);
+    } catch (error) {
+      console.error('Error unrevoking API key:', error);
+    } finally {
+      setApiKeysLoading(false);
     }
   };
 
   const handleDeleteApiKey = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this API key? This action cannot be undone.')) {
-      return;
-    }
-    
     try {
+      setApiKeysLoading(true);
       const response = await fetch(`/api/keys?id=${id}&action=delete`, {
         method: 'DELETE',
+        cache: 'no-store'
       });
       
       const data = await response.json();
@@ -194,10 +201,12 @@ export default function SettingsPage() {
       if (data.success) {
         setApiKeys(apiKeys.filter(key => key.id !== id));
       } else {
-        console.error(data.error || 'Failed to delete API key');
+        console.error('Failed to delete API key');
       }
-    } catch (err) {
-      console.error('An error occurred while deleting API key', err);
+    } catch (error) {
+      console.error('Error deleting API key:', error);
+    } finally {
+      setApiKeysLoading(false);
     }
   };
 
@@ -225,6 +234,7 @@ export default function SettingsPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ [preference]: value }),
+        cache: 'no-store'
       });
       
       if (!response.ok) {

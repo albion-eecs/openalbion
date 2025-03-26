@@ -4,8 +4,8 @@ import { withApiKeyValidation, ApiRequest, parseQueryParams } from '@/lib/api-mi
 
 const handler = async (req: ApiRequest) => {
   try {
-    const { searchParams } = req.nextUrl;
-    const paginationOptions = parseQueryParams(req);
+    const searchParams = await req.nextUrl.searchParams;
+    const paginationOptions = await parseQueryParams(req);
     
     const academicYear = searchParams.get('academicYear') || null;
     const category = searchParams.get('category') || null;

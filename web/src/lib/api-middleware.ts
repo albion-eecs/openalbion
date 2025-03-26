@@ -26,7 +26,8 @@ export async function validateApiKey(req: ApiRequest) {
     ? authHeader.substring(7) 
     : null;
   
-  const queryApiKey = req.nextUrl.searchParams.get('apiKey');
+  const searchParams = await req.nextUrl.searchParams;
+  const queryApiKey = searchParams.get('apiKey');
   
   const apiKey = xApiKey || bearerToken || queryApiKey;
   
@@ -67,8 +68,8 @@ export function withApiKeyValidation(handler: (req: ApiRequest) => Promise<NextR
   };
 }
 
-export function parseQueryParams(req: NextRequest) {
-  const { searchParams } = req.nextUrl;
+export async function parseQueryParams(req: NextRequest) {
+  const searchParams = await req.nextUrl.searchParams;
   
   const page = parseInt(searchParams.get('page') || '1', 10);
   const limit = parseInt(searchParams.get('limit') || '100', 10);

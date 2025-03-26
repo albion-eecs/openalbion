@@ -10,7 +10,7 @@
     "generate-search": "pagefind --site .next/server/app --output-path public/_pagefind"
   },
   "dependencies": {
-    "next": "15.2.2",
+    "next": "^15.2.4",
     "nextra": "^4.2.16",
     "nextra-theme-docs": "^4.2.16",
     "react": "^19.0.0",

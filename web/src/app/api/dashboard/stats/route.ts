@@ -17,7 +17,8 @@ export async function GET(request: NextRequest) {
     }
     
     const url = new URL(request.url);
-    const requestedUserId = url.searchParams.get('userId');
+    const searchParams = await url.searchParams;
+    const requestedUserId = searchParams.get('userId');
     
     if (requestedUserId && requestedUserId !== user.id) {
       return NextResponse.json(

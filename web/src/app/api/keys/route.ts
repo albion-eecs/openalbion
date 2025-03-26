@@ -108,7 +108,7 @@ export async function DELETE(req: NextRequest) {
       );
     }
     
-    const { searchParams } = req.nextUrl;
+    const searchParams = await req.nextUrl.searchParams;
     const keyId = searchParams.get('id');
     
     if (!keyId) {
@@ -184,7 +184,7 @@ export async function PUT(req: NextRequest) {
       );
     }
     
-    const { searchParams } = req.nextUrl;
+    const searchParams = await req.nextUrl.searchParams;
     const keyId = searchParams.get('id');
     
     if (!keyId) {

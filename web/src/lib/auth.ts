@@ -78,7 +78,7 @@ export const auth = betterAuth({
 export async function getUser() {
   try {
     const session = await auth.api.getSession({
-      headers: headers()
+      headers: await headers()
     });
     
     if (!session) {
