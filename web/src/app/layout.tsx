@@ -1,26 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Sora } from 'next/font/google';
-import { JetBrains_Mono } from 'next/font/google';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import { AuthProvider } from '@/contexts/AuthContext';
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  display: "swap",
+const robotoSlab = localFont({
+  src: '../../public/fonts/RobotoSlab-VariableFont_wght.ttf',
+  variable: '--font-roboto-slab',
 });
 
 export const metadata: Metadata = {
@@ -36,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${sora.variable} ${jakarta.variable} ${jetbrainsMono.variable} antialiased bg-background text-foreground`}
+        className={`${robotoSlab.variable} antialiased bg-background text-foreground`}
       >
         <AuthProvider>
           {children}
