@@ -493,7 +493,16 @@ export const apiKeyService = {
              last_used_at as lastUsedAt, is_active as isActive
       FROM api_keys
       WHERE api_key = ? AND is_active = 1
-    `).get(apiKey) as any;
+    `).get(apiKey) as {
+      id: number;
+      userId: string;
+      apiKey: string;
+      name: string;
+      createdAt: number;
+      expiresAt: number | null;
+      lastUsedAt: number | null;
+      isActive: boolean;
+    } | undefined;
     
     if (!key) return null;
     
@@ -725,7 +734,7 @@ export const apiCallService = {
     }
 
     let query = 'SELECT COUNT(*) as count FROM api_calls WHERE user_id = ?';
-    let params: (string | number)[] = [userId];
+    const params: (string | number)[] = [userId];
     
     if (timeframe) {
       query += ' AND created_at BETWEEN ? AND ?';

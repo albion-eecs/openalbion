@@ -51,7 +51,7 @@ export async function validateApiKey(req: ApiRequest) {
     );
   }
   
-  (req as any).apiKey = keyData;
+  (req as ApiRequest).apiKey = keyData;
   
   return NextResponse.next();
 }

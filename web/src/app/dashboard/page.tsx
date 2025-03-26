@@ -21,7 +21,7 @@ function HomeButton() {
   );
 }
 
-function ProfileDropdown({ user }: { user: any }) {
+function ProfileDropdown({ user }: { user: { name?: string | null; email: string; id?: string } }) {
   const { logout } = useAuth();
   const router = useRouter();
 
@@ -62,7 +62,24 @@ export default function DashboardPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
-  const [stats, setStats] = useState<any>(null);
+  const [stats, setStats] = useState<{
+    apiKeyCount?: number;
+    apiCallStats?: { 
+      daily: number; 
+      weekly: number; 
+      monthly: number; 
+      topEndpoints: Array<{ endpoint: string; count: number }> 
+    };
+    totalDatasets?: number;
+    recentActivities?: Array<{
+      action: string;
+      resourceType?: string;
+      resourceId?: string;
+      details?: string;
+      createdAt: number;
+    }>;
+    newDatasetsThisMonth?: number;
+  } | null>(null);
   const [statsLoading, setStatsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -100,6 +117,12 @@ export default function DashboardPage() {
       fetchStats();
     }
   }, [user]);
+
+  useEffect(() => {
+    if (error) {
+      console.error('Dashboard error:', error);
+    }
+  }, [error]);
 
   if (loading || !isClient) {
     return (
@@ -249,8 +272,8 @@ export default function DashboardPage() {
                 </div>
               ) : (
                 <div className="divide-y divide-border/40">
-                  {(stats?.recentActivities || []).length > 0 ? (
-                    stats.recentActivities.map((item: any, i: number) => (
+                  {stats?.recentActivities && stats.recentActivities.length > 0 ? (
+                    stats.recentActivities.map((item, i: number) => (
                       <div key={i} className="flex items-start justify-between p-4 hover:bg-secondary/5 transition-colors duration-200">
                         <div className="flex items-start space-x-4">
                           <div className="h-9 w-9 rounded-full bg-gradient-to-br from-secondary/20 to-purple-500/20 flex items-center justify-center">

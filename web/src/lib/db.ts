@@ -172,6 +172,7 @@ export function setupDatabase() {
     throw error;
   }
 }
+
 function parseCSV(filePath: string) {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   return parse(fileContent, {
@@ -181,18 +182,22 @@ function parseCSV(filePath: string) {
   });
 }
 
+interface CSVRow {
+  [key: string]: string;
+}
+
 export function importDepartments(dataDir: string) {
   console.log('Importing departments...');
   
   const departments = new Set<string>();
   
   const classSizes = parseCSV(path.join(dataDir, 'class_sizes.csv'));
-  classSizes.forEach((row: any) => {
+  classSizes.forEach((row: CSVRow) => {
     if (row.Department) departments.add(row.Department);
   });
   
   const faculty = parseCSV(path.join(dataDir, 'faculty_characteristics.csv'));
-  faculty.forEach((row: any) => {
+  faculty.forEach((row: CSVRow) => {
     if (row.Department) departments.add(row.Department);
   });
   
@@ -338,7 +343,7 @@ export async function importAllData(dataDir: string) {
 const isDirectlyExecuted = () => {
   try {
     return process.argv[1] === fileURLToPath(import.meta.url);
-  } catch (e) {
+  } catch {
     return require.main === module;
   }
 };

@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, ReactNode } from 'react';
-import { authClient, useSession, signInWithGoogle, signOut } from '@/lib/auth-client';
+import { useSession, signInWithGoogle, signOut } from '@/lib/auth-client';
 
 type User = {
   id: string;

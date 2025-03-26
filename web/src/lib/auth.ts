@@ -9,7 +9,7 @@ type GoogleProfile = {
   email_verified: boolean;
   name?: string;
   picture?: string;
-  [key: string]: any;
+  [key: string]: string | boolean | number | null | undefined;
 };
 
 type User = {
