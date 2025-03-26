@@ -7,7 +7,7 @@ export function Footer() {
         <div className="flex items-center gap-2">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary font-semibold">OpenAlbion</span>
           <span className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} All rights reserved.
+            {new Date().getFullYear()} &copy; Albion College EECS Club
           </span>
         </div>
         <div className="flex gap-6 text-sm">
