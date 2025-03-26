@@ -286,8 +286,8 @@ export default function DashboardPage() {
             <span className="decorative-overlay absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-secondary to-purple-400"></span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
                 <CardTitle>Headcount Data API</CardTitle>
                 <CardDescription>Student headcount reports</CardDescription>
@@ -304,8 +304,8 @@ export default function DashboardPage() {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
                 <CardTitle>Class Size API</CardTitle>
                 <CardDescription>Course capacity and enrollment</CardDescription>
@@ -324,8 +324,8 @@ export default function DashboardPage() {
             </Card>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
                 <CardTitle>Faculty API</CardTitle>
                 <CardDescription>Faculty demographic information</CardDescription>
@@ -342,8 +342,8 @@ export default function DashboardPage() {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
                 <CardTitle>Enrollment Reports API</CardTitle>
                 <CardDescription>Enrollment trends and statistics</CardDescription>
@@ -362,8 +362,8 @@ export default function DashboardPage() {
             </Card>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-              <div className="decorative-overlay absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
                 <CardTitle>Departments API</CardTitle>
                 <CardDescription>Academic department information</CardDescription>

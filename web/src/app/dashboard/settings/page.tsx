@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Copy, Check, Trash, X, ArrowLeft, Settings, Key, Infinity, User } from 'lucide-react';
+import { Loader2, Copy, Trash, ArrowLeft, Key, User } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
 import { Checkbox } from "@/components/ui/checkbox";
@@ -26,7 +26,6 @@ type ApiKey = {
 export default function SettingsPage() {
   const router = useRouter();
   const { user, loading } = useAuth();
-  const [isClient, setIsClient] = useState(false);
   
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([]);
   const [apiKeysLoading, setApiKeysLoading] = useState(true);
