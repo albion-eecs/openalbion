@@ -1,19 +1,7 @@
-'use client';
-
 import { createAuthClient } from 'better-auth/react';
 
+const baseURL = typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000';
+
 export const authClient = createAuthClient({
-  baseURL: typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000',
+  baseURL
 });
-
-export const useSession = authClient.useSession;
-
-export async function signInWithGoogle() {
-  return authClient.signIn.social({ provider: 'google' });
-}
-
-export async function signOut() {
-  return authClient.signOut();
-}
-
-export default authClient; 

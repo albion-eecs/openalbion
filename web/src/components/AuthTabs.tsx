@@ -50,14 +50,12 @@ export const AuthTabs = memo(function AuthTabs() {
 
 const LogoutButton = memo(function LogoutButton() {
   const { logout } = useAuth();
-  const router = useRouter();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   const handleLogout = async () => {
     setIsLoggingOut(true);
     try {
-      await logout();
-      router.push('/');
+      await logout('/');
     } catch (error) {
       console.error('Error logging out:', error);
     } finally {

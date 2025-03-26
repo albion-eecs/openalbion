@@ -81,12 +81,9 @@ export default function Home() {
               <div className="absolute -bottom-16 -left-16 w-32 h-32 rounded-full border border-secondary/20 animate-ping opacity-20" style={{ animationDuration: '8s' }}></div>
             </div>
 
-            <div className="bg-card/60 backdrop-blur-sm rounded-2xl shadow-xl border border-secondary/30 p-8 h-auto relative group">
-              {/* Add purple glow effect on hover */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-secondary/0 to-purple-600/0 opacity-0 group-hover:opacity-100 rounded-2xl blur-sm transition-all duration-700 group-hover:from-secondary/20 group-hover:to-purple-600/20"></div>
-              
+            <div className="bg-card/60 backdrop-blur-sm rounded-2xl shadow-xl border border-secondary/30 p-8 h-auto relative">
               {/* Decorative purple elements */}
-              <div className="absolute -top-5 -right-5 w-24 h-24 bg-secondary/5 rounded-full filter blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute -top-5 -right-5 w-24 h-24 bg-secondary/5 rounded-full filter blur-xl opacity-0 transition-opacity duration-700"></div>
               
               <div className="relative">
                 <AuthProvider>

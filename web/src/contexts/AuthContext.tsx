@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, ReactNode } from 'react';
-import { useSession, signInWithGoogle, signOut } from '@/lib/auth-client';
+import { authClient } from '@/lib/auth-client';
 
 type User = {
   id: string;
@@ -13,30 +13,66 @@ type User = {
 type AuthContextType = {
   user: User | null;
   loading: boolean;
-  loginWithGoogle: () => Promise<void>;
-  logout: () => Promise<void>;
+  signUp: (email: string, password: string, name: string) => Promise<void>;
+  signIn: (email: string, password: string) => Promise<void>;
+  logout: (redirectPath?: string) => Promise<void>;
+  validateAlbionEmail: (email: string) => boolean;
 };
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const { data: session, isPending } = useSession();
+  const { data: session, isPending } = authClient.useSession();
   
   const user = session?.user as User | null;
   const loading = isPending;
 
-  const loginWithGoogle = async () => {
+  const validateAlbionEmail = (email: string) => {
+    const emailRegex = /@albion\.edu$/i;
+    return emailRegex.test(email);
+  };
+
+  const signUp = async (email: string, password: string, name: string) => {
     try {
-      await signInWithGoogle();
+      if (!validateAlbionEmail(email)) {
+        throw new Error('Only @albion.edu email addresses are allowed to register');
+      }
+      
+      await authClient.signUp.email({
+        email,
+        password,
+        name,
+        callbackURL: "/dashboard"
+      });
     } catch (error) {
-      console.error('Google login error:', error);
+      console.error('Signup error:', error);
       throw error;
     }
   };
 
-  const logout = async () => {
+  const signIn = async (email: string, password: string) => {
     try {
-      await signOut();
+      await authClient.signIn.email({
+        email,
+        password,
+        callbackURL: "/dashboard",
+        rememberMe: true
+      });
+    } catch (error) {
+      console.error('Login error:', error);
+      throw error;
+    }
+  };
+
+  const logout = async (redirectPath = "/") => {
+    try {
+      await authClient.signOut({
+        fetchOptions: {
+          onSuccess: () => {
+            window.location.href = redirectPath;
+          },
+        },
+      });
     } catch (error) {
       console.error('Logout error:', error);
       throw error;
@@ -44,7 +80,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, loginWithGoogle, logout }}>
+    <AuthContext.Provider value={{ user, loading, signUp, signIn, logout, validateAlbionEmail }}>
       {children}
     </AuthContext.Provider>
   );

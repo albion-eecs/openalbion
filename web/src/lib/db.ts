@@ -3,9 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { parse } from 'csv-parse/sync';
 import { fileURLToPath } from 'url';
-
-const dbPath = process.env.SQLITE_DB_PATH || 
-  (process.env.NODE_ENV === 'production' ? '/app/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
+import { dbPath } from './auth';
 
 let dbInstance: Database.Database | null = null;
 

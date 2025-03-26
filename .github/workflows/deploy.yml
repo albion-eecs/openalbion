@@ -28,8 +28,6 @@ jobs:
           DEPLOY_PATH: /var/www/openalbion
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
           BETTER_AUTH_URL: https://openalbion.org
-          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         run: |
           echo "[DEPLOYMENT] Initiating deployment sequence..."
           ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH"
@@ -49,8 +47,6 @@ jobs:
             docker-compose pull && \
             BETTER_AUTH_SECRET='$BETTER_AUTH_SECRET' \
             BETTER_AUTH_URL='$BETTER_AUTH_URL' \
-            GOOGLE_CLIENT_ID='$GOOGLE_CLIENT_ID' \
-            GOOGLE_CLIENT_SECRET='$GOOGLE_CLIENT_SECRET' \
             NODE_ENV=production \
             docker-compose up -d --remove-orphans --build && \
             echo '[STATUS] Verifying container status...' && \
