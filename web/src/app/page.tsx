@@ -21,7 +21,7 @@ export default function Home() {
       
       <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col items-center gap-2">
-          <h1 className="text-4xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">OpenAlbion</h1>
+          <h1 className="text-4xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">OpenAlbion</h1>
           <p className="text-sm text-muted-foreground">Albion College research data portal</p>
         </div>
       </header>
@@ -31,7 +31,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="flex flex-col justify-center space-y-8 md:sticky md:top-24">
               <div className="space-y-3">
-                <h2 className="text-4xl font-bold tracking-tight leading-tight">Albion&apos;s <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">Data Portal</span></h2>
+                <h2 className="text-4xl font-bold tracking-tight leading-tight">Albion&apos;s <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white">Data Portal</span></h2>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Access research data through standardized APIs to further academic research.
                 </p>
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl opacity-30"></div>
             
             <h2 className="text-3xl font-bold tracking-tight mb-6 text-center">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
                 Download Datasets
               </span>
             </h2>

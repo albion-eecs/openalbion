@@ -15,7 +15,7 @@ export default function SecurityPage() {
       {/* Header */}
       <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col items-center gap-2">
-          <h1 className="text-4xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">OpenAlbion</h1>
+          <h1 className="text-4xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">OpenAlbion</h1>
           <p className="text-sm text-muted-foreground">Albion College research data portal</p>
         </div>
       </header>
@@ -26,7 +26,7 @@ export default function SecurityPage() {
           {/* Hero Section */}
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold tracking-tight mb-4">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
                 Security & Privacy
               </span>
             </h2>
@@ -194,7 +194,7 @@ export default function SecurityPage() {
           {/* Additional Security Information */}
           <div className="mt-20">
             <h3 className="text-xl font-bold tracking-tight mb-6 text-center">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
                 Our Commitment to Security
               </span>
             </h3>

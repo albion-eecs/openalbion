@@ -11,7 +11,7 @@ export default function TermsPage() {
       <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div>
-            <Link href="/" className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+            <Link href="/" className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
               OpenAlbion
             </Link>
           </div>
@@ -27,7 +27,7 @@ export default function TermsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
             <h1 className="text-3xl font-bold tracking-tight mb-8 border-b pb-4 border-secondary/20">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-secondary to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
                 Terms of Service
               </span>
             </h1>

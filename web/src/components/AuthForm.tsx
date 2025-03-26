@@ -34,7 +34,7 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
       <div className="absolute -bottom-12 -right-12 w-40 h-40 bg-secondary/20 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDelay: '2s' }}></div>
       
       <div className="space-y-2 text-center relative z-10">
-        <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white via-secondary/80 to-white bg-clip-text text-transparent">Sign In with Google</h1>
+        <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white bg-clip-text text-transparent">Sign In with Google</h1>
         <p className="text-sm text-muted-foreground">
           Access the Albion research data portal with your @albion.edu account
         </p>

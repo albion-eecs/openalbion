@@ -141,7 +141,7 @@ export default function DashboardPage() {
         
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-6 rounded-2xl border border-secondary/20 bg-card/50 backdrop-blur-sm shadow-lg">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white via-secondary to-white bg-clip-text text-transparent">Dashboard</h1>
+            <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-white to-white bg-clip-text text-transparent">Dashboard</h1>
             <p className="text-muted-foreground mt-1">
               Welcome back, {user.name || user.email.split('@')[0]}
             </p>
