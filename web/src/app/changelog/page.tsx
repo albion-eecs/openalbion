@@ -1,8 +1,36 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
+import { ChangelogTimeline } from "@/components/ChangelogTimeline";
 
 export default function ChangelogPage() {
+  const changelogEntries = [
+    {
+      title: "UI & Infrastructure Updates",
+      version: "v0.2.0",
+      date: "March 26, 2025",
+      items: [
+        "Updated documentation code block styling",
+        "Added robots.txt and sitemaps",
+        "Added PGP key",
+        "UI enhancements including theme adjustments and logo upgrade",
+        "Switched to Roboto Slab font",
+        "Improved deployment configuration and database setup"
+      ]
+    },
+    {
+      title: "Initial Release",
+      version: "v0.1.0",
+      date: "March 14, 2025",
+      items: [
+        "Launched research data portal for Albion College students, faculty, and alumni",
+        "Basic authentication with @albion.edu email domains",
+        "Released initial API documentation and endpoints",
+        "Early Dashboard implementation"
+      ]
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       {/* Background elements */}
@@ -34,37 +62,8 @@ export default function ChangelogPage() {
             </span>
           </h1>
           
-          <div className="space-y-8">
-            {/* Version Entry */}
-            <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-[22px] before:bottom-0 before:w-px before:bg-secondary/30">
-              <div className="flex items-center gap-4">
-                <div className="absolute left-0 w-2 h-2 rounded-full bg-secondary -translate-x-[4px]"></div>
-                <h2 className="text-xl font-semibold text-white">Initial Release</h2>
-                <div className="px-3 py-1.5 rounded-md text-sm font-medium bg-secondary/30 text-white border-2 border-secondary/60 shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">v0.1.0</div>
-              </div>
-              <time className="text-sm text-muted-foreground ml-4 mt-1 block">March 14, 2025</time>
-              <div className="mt-4 ml-4 p-4 rounded-lg border border-secondary/10 bg-card/20">
-                <ul className="space-y-3 text-muted-foreground">
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary">•</span>
-                    <span>Launched research data portal for Albion College students, faculty, and alumni</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary">•</span>
-                    <span>Implemented secure authentication with @albion.edu email domains</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary">•</span>
-                    <span>Released initial API documentation and endpoints</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-secondary">•</span>
-                    <span>Early Dashboard implementation</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          {/* Using our new reusable component */}
+          <ChangelogTimeline entries={changelogEntries} />
         </div>
       </main>
       
