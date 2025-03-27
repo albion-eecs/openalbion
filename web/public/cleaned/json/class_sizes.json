@@ -1,0 +1,5322 @@
+[
+    {
+        "Department": "A&S",
+        "Term": "2002-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2003-Spring",
+        "Average Class Size": "23.7"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2003-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2004-Spring",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2005-Spring",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2005-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2006-Spring",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2006-Fall",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2007-Spring",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2008-Spring",
+        "Average Class Size": "23.4"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.5"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2009-Spring",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2009-Fall",
+        "Average Class Size": "27.2"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2010-Spring",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2010-Fall",
+        "Average Class Size": "25.5"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2011-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2011-Fall",
+        "Average Class Size": "22.8"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2012-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2013-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2014-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2015-Fall",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2018-Fall",
+        "Average Class Size": "-"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2016-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2017-Fall",
+        "Average Class Size": "22.0"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2018-Fall",
+        "Average Class Size": "28.0"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2019-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2020-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2021-Fall",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2022-Fall",
+        "Average Class Size": "22.5"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2023-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2016-Fall",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2017-Fall",
+        "Average Class Size": "27.4"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2018-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2019-Fall",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2020-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2021-Fall",
+        "Average Class Size": "20.9"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2022-Fall",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2023-Fall",
+        "Average Class Size": "20.1"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2003-Spring",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2003-Fall",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2004-Spring",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2004-Fall",
+        "Average Class Size": "15.3"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2005-Spring",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2005-Fall",
+        "Average Class Size": "11.9"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2006-Spring",
+        "Average Class Size": "14.0"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2006-Fall",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2007-Spring",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2007-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2008-Spring",
+        "Average Class Size": "12.5"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2008-Fall",
+        "Average Class Size": "9.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2009-Spring",
+        "Average Class Size": "8.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2009-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2010-Spring",
+        "Average Class Size": "12.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2010-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2011-Spring",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2011-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2012-Fall",
+        "Average Class Size": "9.6"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2013-Fall",
+        "Average Class Size": "10.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2014-Fall",
+        "Average Class Size": "9.4"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2015-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2018-Fall",
+        "Average Class Size": "-"
+    },
+    {
+        "Department": "ART",
+        "Term": "2016-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "ART",
+        "Term": "2017-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "ART",
+        "Term": "2018-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "ART",
+        "Term": "2019-Fall",
+        "Average Class Size": "9.9"
+    },
+    {
+        "Department": "ART",
+        "Term": "2020-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "ART",
+        "Term": "2021-Fall",
+        "Average Class Size": "11.4"
+    },
+    {
+        "Department": "ART",
+        "Term": "2022-Fall",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "ART",
+        "Term": "2023-Fall",
+        "Average Class Size": "14.1"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2016-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2017-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2018-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2019-Fall",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2020-Fall",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2021-Fall",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2022-Fall",
+        "Average Class Size": "16.8"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2023-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2002-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2003-Spring",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2003-Fall",
+        "Average Class Size": "20.2"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2004-Spring",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2005-Spring",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2005-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2006-Spring",
+        "Average Class Size": "22.0"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.4"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2009-Fall",
+        "Average Class Size": "26.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2010-Spring",
+        "Average Class Size": "25.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2010-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2011-Spring",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2011-Fall",
+        "Average Class Size": "26.8"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2012-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2013-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2014-Fall",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2015-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2016-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2017-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2018-Fall",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2019-Fall",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2020-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2021-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2022-Fall",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2023-Fall",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2002-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2003-Spring",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.0"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2004-Spring",
+        "Average Class Size": "20.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2005-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2005-Fall",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2006-Spring",
+        "Average Class Size": "24.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2006-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.0"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2007-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2008-Spring",
+        "Average Class Size": "26.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2009-Spring",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2009-Fall",
+        "Average Class Size": "25.3"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2010-Spring",
+        "Average Class Size": "27.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2010-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2011-Spring",
+        "Average Class Size": "25.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2011-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2012-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2013-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2014-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2015-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2016-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2017-Fall",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2018-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2019-Fall",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2020-Fall",
+        "Average Class Size": "11.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2021-Fall",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2022-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2023-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2002-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2003-Spring",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2004-Spring",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2004-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2005-Spring",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2005-Fall",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2006-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2006-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2007-Spring",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2009-Spring",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2009-Fall",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2010-Spring",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2010-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2011-Spring",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2011-Fall",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2012-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2013-Fall",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2014-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2015-Fall",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2016-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2017-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2018-Fall",
+        "Average Class Size": "24.3"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2019-Fall",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2020-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2021-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2022-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "COMM/SPCH",
+        "Term": "2023-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2002-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2003-Spring",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2003-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2004-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2005-Spring",
+        "Average Class Size": "23.4"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2005-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2006-Spring",
+        "Average Class Size": "23.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2006-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2007-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2007-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2008-Spring",
+        "Average Class Size": "26.2"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2008-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2009-Spring",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2009-Fall",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2010-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2010-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2011-Spring",
+        "Average Class Size": "20.4"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2011-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2012-Fall",
+        "Average Class Size": "23.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2013-Fall",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2014-Fall",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2015-Fall",
+        "Average Class Size": "24.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2016-Fall",
+        "Average Class Size": "27.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2017-Fall",
+        "Average Class Size": "26.3"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2018-Fall",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2019-Fall",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2020-Fall",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2021-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2022-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2023-Fall",
+        "Average Class Size": "17.6"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2002-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2003-Spring",
+        "Average Class Size": "9.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2003-Fall",
+        "Average Class Size": "9.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2004-Spring",
+        "Average Class Size": "12.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2004-Fall",
+        "Average Class Size": "14.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2005-Fall",
+        "Average Class Size": "10.4"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2006-Spring",
+        "Average Class Size": "11.7"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2006-Fall",
+        "Average Class Size": "10.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2007-Spring",
+        "Average Class Size": "10.5"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2007-Fall",
+        "Average Class Size": "7.3"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2008-Spring",
+        "Average Class Size": "8.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2008-Fall",
+        "Average Class Size": "7.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2009-Spring",
+        "Average Class Size": "9.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2009-Fall",
+        "Average Class Size": "7.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2010-Spring",
+        "Average Class Size": "9.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2010-Fall",
+        "Average Class Size": "6.4"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2011-Spring",
+        "Average Class Size": "9.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2011-Fall",
+        "Average Class Size": "7.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2012-Fall",
+        "Average Class Size": "6.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2013-Fall",
+        "Average Class Size": "7.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2014-Fall",
+        "Average Class Size": "6.5"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2015-Fall",
+        "Average Class Size": "10.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2016-Fall",
+        "Average Class Size": "8.1"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2017-Fall",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2018-Fall",
+        "Average Class Size": "12.6"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2019-Fall",
+        "Average Class Size": "14.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2020-Fall",
+        "Average Class Size": "9.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2021-Fall",
+        "Average Class Size": "9.1"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2022-Fall",
+        "Average Class Size": "11.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2023-Fall",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2002-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2003-Spring",
+        "Average Class Size": "17.6"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2003-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2004-Spring",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2004-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2005-Fall",
+        "Average Class Size": "17.6"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2006-Spring",
+        "Average Class Size": "18.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2007-Spring",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2007-Fall",
+        "Average Class Size": "18.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2008-Spring",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2008-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2009-Spring",
+        "Average Class Size": "16.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2009-Fall",
+        "Average Class Size": "17.0"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2010-Spring",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2010-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2011-Spring",
+        "Average Class Size": "17.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2011-Fall",
+        "Average Class Size": "14.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2012-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2013-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2014-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2015-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2016-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2017-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2018-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2019-Fall",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2020-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2021-Fall",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2022-Fall",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2023-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2013-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2014-Fall",
+        "Average Class Size": "25.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2015-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2016-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2017-Fall",
+        "Average Class Size": "27.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2018-Fall",
+        "Average Class Size": "27.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2019-Fall",
+        "Average Class Size": "8.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2020-Fall",
+        "Average Class Size": "9.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2022-Fall",
+        "Average Class Size": "9.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2023-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2013-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2014-Fall",
+        "Average Class Size": "30.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2015-Fall",
+        "Average Class Size": "28.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2016-Fall",
+        "Average Class Size": "34.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2017-Fall",
+        "Average Class Size": "33.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2018-Fall",
+        "Average Class Size": "28.5"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2019-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2020-Fall",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2021-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2022-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2023-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2002-Fall",
+        "Average Class Size": "27.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2003-Spring",
+        "Average Class Size": "30.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2003-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2004-Spring",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2004-Fall",
+        "Average Class Size": "23.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2005-Spring",
+        "Average Class Size": "25.1"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2005-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2006-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2008-Spring",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2008-Fall",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2009-Spring",
+        "Average Class Size": "25.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2009-Fall",
+        "Average Class Size": "25.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2010-Spring",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2010-Fall",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2011-Spring",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2011-Fall",
+        "Average Class Size": "28.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2012-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2013-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2014-Fall",
+        "Average Class Size": "25.0"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2015-Fall",
+        "Average Class Size": "20.9"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2016-Fall",
+        "Average Class Size": "19.5"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2017-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2018-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2019-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2020-Fall",
+        "Average Class Size": "19.0"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2021-Fall",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2022-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2023-Fall",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2002-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2003-Spring",
+        "Average Class Size": "18.9"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2003-Fall",
+        "Average Class Size": "20.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2004-Spring",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2004-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2005-Spring",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2005-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2006-Spring",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.0"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2007-Spring",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2007-Fall",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2008-Spring",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2008-Fall",
+        "Average Class Size": "18.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2009-Spring",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2009-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2010-Spring",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2010-Fall",
+        "Average Class Size": "19.5"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2011-Spring",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2011-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2012-Fall",
+        "Average Class Size": "14.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2013-Fall",
+        "Average Class Size": "16.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2014-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2015-Fall",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2016-Fall",
+        "Average Class Size": "17.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2017-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2018-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2019-Fall",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2020-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2021-Fall",
+        "Average Class Size": "20.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2022-Fall",
+        "Average Class Size": "19.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2023-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2013-Fall",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2014-Fall",
+        "Average Class Size": "9.5"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2015-Fall",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2016-Fall",
+        "Average Class Size": "17.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2017-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2018-Fall",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2019-Fall",
+        "Average Class Size": "14.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2020-Fall",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2021-Fall",
+        "Average Class Size": "9.3"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2022-Fall",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2023-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2002-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2003-Spring",
+        "Average Class Size": "19.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2003-Fall",
+        "Average Class Size": "18.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2004-Spring",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2004-Fall",
+        "Average Class Size": "18.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2005-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2006-Spring",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2006-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2007-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2008-Spring",
+        "Average Class Size": "16.8"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2009-Spring",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2009-Fall",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2010-Spring",
+        "Average Class Size": "16.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2010-Fall",
+        "Average Class Size": "17.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2011-Spring",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2011-Fall",
+        "Average Class Size": "15.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2012-Fall",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2013-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2014-Fall",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2015-Fall",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2016-Fall",
+        "Average Class Size": "26.2"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2017-Fall",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2018-Fall",
+        "Average Class Size": "18.4"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2019-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2020-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2021-Fall",
+        "Average Class Size": "23.8"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2022-Fall",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2023-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2003-Spring",
+        "Average Class Size": "16.7"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2003-Fall",
+        "Average Class Size": "18.4"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2004-Spring",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2004-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2005-Spring",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2005-Fall",
+        "Average Class Size": "16.7"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2006-Spring",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2006-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2007-Spring",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2007-Fall",
+        "Average Class Size": "15.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2008-Spring",
+        "Average Class Size": "11.0"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2009-Spring",
+        "Average Class Size": "10.5"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2009-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2010-Spring",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2010-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2011-Spring",
+        "Average Class Size": "12.7"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2011-Fall",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2012-Fall",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2013-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2014-Fall",
+        "Average Class Size": "15.7"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2015-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2016-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2017-Fall",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2018-Fall",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2019-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2020-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2021-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2022-Fall",
+        "Average Class Size": "12.3"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2023-Fall",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2002-Fall",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2003-Spring",
+        "Average Class Size": "9.3"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2003-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2004-Spring",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2004-Fall",
+        "Average Class Size": "16.3"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2005-Fall",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2006-Spring",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2006-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2007-Spring",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2007-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2008-Spring",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2009-Spring",
+        "Average Class Size": "12.2"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2009-Fall",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2010-Spring",
+        "Average Class Size": "11.8"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2010-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2011-Spring",
+        "Average Class Size": "11.5"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2011-Fall",
+        "Average Class Size": "11.8"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2012-Fall",
+        "Average Class Size": "10.2"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2013-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2014-Fall",
+        "Average Class Size": "13.2"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2015-Fall",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2016-Fall",
+        "Average Class Size": "12.5"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2017-Fall",
+        "Average Class Size": "12.6"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2018-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2019-Fall",
+        "Average Class Size": "10.9"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2020-Fall",
+        "Average Class Size": "10.9"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2021-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2022-Fall",
+        "Average Class Size": "8.8"
+    },
+    {
+        "Department": "MLAC/FRNL",
+        "Term": "2023-Fall",
+        "Average Class Size": "7.3"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2002-Fall",
+        "Average Class Size": "10.8"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2003-Spring",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2003-Fall",
+        "Average Class Size": "9.6"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2004-Spring",
+        "Average Class Size": "12.3"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2004-Fall",
+        "Average Class Size": "12.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2005-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2006-Spring",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2006-Fall",
+        "Average Class Size": "25.9"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2007-Fall",
+        "Average Class Size": "13.6"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2008-Spring",
+        "Average Class Size": "10.7"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2008-Fall",
+        "Average Class Size": "11.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2009-Spring",
+        "Average Class Size": "10.6"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2009-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2010-Spring",
+        "Average Class Size": "12.7"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2010-Fall",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2011-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2011-Fall",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2012-Fall",
+        "Average Class Size": "11.3"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2013-Fall",
+        "Average Class Size": "11.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2014-Fall",
+        "Average Class Size": "6.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2015-Fall",
+        "Average Class Size": "14.6"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2016-Fall",
+        "Average Class Size": "12.8"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2017-Fall",
+        "Average Class Size": "7.7"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2018-Fall",
+        "Average Class Size": "12.2"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2019-Fall",
+        "Average Class Size": "8.0"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2020-Fall",
+        "Average Class Size": "9.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2021-Fall",
+        "Average Class Size": "10.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2022-Fall",
+        "Average Class Size": "10.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2023-Fall",
+        "Average Class Size": "11.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2003-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2003-Fall",
+        "Average Class Size": "20.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2004-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2004-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2005-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2005-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2006-Fall",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2007-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2008-Spring",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2008-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2009-Fall",
+        "Average Class Size": "27.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2010-Spring",
+        "Average Class Size": "25.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2010-Fall",
+        "Average Class Size": "24.5"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2011-Spring",
+        "Average Class Size": "28.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2011-Fall",
+        "Average Class Size": "23.6"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2012-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2013-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2014-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2015-Fall",
+        "Average Class Size": "25.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2016-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2017-Fall",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2018-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2019-Fall",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2020-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2021-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2022-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2023-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2002-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2003-Spring",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2003-Fall",
+        "Average Class Size": "27.8"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2004-Spring",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2005-Spring",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2005-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2007-Spring",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2007-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2008-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2009-Spring",
+        "Average Class Size": "12.7"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2009-Fall",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2010-Spring",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2010-Fall",
+        "Average Class Size": "24.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2011-Spring",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2011-Fall",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2012-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2013-Fall",
+        "Average Class Size": "14.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2014-Fall",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2015-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2016-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2017-Fall",
+        "Average Class Size": "18.3"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2018-Fall",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2019-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2020-Fall",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2021-Fall",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2022-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2023-Fall",
+        "Average Class Size": "12.1"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.9"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2003-Spring",
+        "Average Class Size": "20.1"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2004-Spring",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2005-Spring",
+        "Average Class Size": "25.3"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2005-Fall",
+        "Average Class Size": "17.9"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2006-Spring",
+        "Average Class Size": "18.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2006-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2008-Spring",
+        "Average Class Size": "22.0"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2008-Fall",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2009-Spring",
+        "Average Class Size": "19.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2009-Fall",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2010-Spring",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2010-Fall",
+        "Average Class Size": "19.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2011-Spring",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2011-Fall",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2012-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2013-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2014-Fall",
+        "Average Class Size": "13.7"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2015-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2016-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2017-Fall",
+        "Average Class Size": "17.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2018-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2019-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2020-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2021-Fall",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2022-Fall",
+        "Average Class Size": "12.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2023-Fall",
+        "Average Class Size": "12.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2002-Fall",
+        "Average Class Size": "25.8"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2003-Spring",
+        "Average Class Size": "25.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2003-Fall",
+        "Average Class Size": "26.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2004-Spring",
+        "Average Class Size": "25.7"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2004-Fall",
+        "Average Class Size": "24.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2005-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2005-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2006-Spring",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2007-Spring",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2007-Fall",
+        "Average Class Size": "23"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2008-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2008-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.8"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2009-Fall",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2010-Spring",
+        "Average Class Size": "26.1"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2010-Fall",
+        "Average Class Size": "24.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2011-Spring",
+        "Average Class Size": "25.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2011-Fall",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2012-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2013-Fall",
+        "Average Class Size": "24.6"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2014-Fall",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2015-Fall",
+        "Average Class Size": "26.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2016-Fall",
+        "Average Class Size": "23.7"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2017-Fall",
+        "Average Class Size": "26.0"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2018-Fall",
+        "Average Class Size": "24.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2019-Fall",
+        "Average Class Size": "23.9"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2020-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2021-Fall",
+        "Average Class Size": "23.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2022-Fall",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2023-Fall",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2003-Spring",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2003-Fall",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2004-Spring",
+        "Average Class Size": "23.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2005-Spring",
+        "Average Class Size": "25.0"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2005-Fall",
+        "Average Class Size": "16.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2006-Fall",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2007-Spring",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2007-Fall",
+        "Average Class Size": "20.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2008-Spring",
+        "Average Class Size": "27.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2008-Fall",
+        "Average Class Size": "15.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2009-Spring",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2009-Fall",
+        "Average Class Size": "20.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2010-Spring",
+        "Average Class Size": "26.6"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2010-Fall",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2011-Spring",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2011-Fall",
+        "Average Class Size": "17.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2012-Fall",
+        "Average Class Size": "12.7"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2013-Fall",
+        "Average Class Size": "13.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2014-Fall",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2015-Fall",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2016-Fall",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2017-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2018-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2019-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2020-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2021-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2022-Fall",
+        "Average Class Size": "14.8"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2023-Fall",
+        "Average Class Size": "12.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2003-Spring",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2004-Spring",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2004-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2005-Spring",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2005-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2006-Spring",
+        "Average Class Size": "18.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2006-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2007-Spring",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2007-Fall",
+        "Average Class Size": "16.2"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2008-Spring",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2009-Spring",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2009-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2010-Spring",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2010-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2011-Spring",
+        "Average Class Size": "13.2"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2011-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2012-Fall",
+        "Average Class Size": "10.2"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2013-Fall",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2014-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2015-Fall",
+        "Average Class Size": "16.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2016-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2017-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2018-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2019-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2020-Fall",
+        "Average Class Size": "15.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2021-Fall",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2022-Fall",
+        "Average Class Size": "16.0"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2023-Fall",
+        "Average Class Size": "16.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2011-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2012-Fall",
+        "Average Class Size": "22.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2013-Fall",
+        "Average Class Size": "16.3"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2014-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2015-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2016-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2017-Fall",
+        "Average Class Size": "25.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2018-Fall",
+        "Average Class Size": "29.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2019-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2020-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2021-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2022-Fall",
+        "Average Class Size": "23.8"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2023-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2012-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2013-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2014-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2015-Fall",
+        "Average Class Size": "15.7"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2016-Fall",
+        "Average Class Size": "16.0"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2017-Fall",
+        "Average Class Size": "17.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2018-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2019-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2020-Fall",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2021-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2022-Fall",
+        "Average Class Size": "15.6"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2023-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2002-Fall",
+        "Average Class Size": "200830"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2003-Spring",
+        "Average Class Size": "200930"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2003-Fall",
+        "Average Class Size": "201030"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2004-Spring",
+        "Average Class Size": "201130"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2004-Fall",
+        "Average Class Size": "201230"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2005-Spring",
+        "Average Class Size": "201330"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2005-Fall",
+        "Average Class Size": "201430"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2006-Spring",
+        "Average Class Size": "201530"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2006-Fall",
+        "Average Class Size": "201630"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2007-Spring",
+        "Average Class Size": "201730"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2007-Fall",
+        "Average Class Size": "201830"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2008-Spring",
+        "Average Class Size": "201930"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2008-Fall",
+        "Average Class Size": "202030"
+    },
+    {
+        "Department": "DEPT",
+        "Term": "2009-Spring",
+        "Average Class Size": "202130"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2002-Fall",
+        "Average Class Size": "22.5"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2003-Spring",
+        "Average Class Size": "27.2"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2003-Fall",
+        "Average Class Size": "25.5"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2004-Spring",
+        "Average Class Size": "22.8"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2004-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2005-Fall",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "A&S",
+        "Term": "2007-Fall",
+        "Average Class Size": "-"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2006-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.0"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2007-Fall",
+        "Average Class Size": "28.0"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2008-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "ANTH",
+        "Term": "2009-Spring",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2006-Fall",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2007-Spring",
+        "Average Class Size": "27.4"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2007-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2008-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "SOC",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.9"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2002-Fall",
+        "Average Class Size": "9.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2003-Spring",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2003-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2004-Spring",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2004-Fall",
+        "Average Class Size": "9.6"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2005-Spring",
+        "Average Class Size": "10.8"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2005-Fall",
+        "Average Class Size": "9.4"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2006-Spring",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "ART/ARTH",
+        "Term": "2007-Fall",
+        "Average Class Size": "-"
+    },
+    {
+        "Department": "ART",
+        "Term": "2006-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "ART",
+        "Term": "2007-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "ART",
+        "Term": "2007-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "ART",
+        "Term": "2008-Spring",
+        "Average Class Size": "9.9"
+    },
+    {
+        "Department": "ART",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "ART",
+        "Term": "2009-Spring",
+        "Average Class Size": "11.4"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2006-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2008-Spring",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2008-Fall",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "ARTH",
+        "Term": "2009-Spring",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2002-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2003-Spring",
+        "Average Class Size": "26.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2003-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2004-Spring",
+        "Average Class Size": "26.8"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2004-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2005-Spring",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2005-Fall",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2006-Spring",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2006-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2007-Spring",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2007-Fall",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2008-Spring",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2008-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "BIOL",
+        "Term": "2009-Spring",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2002-Fall",
+        "Average Class Size": "22.2"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2003-Spring",
+        "Average Class Size": "25.3"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2003-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2004-Spring",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2004-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2005-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2006-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2006-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2007-Spring",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2007-Fall",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2008-Spring",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2008-Fall",
+        "Average Class Size": "11.4"
+    },
+    {
+        "Department": "CHEM",
+        "Term": "2009-Spring",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2002-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2003-Spring",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2003-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2004-Spring",
+        "Average Class Size": "22.7"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2004-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2005-Spring",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2005-Fall",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2006-Spring",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2006-Fall",
+        "Average Class Size": "24.2"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2007-Fall",
+        "Average Class Size": "24.3"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2008-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.9"
+    },
+    {
+        "Department": "COMM",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2002-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2003-Spring",
+        "Average Class Size": "21.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2003-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2004-Spring",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2004-Fall",
+        "Average Class Size": "23.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2005-Spring",
+        "Average Class Size": "21.5"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2005-Fall",
+        "Average Class Size": "21.2"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2006-Spring",
+        "Average Class Size": "24.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2006-Fall",
+        "Average Class Size": "27.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2007-Spring",
+        "Average Class Size": "26.3"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2007-Fall",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2008-Spring",
+        "Average Class Size": "21.8"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2008-Fall",
+        "Average Class Size": "20.6"
+    },
+    {
+        "Department": "E&M",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2002-Fall",
+        "Average Class Size": "7.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2003-Spring",
+        "Average Class Size": "7.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2003-Fall",
+        "Average Class Size": "6.4"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2004-Spring",
+        "Average Class Size": "7.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2004-Fall",
+        "Average Class Size": "6.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2005-Spring",
+        "Average Class Size": "7.2"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2005-Fall",
+        "Average Class Size": "6.5"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2006-Spring",
+        "Average Class Size": "10.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2006-Fall",
+        "Average Class Size": "8.1"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2007-Spring",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2007-Fall",
+        "Average Class Size": "12.6"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2008-Spring",
+        "Average Class Size": "14.8"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2008-Fall",
+        "Average Class Size": "9.9"
+    },
+    {
+        "Department": "EDUC",
+        "Term": "2009-Spring",
+        "Average Class Size": "9.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2002-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2003-Spring",
+        "Average Class Size": "17.0"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2003-Fall",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2004-Spring",
+        "Average Class Size": "14.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2004-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2005-Spring",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2005-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2006-Spring",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2006-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2007-Spring",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2007-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2008-Spring",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2008-Fall",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "ENGL",
+        "Term": "2009-Spring",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2005-Fall",
+        "Average Class Size": "25.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2006-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2006-Fall",
+        "Average Class Size": "24"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2007-Spring",
+        "Average Class Size": "27.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2007-Fall",
+        "Average Class Size": "27.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2008-Spring",
+        "Average Class Size": "8.0"
+    },
+    {
+        "Department": "ENVN",
+        "Term": "2008-Fall",
+        "Average Class Size": "9.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2005-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2005-Fall",
+        "Average Class Size": "30.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2006-Spring",
+        "Average Class Size": "28.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2006-Fall",
+        "Average Class Size": "34"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2007-Spring",
+        "Average Class Size": "33.3"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2007-Fall",
+        "Average Class Size": "28.5"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2008-Spring",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2008-Fall",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "ETHN",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2002-Fall",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2003-Spring",
+        "Average Class Size": "25.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2003-Fall",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2004-Spring",
+        "Average Class Size": "28.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2004-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2005-Spring",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2005-Fall",
+        "Average Class Size": "25.0"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2006-Spring",
+        "Average Class Size": "20.9"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.5"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2007-Spring",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2007-Fall",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2008-Spring",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2008-Fall",
+        "Average Class Size": "19.0"
+    },
+    {
+        "Department": "GEOL",
+        "Term": "2009-Spring",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.2"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2003-Spring",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.5"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2004-Spring",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2004-Fall",
+        "Average Class Size": "14.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2005-Spring",
+        "Average Class Size": "16.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2005-Fall",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2006-Spring",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2006-Fall",
+        "Average Class Size": "17.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2008-Spring",
+        "Average Class Size": "19.9"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2008-Fall",
+        "Average Class Size": "23.1"
+    },
+    {
+        "Department": "HIST",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.1"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2005-Spring",
+        "Average Class Size": "12.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2005-Fall",
+        "Average Class Size": "9.5"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2006-Spring",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2006-Fall",
+        "Average Class Size": "17"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2007-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2007-Fall",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2008-Spring",
+        "Average Class Size": "14.0"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2008-Fall",
+        "Average Class Size": "13.3"
+    },
+    {
+        "Department": "INTN",
+        "Term": "2009-Spring",
+        "Average Class Size": "9.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2003-Spring",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2003-Fall",
+        "Average Class Size": "17.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2004-Spring",
+        "Average Class Size": "15.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2004-Fall",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2005-Spring",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2005-Fall",
+        "Average Class Size": "22.4"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2006-Spring",
+        "Average Class Size": "21.3"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2006-Fall",
+        "Average Class Size": "26.2"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2007-Spring",
+        "Average Class Size": "19.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2007-Fall",
+        "Average Class Size": "18.4"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2008-Spring",
+        "Average Class Size": "20.7"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.6"
+    },
+    {
+        "Department": "KIN/PHED",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2003-Spring",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2003-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2004-Spring",
+        "Average Class Size": "14.5"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2004-Fall",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2005-Spring",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2005-Fall",
+        "Average Class Size": "15.7"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2006-Spring",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2006-Fall",
+        "Average Class Size": "19.8"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2007-Spring",
+        "Average Class Size": "17.3"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2007-Fall",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2008-Spring",
+        "Average Class Size": "16.1"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2008-Fall",
+        "Average Class Size": "14.2"
+    },
+    {
+        "Department": "MATH/CS",
+        "Term": "2009-Spring",
+        "Average Class Size": "15.4"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.9"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2003-Spring",
+        "Average Class Size": "14.7"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2003-Fall",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2004-Spring",
+        "Average Class Size": "11.8"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2004-Fall",
+        "Average Class Size": "10.2"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2005-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2005-Fall",
+        "Average Class Size": "13.2"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2006-Spring",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2006-Fall",
+        "Average Class Size": "12.5"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2007-Spring",
+        "Average Class Size": "12.6"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2007-Fall",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2008-Spring",
+        "Average Class Size": "10.9"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2008-Fall",
+        "Average Class Size": "10.9"
+    },
+    {
+        "Department": "MLAC",
+        "Term": "2009-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2002-Fall",
+        "Average Class Size": "11.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2003-Spring",
+        "Average Class Size": "12.4"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2003-Fall",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2004-Spring",
+        "Average Class Size": "13.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2004-Fall",
+        "Average Class Size": "11.3"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2005-Spring",
+        "Average Class Size": "11.5"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2005-Fall",
+        "Average Class Size": "6.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2006-Spring",
+        "Average Class Size": "14.6"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2006-Fall",
+        "Average Class Size": "12.75"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2007-Spring",
+        "Average Class Size": "7.7"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2007-Fall",
+        "Average Class Size": "12.2"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2008-Spring",
+        "Average Class Size": "8.0"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2008-Fall",
+        "Average Class Size": "9.1"
+    },
+    {
+        "Department": "MUS",
+        "Term": "2009-Spring",
+        "Average Class Size": "10.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2002-Fall",
+        "Average Class Size": "23.2"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2003-Spring",
+        "Average Class Size": "27.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2003-Fall",
+        "Average Class Size": "24.5"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2004-Spring",
+        "Average Class Size": "23.6"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2004-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2005-Spring",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2005-Fall",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2006-Spring",
+        "Average Class Size": "25.1"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2006-Fall",
+        "Average Class Size": "21.6"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2007-Spring",
+        "Average Class Size": "21.7"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2008-Spring",
+        "Average Class Size": "24.9"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2008-Fall",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "PHIL",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2002-Fall",
+        "Average Class Size": "21.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2003-Spring",
+        "Average Class Size": "20.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2003-Fall",
+        "Average Class Size": "24.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2004-Spring",
+        "Average Class Size": "24.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2004-Fall",
+        "Average Class Size": "19.1"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2005-Spring",
+        "Average Class Size": "14.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2005-Fall",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2006-Spring",
+        "Average Class Size": "15.8"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2006-Fall",
+        "Average Class Size": "16.5"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2007-Spring",
+        "Average Class Size": "18.3"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2007-Fall",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2008-Spring",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2008-Fall",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "PHYS",
+        "Term": "2009-Spring",
+        "Average Class Size": "14.4"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2002-Fall",
+        "Average Class Size": "18.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2003-Spring",
+        "Average Class Size": "17.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2004-Spring",
+        "Average Class Size": "18.0"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2004-Fall",
+        "Average Class Size": "11.2"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2005-Fall",
+        "Average Class Size": "13.7"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2006-Spring",
+        "Average Class Size": "18.8"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2006-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2007-Spring",
+        "Average Class Size": "17.6"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2007-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2008-Spring",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2008-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "PLSC",
+        "Term": "2009-Spring",
+        "Average Class Size": "17.5"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2002-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2003-Spring",
+        "Average Class Size": "24.8"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2003-Fall",
+        "Average Class Size": "24.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2004-Spring",
+        "Average Class Size": "25.2"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2004-Fall",
+        "Average Class Size": "23.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2005-Spring",
+        "Average Class Size": "24.6"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2005-Fall",
+        "Average Class Size": "23.5"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2006-Spring",
+        "Average Class Size": "26.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2006-Fall",
+        "Average Class Size": "23.7"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2007-Spring",
+        "Average Class Size": "26.0"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2007-Fall",
+        "Average Class Size": "24.4"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2008-Spring",
+        "Average Class Size": "23.9"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2008-Fall",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "PSYC",
+        "Term": "2009-Spring",
+        "Average Class Size": "23.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2002-Fall",
+        "Average Class Size": "15.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2003-Spring",
+        "Average Class Size": "20.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2003-Fall",
+        "Average Class Size": "19.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2004-Spring",
+        "Average Class Size": "17.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2004-Fall",
+        "Average Class Size": "12.7"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.2"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2005-Fall",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2006-Spring",
+        "Average Class Size": "15.9"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2006-Fall",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2007-Spring",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2007-Fall",
+        "Average Class Size": "21.4"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2008-Spring",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2008-Fall",
+        "Average Class Size": "20.3"
+    },
+    {
+        "Department": "RELG",
+        "Term": "2009-Spring",
+        "Average Class Size": "20.8"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2002-Fall",
+        "Average Class Size": "13.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2003-Spring",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2003-Fall",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2004-Spring",
+        "Average Class Size": "15.5"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2004-Fall",
+        "Average Class Size": "10.2"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2005-Spring",
+        "Average Class Size": "11.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2005-Fall",
+        "Average Class Size": "19.6"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2006-Spring",
+        "Average Class Size": "16.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2006-Fall",
+        "Average Class Size": "18.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2007-Spring",
+        "Average Class Size": "22.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2007-Fall",
+        "Average Class Size": "15.1"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2008-Spring",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2008-Fall",
+        "Average Class Size": "15.3"
+    },
+    {
+        "Department": "THEA",
+        "Term": "2009-Spring",
+        "Average Class Size": "17.4"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2004-Spring",
+        "Average Class Size": "21.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2004-Fall",
+        "Average Class Size": "22.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2005-Spring",
+        "Average Class Size": "16.3"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2005-Fall",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2006-Spring",
+        "Average Class Size": "24.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2006-Fall",
+        "Average Class Size": "20.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2007-Spring",
+        "Average Class Size": "25.5"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2007-Fall",
+        "Average Class Size": "29.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2008-Spring",
+        "Average Class Size": "23.0"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2008-Fall",
+        "Average Class Size": "18.7"
+    },
+    {
+        "Department": "WGS",
+        "Term": "2009-Spring",
+        "Average Class Size": "19.4"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2004-Fall",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2005-Spring",
+        "Average Class Size": "13.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2005-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2006-Spring",
+        "Average Class Size": "15.7"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2006-Fall",
+        "Average Class Size": "16"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2007-Spring",
+        "Average Class Size": "17.8"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2007-Fall",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2008-Spring",
+        "Average Class Size": "14.3"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2008-Fall",
+        "Average Class Size": "12.9"
+    },
+    {
+        "Department": "LA 101",
+        "Term": "2009-Spring",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2002-Fall",
+        "Average Class Size": "15.6"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2003-Spring",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2003-Fall",
+        "Average Class Size": "15.2"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2004-Spring",
+        "Average Class Size": "15.0"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2004-Fall",
+        "Average Class Size": "16.9"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2005-Spring",
+        "Average Class Size": "11.9"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2005-Fall",
+        "Average Class Size": "12.3"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2006-Spring",
+        "Average Class Size": "13.6"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2006-Fall",
+        "Average Class Size": "16.6"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2007-Spring",
+        "Average Class Size": "14.9"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2007-Fall",
+        "Average Class Size": "15.2"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2008-Spring",
+        "Average Class Size": "13.0"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2008-Fall",
+        "Average Class Size": "11.8"
+    },
+    {
+        "Department": "SPEC",
+        "Term": "2009-Spring",
+        "Average Class Size": "13.0"
+    }
+]

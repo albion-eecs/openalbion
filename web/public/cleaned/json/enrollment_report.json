@@ -1,0 +1,3817 @@
+[
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "343",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "344",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "403",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "451",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "466",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "401",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "417",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "503",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "394",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "444",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "352",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "340",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "354",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "376",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "380",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "429",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "480",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "498",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "478",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "569",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "553",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "486",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New High School Graduates",
+        "Full Time": "521",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "12",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "18",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "16",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "25",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "20",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "5",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "21",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "28",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "46",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "22",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "25",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "26",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "12",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "17",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "11",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "11",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "3",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "11",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "8",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "7",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "12",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "368",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "376",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "444",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "509",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "506",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "431",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "450",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "531",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "436",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "462",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "369",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "359",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "373",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "399",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "397",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "452",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "492",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "524",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "495",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "577",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "571",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "503",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "538",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "20",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "20",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "19",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "16",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "16",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "18",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "21",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "12",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "15",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "22",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "17",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "274",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "289",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "359",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "343",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "315",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "343",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "385",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "336",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "367",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "300",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "303",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "302",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "287",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "338",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "358",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "424",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "441",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "423",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "512",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "501",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "436",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "461",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "383",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "294",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "316",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "384",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "368",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "342",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "364",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "409",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "367",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "382",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "321",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "313",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "318",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "311",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "358",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "378",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "445",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "464",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "446",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "529",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "515",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "457",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "484",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "404",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New High School Grads (w/ 6+ units)",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "3",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "249",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "306",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "279",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "273",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "288",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "308",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "280",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "329",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "274",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "257",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "254",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "244",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "317",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "332",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "347",
+        "Part Time": "9"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "359",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "346",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "404",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "397",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "362",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "392",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "329",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "305",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "4",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "19",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "19",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "14",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "16",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "34",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "39",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "49",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "66",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "60",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "38",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "31",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "44",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "36",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "265",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "332",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "297",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "290",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "297",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "336",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "296",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "359",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "285",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "286",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "272",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "266",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "327",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "334",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "385",
+        "Part Time": "9"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "399",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "401",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "475",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "460",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "405",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "432",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "377",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "346",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "New Transfer Students",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "356",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "301",
+        "Part Time": "9"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "297",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "320",
+        "Part Time": "10"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "339",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "306",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "340",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "288",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "276",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "277",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "275",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "314",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "337",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "398",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "396",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "395",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "462",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "443",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "403",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "415",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "360",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "313",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Returning On-Campus Students",
+        "Full Time": "293",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "9",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "17",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "11",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "7",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "5",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "8",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "10",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "18",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "16",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "13",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "18",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "22",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "28",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "24",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "28",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "31",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "22",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Off-Campus Students",
+        "Full Time": "27",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "365",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "311",
+        "Part Time": "9"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "314",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "331",
+        "Part Time": "10"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "345",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "317",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "350",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "295",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "281",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "285",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "285",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "325",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "337",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "398",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "410",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "413",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "484",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "471",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "427",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "443",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "392",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "335",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "320",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "1",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "2",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "2",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "15"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "9"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "10"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "14"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "12"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "12"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Albion High School Scholars",
+        "Full Time": "0",
+        "Part Time": "18"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Community Scholars",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "2",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "2",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "3",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "2",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "3"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "3",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "1",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "0",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "6",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Post-Graduates/Post-Grad Certificate",
+        "Full Time": "9",
+        "Part Time": "2"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "1",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "3",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "1",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "1"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "2",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "2",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "2",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "8",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "5",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "3",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "4",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "4",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "1",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "4"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "2",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "10"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "0",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "1",
+        "Part Time": "5"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "Special Admits & Auditors",
+        "Full Time": "2",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "3",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "1",
+        "Part Time": "6"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "5",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "2",
+        "Part Time": "10"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "2",
+        "Part Time": "7"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "7",
+        "Part Time": "17"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "4",
+        "Part Time": "17"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "2",
+        "Part Time": "8"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "9",
+        "Part Time": "16"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "5",
+        "Part Time": "11"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "3",
+        "Part Time": "16"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "4",
+        "Part Time": "19"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "5",
+        "Part Time": "22"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "3",
+        "Part Time": "16"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "2",
+        "Part Time": "13"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "1",
+        "Part Time": "15"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "1",
+        "Part Time": "14"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "0",
+        "Part Time": "16"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "2",
+        "Part Time": "22"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "1",
+        "Part Time": "25"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "0",
+        "Part Time": "14"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "7",
+        "Part Time": "17"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "TOTALS",
+        "Full Time": "11",
+        "Part Time": "27"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1295",
+        "Part Time": "13"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1336",
+        "Part Time": "18"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1444",
+        "Part Time": "12"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1500",
+        "Part Time": "23"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1492",
+        "Part Time": "14"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1455",
+        "Part Time": "20"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1509",
+        "Part Time": "24"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1554",
+        "Part Time": "14"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1393",
+        "Part Time": "25"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1359",
+        "Part Time": "17"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1242",
+        "Part Time": "26"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1272",
+        "Part Time": "35"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1353",
+        "Part Time": "29"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1492",
+        "Part Time": "22"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1572",
+        "Part Time": "30"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1709",
+        "Part Time": "29"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1842",
+        "Part Time": "18"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1916",
+        "Part Time": "22"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1913",
+        "Part Time": "28"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1941",
+        "Part Time": "38"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1852",
+        "Part Time": "15"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1706",
+        "Part Time": "26"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "GRAND TOTALS",
+        "Full Time": "1619",
+        "Part Time": "39"
+    },
+    {
+        "Academic Year": "2024-25",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1308",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2023-24",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1354",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2022-23",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1456",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2021-22",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1523",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2020-21",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1506",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2019-20",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1475",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2018-19",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1533",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2017-18",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1568",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2016-17",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1418",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2015-16",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1376",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2014-15",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1268",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2013-14",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1307",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2012-13",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1382",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2011-12",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1514",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2010-11",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1602",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2009-10",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1738",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2008-09",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1860",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2007-08",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1938",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2006-07",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1941",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2005-06",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1979",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2004-05",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1867",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2003-04",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1732",
+        "Part Time": "0"
+    },
+    {
+        "Academic Year": "2002-03",
+        "Category": "",
+        "Subcategory": "HEADCOUNT",
+        "Full Time": "1658",
+        "Part Time": "0"
+    }
+]
