@@ -19,7 +19,22 @@ type AuthContextType = {
   validateAlbionEmail: (email: string) => boolean;
 };
 
+interface AuthError {
+  status?: number;
+  message?: string;
+  statusText?: string;
+}
+
 const AuthContext = createContext<AuthContextType | null>(null);
+
+const ERROR_MESSAGES = {
+  INVALID_CREDENTIALS: "Invalid email or password",
+  DOMAIN_VALIDATION: "Only @albion.edu email addresses are allowed to register",
+  USER_EXISTS: "An account with this email already exists",
+  PASSWORD_TOO_WEAK: "Password must be at least 8 characters long",
+  NETWORK_ERROR: "Network error. Please check your connection and try again",
+  DEFAULT: "An unexpected error occurred. Please try again"
+};
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const { data: session, isPending } = authClient.useSession();
@@ -32,35 +47,62 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return emailRegex.test(email);
   };
 
+  const parseAuthError = (error: AuthError | unknown): string => {
+    if (!error) return ERROR_MESSAGES.DEFAULT;
+    
+    const authError = error as AuthError;
+    
+    if (authError.status === 400 && authError.message?.includes("@albion.edu")) {
+      return ERROR_MESSAGES.DOMAIN_VALIDATION;
+    } else if (authError.status === 401) {
+      return ERROR_MESSAGES.INVALID_CREDENTIALS;
+    } else if (authError.status === 409) {
+      return ERROR_MESSAGES.USER_EXISTS;
+    } else if (authError.message?.includes("password")) {
+      return ERROR_MESSAGES.PASSWORD_TOO_WEAK;
+    } else if (authError.message?.includes("network") || authError.message?.includes("connect")) {
+      return ERROR_MESSAGES.NETWORK_ERROR;
+    }
+    
+    return authError.message || ERROR_MESSAGES.DEFAULT;
+  };
+
   const signUp = async (email: string, password: string, name: string) => {
     try {
+
       if (!validateAlbionEmail(email)) {
-        throw new Error('Only @albion.edu email addresses are allowed to register');
+        throw new Error(ERROR_MESSAGES.DOMAIN_VALIDATION);
       }
       
-      await authClient.signUp.email({
+      const { error } = await authClient.signUp.email({
         email,
         password,
         name,
         callbackURL: "/dashboard"
       });
+      
+      if (error) {
+        throw error;
+      }
     } catch (error) {
-      console.error('Signup error:', error);
-      throw error;
+      throw new Error(parseAuthError(error));
     }
   };
 
   const signIn = async (email: string, password: string) => {
     try {
-      await authClient.signIn.email({
+      const { error } = await authClient.signIn.email({
         email,
         password,
         callbackURL: "/dashboard",
         rememberMe: true
       });
+      
+      if (error) {
+        throw error;
+      }
     } catch (error) {
-      console.error('Login error:', error);
-      throw error;
+      throw new Error(parseAuthError(error));
     }
   };
 
@@ -74,8 +116,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         },
       });
     } catch (error) {
-      console.error('Logout error:', error);
-      throw error;
+      throw new Error(parseAuthError(error));
     }
   };
 

@@ -6,31 +6,97 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AlertError } from '@/components/ui/alert-error';
+import { FormError } from '@/components/ui/form-error';
 
 type AuthFormProps = {
   onSuccess?: () => void;
 };
 
+type FieldErrors = {
+  name?: string;
+  email?: string;
+  password?: string;
+};
+
 export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
   const { signUp, signIn, validateAlbionEmail } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [activeTab, setActiveTab] = useState('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
+  const validateForm = (isRegister = false): boolean => {
+    const errors: FieldErrors = {};
+    let isValid = true;
+
+    setFieldErrors({});
+    setFormError(null);
+
+    if (!email.trim()) {
+      errors.email = 'Email is required';
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = 'Please include an @ in the email';
+      isValid = false;
+    } else if (isRegister && !validateAlbionEmail(email)) {
+      errors.email = 'Must use an @albion.edu email';
+      isValid = false;
+    }
+
+    if (!password) {
+      errors.password = 'Password is required';
+      isValid = false;
+    } else if (isRegister && password.length < 8) {
+      errors.password = 'Password must be at least 8 characters';
+      isValid = false;
+    }
+
+    if (isRegister && !name.trim()) {
+      errors.name = 'Name is required';
+      isValid = false;
+    }
+
+    setFieldErrors(errors);
+    return isValid;
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    if (fieldErrors.email) {
+      setFieldErrors(prev => ({ ...prev, email: undefined }));
+    }
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+    if (fieldErrors.password) {
+      setFieldErrors(prev => ({ ...prev, password: undefined }));
+    }
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+    if (fieldErrors.name) {
+      setFieldErrors(prev => ({ ...prev, name: undefined }));
+    }
+  };
+
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
+    
+    if (!validateForm()) return;
+    
     setIsLoading(true);
 
     try {
       await signIn(email, password);
       if (onSuccess) onSuccess();
     } catch (err) {
-      console.error('Authentication error:', err);
-      setError(err instanceof Error ? err.message : 'Authentication failed');
+      setFormError(err instanceof Error ? err.message : 'Authentication failed');
     } finally {
       setIsLoading(false);
     }
@@ -38,21 +104,16 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
-
-    if (!validateAlbionEmail(email)) {
-      setError('Only @albion.edu email addresses are allowed to register');
-      return;
-    }
-
+    
+    if (!validateForm(true)) return;
+    
     setIsLoading(true);
 
     try {
       await signUp(email, password, name);
       if (onSuccess) onSuccess();
     } catch (err) {
-      console.error('Registration error:', err);
-      setError(err instanceof Error ? err.message : 'Registration failed');
+      setFormError(err instanceof Error ? err.message : 'Registration failed');
     } finally {
       setIsLoading(false);
     }
@@ -77,13 +138,9 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
             </p>
           </div>
 
-          {error && (
-            <div className="text-destructive text-sm p-3 bg-destructive/10 rounded-lg border border-destructive/20 relative z-10">
-              {error}
-            </div>
-          )}
+          <AlertError message={formError} />
 
-          <form onSubmit={handleSignIn} className="space-y-4">
+          <form onSubmit={handleSignIn} noValidate className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
               <Input 
@@ -91,9 +148,12 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
                 type="email" 
                 placeholder="name@albion.edu" 
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
+                className={fieldErrors.email ? "border-destructive/50 focus-visible:ring-destructive/30" : ""}
+                aria-invalid={!!fieldErrors.email}
                 required
               />
+              <FormError message={fieldErrors.email} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
@@ -102,9 +162,12 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
                 type="password" 
                 placeholder="••••••••" 
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
+                className={fieldErrors.password ? "border-destructive/50 focus-visible:ring-destructive/30" : ""}
+                aria-invalid={!!fieldErrors.password}
                 required
               />
+              <FormError message={fieldErrors.password} />
             </div>
             
             <div className="pt-4">
@@ -137,13 +200,9 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
             </p>
           </div>
 
-          {error && (
-            <div className="text-destructive text-sm p-3 bg-destructive/10 rounded-lg border border-destructive/20 relative z-10">
-              {error}
-            </div>
-          )}
+          <AlertError message={formError} />
 
-          <form onSubmit={handleSignUp} className="space-y-4">
+          <form onSubmit={handleSignUp} noValidate className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="reg-name">Full Name</Label>
               <Input 
@@ -151,9 +210,12 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
                 type="text" 
                 placeholder="Your Name" 
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
+                className={fieldErrors.name ? "border-destructive/50 focus-visible:ring-destructive/30" : ""}
+                aria-invalid={!!fieldErrors.name}
                 required
               />
+              <FormError message={fieldErrors.name} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="reg-email">Email</Label>
@@ -162,9 +224,12 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
                 type="email" 
                 placeholder="name@albion.edu" 
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
+                className={fieldErrors.email ? "border-destructive/50 focus-visible:ring-destructive/30" : ""}
+                aria-invalid={!!fieldErrors.email}
                 required
               />
+              <FormError message={fieldErrors.email} />
               <p className="text-xs text-muted-foreground">
                 Only @albion.edu email addresses are allowed to register
               </p>
@@ -176,9 +241,12 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
                 type="password" 
                 placeholder="••••••••" 
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
+                className={fieldErrors.password ? "border-destructive/50 focus-visible:ring-destructive/30" : ""}
+                aria-invalid={!!fieldErrors.password}
                 required
               />
+              <FormError message={fieldErrors.password} />
             </div>
             
             <div className="pt-4">

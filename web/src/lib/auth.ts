@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
 import { headers } from "next/headers";
 import path from "path";
+import { createAuthMiddleware, APIError } from "better-auth/api";
 
 export const dbPath = process.env.SQLITE_DB_PATH || 
   (process.env.NODE_ENV === 'production' ? '/app/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
@@ -10,7 +11,20 @@ export const auth = betterAuth({
     database: new Database(dbPath),
     emailAndPassword: {  
       enabled: true
-  }
+    },
+    hooks: {
+      before: createAuthMiddleware(async (ctx) => {
+        if (ctx.path !== "/sign-up/email") {
+          return;
+        }
+        
+        if (!ctx.body?.email?.endsWith("@albion.edu")) {
+          throw new APIError("BAD_REQUEST", {
+            message: "Only @albion.edu email addresses are allowed to register",
+          });
+        }
+      }),
+    }
 })
 
 export async function getUser() {
@@ -24,8 +38,7 @@ export async function getUser() {
     }
     
     return session.user;
-  } catch (error) {
-    console.error('Error getting user:', error);
+  } catch {
     return null;
   }
 }
