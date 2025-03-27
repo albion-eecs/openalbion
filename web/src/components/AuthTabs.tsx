@@ -1,12 +1,12 @@
 'use client';
 
-import { useState, memo, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { AuthForm } from '@/components/AuthForm';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 
-export const AuthTabs = memo(function AuthTabs() {
+export function AuthTabs() {
   const { user } = useAuth();
   const router = useRouter();
 
@@ -46,9 +46,9 @@ export const AuthTabs = memo(function AuthTabs() {
       </div>
     </div>
   );
-});
+}
 
-const LogoutButton = memo(function LogoutButton() {
+function LogoutButton() {
   const { logout } = useAuth();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
 
@@ -72,4 +72,4 @@ const LogoutButton = memo(function LogoutButton() {
       {isLoggingOut ? 'Signing out...' : 'Sign out'}
     </Button>
   );
-}); 
+} 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, memo } from 'react';
+import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,7 +19,7 @@ type FieldErrors = {
   password?: string;
 };
 
-export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
+export function AuthForm({ onSuccess }: AuthFormProps) {
   const { signUp, signIn, validateAlbionEmail } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
@@ -276,4 +276,4 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
       <div className="absolute top-1/3 -left-8 w-16 h-16 rounded-full border border-secondary/30 animate-ping opacity-10" style={{ animationDuration: '6s' }}></div>
     </div>
   );
-}); 
+} 
