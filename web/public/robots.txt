@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://openalbion.com/sitemap.xml
+Sitemap: https://openalbion.org/sitemap.xml
