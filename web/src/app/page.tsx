@@ -38,7 +38,6 @@ export default function Home() {
               </div>
               
               <div className="space-y-6">
-                {/* Enhanced feature cards with more purple effects */}
                 <div className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-secondary/10 to-secondary/30 p-6 transition-all duration-500 hover:shadow-xl hover:shadow-secondary/30 hover:from-secondary/20 hover:to-secondary/40 border border-secondary/20">
                   <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-gradient-to-br from-secondary to-purple-600 opacity-20 blur-2xl transition-all duration-500 group-hover:opacity-40 group-hover:scale-110"></div>
                   <div className="flex items-center gap-4">
@@ -48,7 +47,6 @@ export default function Home() {
                       <p className="text-muted-foreground leading-relaxed">Only students, faculty, and alumni with @albion.edu emails can register.</p>
                     </div>
                   </div>
-                  {/* Add a subtle animated highlight */}
                   <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-secondary/0 via-secondary/80 to-secondary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 
@@ -77,12 +75,10 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Add a decorative purple element */}
               <div className="absolute -bottom-16 -left-16 w-32 h-32 rounded-full border border-secondary/20 animate-ping opacity-20" style={{ animationDuration: '8s' }}></div>
             </div>
 
             <div className="bg-card/60 backdrop-blur-sm rounded-2xl shadow-xl border border-secondary/30 p-8 h-auto relative">
-              {/* Decorative purple elements */}
               <div className="absolute -top-5 -right-5 w-24 h-24 bg-secondary/5 rounded-full filter blur-xl opacity-0 transition-opacity duration-700"></div>
               
               <div className="relative">

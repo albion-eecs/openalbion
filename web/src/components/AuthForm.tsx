@@ -204,7 +204,6 @@ export const AuthForm = memo(function AuthForm({ onSuccess }: AuthFormProps) {
         </TabsContent>
       </Tabs>
 
-      {/* Decorative purple elements */}
       <div className="absolute top-1/2 -right-6 w-12 h-12 rounded-full border border-secondary/40 animate-ping opacity-20" style={{ animationDuration: '4s' }}></div>
       <div className="absolute top-1/3 -left-8 w-16 h-16 rounded-full border border-secondary/30 animate-ping opacity-10" style={{ animationDuration: '6s' }}></div>
     </div>

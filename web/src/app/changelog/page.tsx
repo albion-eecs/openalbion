@@ -6,6 +6,21 @@ import { ChangelogTimeline } from "@/components/ChangelogTimeline";
 export default function ChangelogPage() {
   const changelogEntries = [
     {
+      title: "Authentication",
+      version: "v0.3.0",
+      date: "March 27, 2025",
+      items: [
+        "Updated to latest Next.js version",
+        "Refactored authentication to use email and password",
+        "Simplified security page",
+        "Fixed footer responsiveness issues",
+        "Added Discord server contact information",
+        "Fixed route-related ESLint issues",
+        "Resolved miscellaneous type errors",
+        "Fixed dashboard available APIs card error"
+      ]
+    },
+    {
       title: "UI & Infrastructure Updates",
       version: "v0.2.0",
       date: "March 26, 2025",
@@ -62,7 +77,6 @@ export default function ChangelogPage() {
             </span>
           </h1>
           
-          {/* Using our new reusable component */}
           <ChangelogTimeline entries={changelogEntries} />
         </div>
       </main>
