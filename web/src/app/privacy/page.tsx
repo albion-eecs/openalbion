@@ -36,10 +36,10 @@ export default function PrivacyPage() {
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold text-foreground">Information We Collect</h2>
                 <p>
-                  OpenAlbion, maintained by the EECS Club at Albion College, collects information necessary to provide access to research data. This includes:
+                  OpenAlbion, maintained by the Albion College EECS Club, collects information necessary to provide access to research data. This includes:
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Authentication information (Albion email address)</li>
+                  <li>Authentication information (Albion email address and password)</li>
                   <li>API usage statistics</li>
                   <li>Log data for security and troubleshooting purposes</li>
                 </ul>
@@ -61,14 +61,14 @@ export default function PrivacyPage() {
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold text-foreground">Data Retention</h2>
                 <p>
-                  OpenAlbion retains user data for as long as necessary to provide the service. Usage logs may be retained for up to 12 months for security, troubleshooting, and academic research purposes. The EECS Club takes data protection seriously and implements appropriate measures to safeguard collected information.
+                  OpenAlbion retains user data for as long as necessary to provide the service. Usage logs may be retained for up to 12 months for security, troubleshooting, and academic research purposes.
                 </p>
               </section>
               
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold text-foreground">Data Security</h2>
                 <p>
-                  We implement appropriate security measures to protect your information. API keys should be kept confidential and not shared with others.
+                  We implement appropriate security measures to protect user information. API keys should be kept confidential and not shared with others.
                 </p>
               </section>
               

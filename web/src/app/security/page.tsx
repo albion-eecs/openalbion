@@ -35,7 +35,7 @@ export default function SecurityPage() {
               Security
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              The EECS Club is committed to ensuring the security and integrity of the OpenAlbion platform.
+              The Albion College EECS Club is committed to ensuring the security and integrity of the OpenAlbion platform.
             </p>
           </div>
           
@@ -93,10 +93,10 @@ export default function SecurityPage() {
                     The EECS Club is committed to the following security patching guidelines:
                   </p>
                   <ul className="text-sm text-muted-foreground space-y-3 list-disc pl-5">
-                    <li>We acknowledge all security reports within 12 hours</li>
-                    <li>Critical security issues are addressed within 24 hours</li>
-                    <li>We provide regular updates on the progress of reported issues</li>
-                    <li>Once resolved, we disclose relevant details to affected users</li>
+                    <li>Acknowledge all security reports within 12 hours</li>
+                    <li>Patch critical vulnerabilities within 24 hours</li>
+                    <li>Provide updates on the progress of reported issues</li>
+                    <li>Disclose relevant details to affected users once resolved</li>
                   </ul>
                 </div>
               </div>

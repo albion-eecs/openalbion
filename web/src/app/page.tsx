@@ -22,7 +22,7 @@ export default function Home() {
       <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-secondary/20 relative z-10">
         <div className="max-w-7xl mx-auto flex flex-col items-center gap-2">
           <h1 className="text-4xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">OpenAlbion</h1>
-          <p className="text-sm text-muted-foreground">Albion College research data portal</p>
+          <p className="text-sm text-muted-foreground">Albion College data portal</p>
         </div>
       </header>
       
@@ -55,7 +55,7 @@ export default function Home() {
                   <div className="flex items-center gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-secondary to-purple-600 text-white font-medium shadow-md shadow-secondary/20">2</div>
                     <div className="z-10">
-                      <h3 className="font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">API-Driven Data Access</h3>
+                      <h3 className="font-semibold text-lg group-hover:text-white/90 transition-colors duration-300">API-Driven</h3>
                       <p className="text-muted-foreground leading-relaxed">Programmatically access research data through standardized API endpoints.</p>
                     </div>
                   </div>

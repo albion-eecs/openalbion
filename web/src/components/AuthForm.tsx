@@ -134,7 +134,7 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
           <div className="space-y-2 text-center relative z-10">
             <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white bg-clip-text text-transparent">Sign In</h1>
             <p className="text-sm text-muted-foreground">
-              Access the Albion research data portal
+              Access the data portal
             </p>
           </div>
 
@@ -196,7 +196,7 @@ export function AuthForm({ onSuccess }: AuthFormProps) {
           <div className="space-y-2 text-center relative z-10">
             <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-white to-white bg-clip-text text-transparent">Create Account</h1>
             <p className="text-sm text-muted-foreground">
-              Register for the Albion research data portal
+              Register for the data portal
             </p>
           </div>
 

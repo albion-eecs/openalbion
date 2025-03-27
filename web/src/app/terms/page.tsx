@@ -43,7 +43,7 @@ export default function TermsPage() {
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold text-foreground">Eligibility</h2>
                 <p>
-                  OpenAlbion is a project run by the EECS Club at Albion College and is exclusively available to current students, faculty, staff, and alumni of Albion College with valid Albion email addresses.
+                  OpenAlbion is a project run by the Albion College EECS Club and is exclusively available to current students, faculty, staff, and alumni of Albion College with valid Albion email addresses.
                 </p>
               </section>
               
@@ -54,9 +54,9 @@ export default function TermsPage() {
                 </p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Use the API for academic, research, or educational purposes only</li>
-                  <li>Not attempt to overwhelm or crash the API (rate limits apply)</li>
+                  <li>Not attempt to overwhelm or crash the API (rate limits may apply)</li>
                   <li>Keep API keys secure and not share them with others</li>
-                  <li>Properly attribute OpenAlbion when using data in publications or projects</li>
+                  <li>Attribute OpenAlbion when using data in publications or projects</li>
                 </ul>
               </section>
               
@@ -84,7 +84,7 @@ export default function TermsPage() {
               <section className="space-y-4">
                 <h2 className="text-xl font-semibold text-foreground">Disclaimer of Warranty</h2>
                 <p>
-                  OpenAlbion is provided &quot;as is&quot; without warranties of any kind, either express or implied. As a student-run project by the EECS Club, we do not guarantee the accuracy, completeness, or timeliness of the data. This service is designed primarily for academic research and educational purposes.
+                  OpenAlbion is provided &quot;as is&quot; without warranties of any kind, either express or implied. As a student-run project by the Albion College EECS Club, we do not guarantee the accuracy, completeness, or timeliness of the data. This service is designed primarily for academic research and educational purposes.
                 </p>
               </section>
             </div>

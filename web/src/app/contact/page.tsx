@@ -39,7 +39,7 @@ export default function ContactPage() {
               <div className="mb-6">
                 <h2 className="text-xl font-semibold text-foreground inline-block border-b border-secondary/30 pb-2 mb-4">Get In Touch</h2>
                 <p className="text-muted-foreground">
-                  Have questions about OpenAlbion or need assistance with the API?
+                  Have questions about OpenAlbion or need help with the API?
                 </p>
               </div>
               
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   </div>
                   <h2 className="text-xl font-semibold text-foreground">Join the EECS Club</h2>
                   <p className="text-muted-foreground mb-6">
-                    The EECS Club welcomes any and all students interested in engineering, computer science, data science, and research projects.
+                    The EECS Club (or the Electrical Engineering and Computer Science Club) welcomes any and all students interested in engineering, computer science, data science, and research projects.
                   </p>
                 </div>
               </div>
