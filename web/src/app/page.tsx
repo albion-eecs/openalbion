@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function Home() {
   const handleDownload = (filePath: string) => {
     const link = document.createElement('a');
-    link.href = `/cleaned/${filePath}`;
+    link.href = `/datasets/cleaned/${filePath}`;
     link.download = filePath.split('/').pop() || '';
     document.body.appendChild(link);
     link.click();

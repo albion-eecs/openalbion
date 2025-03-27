@@ -4,7 +4,7 @@ export default function FlyerPage() {
   return (
     <div className="relative w-full h-screen bg-black">
       <Image 
-        src="/flyer.png" 
+        src="/assets/flyer.png" 
         alt="EECS Club Flyer" 
         fill
         className="object-contain"
@@ -12,7 +12,7 @@ export default function FlyerPage() {
       />
       
       <a 
-        href="/flyer.png" 
+        href="/assets/flyer.png" 
         download="eecs_club_flyer.png"
         className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full transition-colors"
         title="Download Flyer"
