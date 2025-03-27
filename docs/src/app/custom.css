@@ -22,57 +22,43 @@ pre code {
   font-size: 0.9em !important;
 }
 
-table {
+.custom-table-container {
   background-color: #000000 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 0.5rem !important;
-  border-spacing: 0 !important;
-  border-collapse: separate !important;
   margin: 1rem 0 !important;
-  table-layout: fixed !important;
+  overflow-x: auto !important;
   width: 100% !important;
-  overflow: hidden !important;
+}
+
+.custom-table-container table {
+  width: 100% !important;
+}
+
+.custom-table-container th,
+.custom-table-container td {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.custom-table-container th {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  font-weight: 600 !important;
+}
+
+.custom-table-container tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+table {
+  overflow-x: auto !important;
+  max-width: 100% !important;
 }
 
 th, td {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   padding: 0.75rem 1rem !important;
   color: #ffffff !important;
-  white-space: nowrap !important;
-}
-
-
-table th:nth-child(1):not(:last-child) ~ th:nth-child(4),
-table td:nth-child(1):not(:last-child) ~ td:nth-child(4) {
-  width: 50% !important;
-  white-space: normal !important;
-}
-
-table th:nth-child(1):not(:last-child) ~ th:nth-child(3),
-table td:nth-child(1):not(:last-child) ~ td:nth-child(3) {
-  width: 10% !important;
-}
-
-table th:nth-child(1):not(:last-child) ~ th:nth-child(2),
-table td:nth-child(1):not(:last-child) ~ td:nth-child(2) {
-  width: 10% !important;
-}
-
-table th:nth-child(1):not(:last-child) ~ th:nth-child(1),
-table td:nth-child(1):not(:last-child) ~ td:nth-child(1) {
-  width: 20% !important;
-}
-
-/* For 2-column tables (like error responses) */
-table th:first-child:nth-last-child(2),
-table td:first-child:nth-last-child(2) {
-  width: 15% !important;
-}
-
-table th:last-child:nth-child(2),
-table td:last-child:nth-child(2) {
-  width: 85% !important;
-  white-space: normal !important;
 }
 
 th {
