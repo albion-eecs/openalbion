@@ -15,11 +15,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV SQLITE_DB_PATH=/app/data/sqlite.db
 
-RUN mkdir -p /app/data && \
-    npm run db:all && \
-    chown -R node:node /app/data
+RUN npm run db:all && \
+    chown -R node:node /app/db
 
 RUN npm run build
 
@@ -28,7 +26,6 @@ WORKDIR /app
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV SQLITE_DB_PATH=/app/data/sqlite.db
 
 RUN npm install -g tsx
 COPY package.json package-lock.json ./
@@ -38,12 +35,12 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/data /app/data
+COPY --from=builder /app/db /app/db
 
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
-RUN chown -R nextjs:nodejs /app/data
+RUN chown -R nextjs:nodejs /app/db
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static

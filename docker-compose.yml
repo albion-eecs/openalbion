@@ -10,10 +10,9 @@ services:
       - NODE_ENV=production
       - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
       - BETTER_AUTH_URL=${BETTER_AUTH_URL}
-      - SQLITE_DB_PATH=/app/data/sqlite.db
     volumes:
       - ./web/public:/app/public
-      - sqlite_data:/app/data
+      - sqlite_data:/app/db
     networks:
       - app_network
 

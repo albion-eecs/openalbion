@@ -10,14 +10,7 @@ let dbInstance: Database.Database | null = null;
 function initializeDb() {
   if (dbInstance) return dbInstance;
   
-  try {
-    if (process.env.NODE_ENV === 'production') {
-      const dbDir = path.dirname(dbPath);
-      if (!fs.existsSync(dbDir)) {
-        fs.mkdirSync(dbDir, { recursive: true });
-      }
-    }
-    
+  try { 
     dbInstance = new Database(dbPath);
     dbInstance.pragma('foreign_keys = ON');
     return dbInstance;
@@ -353,7 +346,7 @@ if (isDirectlyExecuted()) {
     setupDatabase();
     console.log('Database schema has been set up successfully');
   } else if (command === 'import') {
-    const dataDir = path.join(process.cwd(), 'public', 'cleaned');
+    const dataDir = path.join(process.cwd(), 'public', 'datasets', 'cleaned', 'csv');
     
     if (!fs.existsSync(dataDir)) {
       console.error(`Data directory not found: ${dataDir}`);

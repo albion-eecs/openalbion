@@ -1,11 +1,9 @@
 import { betterAuth } from "better-auth";
 import Database from "better-sqlite3";
 import { headers } from "next/headers";
-import path from "path";
 import { createAuthMiddleware, APIError } from "better-auth/api";
 
-export const dbPath = process.env.SQLITE_DB_PATH || 
-  (process.env.NODE_ENV === 'production' ? '/app/data/sqlite.db' : path.join(process.cwd(), 'sqlite.db'));
+export const dbPath = "./db/sqlite.db";
 
 export const auth = betterAuth({
     database: new Database(dbPath),
