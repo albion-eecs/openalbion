@@ -5,6 +5,19 @@ import { Changelog } from "@/components/Changelog";
 export default function ChangelogPage() {
   const changelogEntries = [
     {
+      title: "Miscellaneous Fixes and Standardization",
+      version: "v0.4.0",
+      date: "March 27, 2025",
+      items: [
+        "Refactored environment variables and path authentication",
+        "Improved component standards and reusability",
+        "Updated public assets and folder structure",
+        "Added new cleaned dataset types (json, xml)",
+        "Fixed robots.txt and sitemaps TLD issues",
+        "Fixed authentication UI input registration bug"
+      ]
+    },
+    {
       title: "Authentication",
       version: "v0.3.0",
       date: "March 27, 2025",
