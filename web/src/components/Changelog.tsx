@@ -44,7 +44,7 @@ interface ChangelogTimelineProps {
   entries: ChangelogEntryProps[];
 }
 
-export const ChangelogTimeline: React.FC<ChangelogTimelineProps> = ({ entries }) => {
+export const Changelog: React.FC<ChangelogTimelineProps> = ({ entries }) => {
   return (
     <div className="relative">
       <div className="absolute left-4 top-0 bottom-0 w-px bg-secondary/30"></div>

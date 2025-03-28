@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
-import { ChangelogTimeline } from "@/components/ChangelogTimeline";
+import { Header } from "@/components/Header";
+import { Changelog } from "@/components/Changelog";
 
 export default function ChangelogPage() {
   const changelogEntries = [
@@ -52,21 +51,7 @@ export default function ChangelogPage() {
       <div className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '8s' }}></div>
       <div className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{ animationDuration: '12s' }}></div>
       
-      {/* Header */}
-      <header className="py-6 px-4 sm:px-6 lg:px-8 border-b border-secondary/20 relative z-10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div>
-            <Link href="/" className="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white">
-              OpenAlbion
-            </Link>
-          </div>
-          <Link href="/">
-            <Button variant="outline" className="border-secondary/40 hover:bg-secondary/10 hover:border-secondary/60">
-              Back to Home
-            </Button>
-          </Link>
-        </div>
-      </header>
+      <Header />
       
       {/* Main content */}
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -77,7 +62,7 @@ export default function ChangelogPage() {
             </span>
           </h1>
           
-          <ChangelogTimeline entries={changelogEntries} />
+          <Changelog entries={changelogEntries} />
         </div>
       </main>
       
