@@ -15,7 +15,7 @@ const navbar = (
   <Navbar
     logo={
       <Image 
-        src="/assets/albion-transparent.png" 
+        src="/assets/logo-transparent.png" 
         alt="Logo" 
         width={25} 
         height={25} 
