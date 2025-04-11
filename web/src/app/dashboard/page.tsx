@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
+import { authClient } from "@/lib/auth-client";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import React from 'react';
@@ -62,6 +63,7 @@ export default function DashboardPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
+  const { data: session } = authClient.useSession();
   const [stats, setStats] = useState<{
     apiKeyCount?: number;
     apiCallStats?: { 
@@ -90,6 +92,12 @@ export default function DashboardPage() {
       router.push('/');
     }
   }, [user, loading, router]);
+
+  useEffect(() => {
+    if (!session) {
+      router.push("/");
+    }
+  }, [session, router]);
 
   useEffect(() => {
     if (user) {

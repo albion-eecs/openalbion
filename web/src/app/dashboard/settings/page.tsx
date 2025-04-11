@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Loader2, Copy, Trash, ArrowLeft, Key, User } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/contexts/AuthContext';
+import { authClient } from "@/lib/auth-client";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";
 
@@ -26,6 +27,7 @@ type ApiKey = {
 export default function SettingsPage() {
   const router = useRouter();
   const { user, loading } = useAuth();
+  const { data: session } = authClient.useSession();
   
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([]);
   const [apiKeysLoading, setApiKeysLoading] = useState(true);
@@ -41,6 +43,12 @@ export default function SettingsPage() {
     dataUpdateAlerts: false,
   });
   const [prefsLoading, setPrefsLoading] = useState(true);
+  
+  useEffect(() => {
+    if (!session) {
+      router.push("/");
+    }
+  }, [session, router]);
   
   useEffect(() => {
     if (user) {
