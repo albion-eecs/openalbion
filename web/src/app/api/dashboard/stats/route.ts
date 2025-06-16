@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 import { NextRequest, NextResponse } from "next/server";
-import { getUser } from "@/lib/auth";
+import { getUser } from "@/lib/auth-server";
 import { statisticsService } from "@/lib/db-service";
 
 export async function GET(request: NextRequest) {

@@ -1,12 +1,12 @@
 import { betterAuth } from "better-auth";
-import Database from "better-sqlite3";
-import { headers } from "next/headers";
 import { createAuthMiddleware, APIError } from "better-auth/api";
-
-export const dbPath = "./db/sqlite.db";
+import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { db } from "../../db/index";
 
 export const auth = betterAuth({
-  database: new Database(dbPath),
+  database: drizzleAdapter(db, {
+    provider: "sqlite",
+  }),
   emailAndPassword: {
     enabled: true,
   },
@@ -24,19 +24,3 @@ export const auth = betterAuth({
     }),
   },
 });
-
-export async function getUser() {
-  try {
-    const session = await auth.api.getSession({
-      headers: await headers(),
-    });
-
-    if (!session) {
-      return null;
-    }
-
-    return session.user;
-  } catch {
-    return null;
-  }
-}

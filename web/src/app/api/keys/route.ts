@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { apiKeyService, userLogService } from "@/lib/db-service";
-import { getUser } from "@/lib/auth";
+import { getUser } from "@/lib/auth-server";
 
 type ApiKey = {
   id: number;
