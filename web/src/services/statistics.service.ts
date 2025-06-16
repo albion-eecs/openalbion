@@ -40,6 +40,6 @@ export const getDashboardStats = cache(
       requestsLast30Days: requestsLast30Days.value,
     };
   },
-  ["dashboard-stats"],
+  ["statistics"],
   { revalidate: 300 }
 );
