@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { AuthProvider } from "@/contexts/AuthContext";
+import { AuthProvider } from "@/contexts/auth-context";
 
 const robotoSlab = localFont({
   src: "../../public/fonts/RobotoSlab-VariableFont_wght.ttf",

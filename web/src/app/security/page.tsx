@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { AlertTriangle, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 
 export default function SecurityPage() {
   return (

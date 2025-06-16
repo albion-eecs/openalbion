@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/card";
 import { Loader2, Copy, Trash, ArrowLeft, Key, User } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/contexts/AuthContext";
+import { useAuth } from "@/contexts/auth-context";
 import { authClient } from "@/lib/auth-client";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";

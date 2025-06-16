@@ -2,9 +2,9 @@
 
 import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { AuthForm } from "@/components/AuthForm";
+import { AuthForm } from "@/components/auth-form";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/contexts/AuthContext";
+import { useAuth } from "@/contexts/auth-context";
 
 export function AuthTabs() {
   const { user } = useAuth();

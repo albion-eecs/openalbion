@@ -1,8 +1,8 @@
 "use client";
 
-import { AuthTabs } from "@/components/AuthTabs";
-import { AuthProvider } from "@/contexts/AuthContext";
-import { Footer } from "@/components/Footer";
+import { AuthTabs } from "@/components/auth-tabs";
+import { AuthProvider } from "@/contexts/auth-context";
+import { Footer } from "@/components/footer";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Card,

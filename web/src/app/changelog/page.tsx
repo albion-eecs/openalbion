@@ -1,6 +1,6 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { Changelog } from "@/components/Changelog";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { Changelog } from "@/components/changelog";
 
 export default function ChangelogPage() {
   const changelogEntries = [
