@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/auth-context";
-import { authClient } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -93,41 +92,24 @@ export default function DashboardPage() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
-  const { data: session } = authClient.useSession();
   const [stats, setStats] = useState<{
-    apiKeyCount?: number;
-    apiCallStats?: {
-      daily: number;
-      weekly: number;
-      monthly: number;
-      topEndpoints: Array<{ endpoint: string; count: number }>;
-    };
-    totalDatasets?: number;
-    recentActivities?: Array<{
-      action: string;
-      resourceType?: string;
-      resourceId?: string;
-      details?: string;
-      createdAt: number;
-    }>;
-    newDatasetsThisMonth?: number;
+    totalKeys?: number;
+    activeKeys?: number;
+    totalRequests?: number;
+    requestsLast30Days?: number;
   } | null>(null);
   const [statsLoading, setStatsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setIsClient(true);
-
+  }, []);
+  
+  useEffect(() => {
     if (!loading && !user) {
       router.push("/");
     }
   }, [user, loading, router]);
-
-  useEffect(() => {
-    if (!session) {
-      router.push("/");
-    }
-  }, [session, router]);
 
   useEffect(() => {
     if (user) {
@@ -165,31 +147,20 @@ export default function DashboardPage() {
     }
   }, [error]);
 
-  if (loading || !isClient) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-secondary"></div>
-          <p className="text-muted-foreground">Loading dashboard...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!user) {
+  if (loading || !isClient || !user) {
     return null;
   }
 
   const formatRelativeTime = (timestamp: number) => {
-    const now = Math.floor(Date.now() / 1000);
-    const seconds = now - timestamp;
+    const now = new Date().getTime();
+    const seconds = Math.floor((now - timestamp) / 1000);
 
     if (seconds < 60) return "Just now";
     if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes ago`;
     if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`;
     if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`;
 
-    const date = new Date(timestamp * 1000);
+    const date = new Date(timestamp);
     return date.toLocaleDateString();
   };
 
@@ -235,19 +206,17 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 overflow-hidden relative group">
               <div className="decorative-overlay absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary to-purple-400 transform origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Data Sets</CardTitle>
-                <CardDescription>Available research data sets</CardDescription>
+                <CardTitle className="text-lg">Total API Keys</CardTitle>
+                <CardDescription>All created API keys</CardDescription>
               </CardHeader>
               <CardContent>
                 {statsLoading ? (
                   <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
                 ) : (
                   <>
-                    <p className="text-3xl font-bold">
-                      {stats?.totalDatasets || 0}
-                    </p>
+                    <p className="text-3xl font-bold">{stats?.totalKeys || 0}</p>
                     <p className="text-sm text-muted-foreground">
-                      {stats?.newDatasetsThisMonth || 0} available datasets
+                      {stats?.activeKeys || 0} active keys
                     </p>
                   </>
                 )}
@@ -256,8 +225,8 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 overflow-hidden relative group">
               <div className="decorative-overlay absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary to-purple-400 transform origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">API Calls</CardTitle>
-                <CardDescription>Monthly API usage</CardDescription>
+                <CardTitle className="text-lg">API Calls (30 Days)</CardTitle>
+                <CardDescription>API requests in the last 30 days</CardDescription>
               </CardHeader>
               <CardContent>
                 {statsLoading ? (
@@ -265,10 +234,10 @@ export default function DashboardPage() {
                 ) : (
                   <>
                     <p className="text-3xl font-bold">
-                      {stats?.apiCallStats?.monthly || 0}
+                      {stats?.requestsLast30Days || 0}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                      {stats?.apiCallStats?.daily || 0} in the last 24 hours
+                      {stats?.totalRequests || 0} total requests
                     </p>
                   </>
                 )}
@@ -277,101 +246,23 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 overflow-hidden relative group">
               <div className="decorative-overlay absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary to-purple-400 transform origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">API Keys</CardTitle>
-                <CardDescription>Active API keys</CardDescription>
+                <CardTitle className="text-lg">Available Data Sets</CardTitle>
+                <CardDescription>Available for query via API</CardDescription>
               </CardHeader>
               <CardContent>
                 {statsLoading ? (
                   <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
                 ) : (
                   <>
-                    <p className="text-3xl font-bold">
-                      {stats?.apiKeyCount || 0}
-                    </p>
+                    <p className="text-3xl font-bold">2</p>
                     <p className="text-sm text-muted-foreground">
-                      Unlimited amount allowed
+                      Headcounts & Enrollment
                     </p>
                   </>
                 )}
               </CardContent>
             </Card>
           </div>
-        </section>
-
-        <section>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold relative">
-              Recent Activity
-              <span className="decorative-overlay absolute -bottom-1 left-0 w-20 h-0.5 bg-gradient-to-r from-secondary to-purple-400"></span>
-            </h2>
-          </div>
-          <Card className="border-secondary/20">
-            <CardContent className="p-0">
-              {statsLoading ? (
-                <div className="p-8">
-                  <div className="space-y-4">
-                    {[1, 2, 3].map(i => (
-                      <div
-                        key={i}
-                        className="animate-pulse flex items-start space-x-4"
-                      >
-                        <div className="h-9 w-9 rounded-full bg-gray-200/20"></div>
-                        <div className="flex-1 space-y-2">
-                          <div className="h-4 bg-gray-200/20 rounded w-1/4"></div>
-                          <div className="h-3 bg-gray-200/20 rounded w-3/4"></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <div className="divide-y divide-border/40">
-                  {stats?.recentActivities &&
-                  stats.recentActivities.length > 0 ? (
-                    stats.recentActivities.map((item, i: number) => (
-                      <div
-                        key={i}
-                        className="flex items-start justify-between p-4 hover:bg-secondary/5 transition-colors duration-200"
-                      >
-                        <div className="flex items-start space-x-4">
-                          <div className="h-9 w-9 rounded-full bg-gradient-to-br from-secondary/20 to-purple-500/20 flex items-center justify-center">
-                            <svg
-                              className="h-5 w-5 text-secondary"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                              />
-                            </svg>
-                          </div>
-                          <div>
-                            <p className="font-medium">{item.action}</p>
-                            <p className="text-sm text-muted-foreground">
-                              {item.resourceType &&
-                                `${item.resourceType}${item.resourceId ? ` (#${item.resourceId})` : ""}`}
-                              {item.details && <span>{item.details}</span>}
-                            </p>
-                          </div>
-                        </div>
-                        <span className="text-xs text-muted-foreground">
-                          {formatRelativeTime(item.createdAt)}
-                        </span>
-                      </div>
-                    ))
-                  ) : (
-                    <div className="p-8 text-center text-muted-foreground">
-                      No recent activity to display
-                    </div>
-                  )}
-                </div>
-              )}
-            </CardContent>
-          </Card>
         </section>
 
         <section>

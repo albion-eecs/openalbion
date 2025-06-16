@@ -85,3 +85,45 @@ export const headcounts = sqliteTable("headcounts", {
   year: integer("year").primaryKey(),
   count: integer("count").notNull(),
 });
+
+export const apiKeys = sqliteTable("api_keys", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id").notNull(),
+  apiKey: text("api_key").notNull().unique(),
+  name: text("name").notNull(),
+  createdAt: integer("created_at").notNull(),
+  expiresAt: integer("expires_at"),
+  lastUsedAt: integer("last_used_at"),
+  isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
+});
+
+export const userLogs = sqliteTable("user_logs", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" }),
+  action: text("action").notNull(),
+  resourceType: text("resource_type"),
+  resourceId: text("resource_id"),
+  details: text("details"),
+  createdAt: integer("created_at")
+    .$defaultFn(() => new Date().getTime())
+    .notNull(),
+});
+
+export const userPreferences = sqliteTable("user_preferences", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" })
+    .unique(),
+  apiUsageAlerts: integer("api_usage_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  securityAlerts: integer("security_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  dataUpdateAlerts: integer("data_update_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+});

@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getUser } from "@/lib/auth-server";
-import { userPreferenceService } from "@/lib/db-service";
-
-export const dynamic = "force-dynamic";
-export const runtime = "nodejs";
+import { requireUser } from "@/lib/auth-server";
+import * as userPreferenceService from "@/services/userPreference.service";
 
 export async function GET() {
   try {
-    const user = await getUser();
+    const user = await requireUser();
+    const preferences = await userPreferenceService.getPreferences(user.id);
 
-    if (!user) {
+    return NextResponse.json(preferences);
+  } catch (error) {
+    if (error instanceof Error && error.message === "Unauthorized") {
       return NextResponse.json(
         {
           error: "Unauthorized",
@@ -18,11 +18,6 @@ export async function GET() {
         { status: 401 }
       );
     }
-
-    const preferences = await userPreferenceService.getPreferences(user.id);
-
-    return NextResponse.json(preferences);
-  } catch (error) {
     console.error("Error fetching user preferences:", error);
 
     return NextResponse.json(
@@ -37,9 +32,30 @@ export async function GET() {
 
 export async function PUT(request: NextRequest) {
   try {
-    const user = await getUser();
+    const user = await requireUser();
+    const body = await request.json();
+    const validatedBody =
+      userPreferenceService.preferenceSchema.safeParse(body);
 
-    if (!user) {
+    if (!validatedBody.success) {
+      return NextResponse.json(
+        {
+          error: "Bad Request",
+          message: "Invalid request body",
+          details: validatedBody.error.flatten(),
+        },
+        { status: 400 }
+      );
+    }
+
+    const updatedPreferences = await userPreferenceService.updatePreferences(
+      user.id,
+      validatedBody.data
+    );
+
+    return NextResponse.json(updatedPreferences);
+  } catch (error) {
+    if (error instanceof Error && error.message === "Unauthorized") {
       return NextResponse.json(
         {
           error: "Unauthorized",
@@ -48,41 +64,6 @@ export async function PUT(request: NextRequest) {
         { status: 401 }
       );
     }
-
-    const data = await request.json();
-
-    const validPreferences = [
-      "apiUsageAlerts",
-      "securityAlerts",
-      "dataUpdateAlerts",
-    ];
-    const preferences: Record<string, boolean> = {};
-    let hasValidPreference = false;
-
-    for (const key of validPreferences) {
-      if (typeof data[key] === "boolean") {
-        preferences[key] = data[key];
-        hasValidPreference = true;
-      }
-    }
-
-    if (!hasValidPreference) {
-      return NextResponse.json(
-        {
-          error: "Bad Request",
-          message: "At least one valid preference must be provided",
-        },
-        { status: 400 }
-      );
-    }
-
-    const updatedPreferences = await userPreferenceService.updatePreferences(
-      user.id,
-      preferences
-    );
-
-    return NextResponse.json(updatedPreferences);
-  } catch (error) {
     console.error("Error updating user preferences:", error);
 
     return NextResponse.json(
