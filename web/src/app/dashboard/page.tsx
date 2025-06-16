@@ -104,7 +104,7 @@ export default function DashboardPage() {
   useEffect(() => {
     setIsClient(true);
   }, []);
-  
+
   useEffect(() => {
     if (!loading && !user) {
       router.push("/");
@@ -150,19 +150,6 @@ export default function DashboardPage() {
   if (loading || !isClient || !user) {
     return null;
   }
-
-  const formatRelativeTime = (timestamp: number) => {
-    const now = new Date().getTime();
-    const seconds = Math.floor((now - timestamp) / 1000);
-
-    if (seconds < 60) return "Just now";
-    if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes ago`;
-    if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`;
-    if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`;
-
-    const date = new Date(timestamp);
-    return date.toLocaleDateString();
-  };
 
   return (
     <div className="container mx-auto py-8">
@@ -214,7 +201,9 @@ export default function DashboardPage() {
                   <div className="animate-pulse h-10 bg-gray-200/20 rounded"></div>
                 ) : (
                   <>
-                    <p className="text-3xl font-bold">{stats?.totalKeys || 0}</p>
+                    <p className="text-3xl font-bold">
+                      {stats?.totalKeys || 0}
+                    </p>
                     <p className="text-sm text-muted-foreground">
                       {stats?.activeKeys || 0} active keys
                     </p>
@@ -226,7 +215,9 @@ export default function DashboardPage() {
               <div className="decorative-overlay absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-secondary to-purple-400 transform origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg">API Calls (30 Days)</CardTitle>
-                <CardDescription>API requests in the last 30 days</CardDescription>
+                <CardDescription>
+                  API requests in the last 30 days
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 {statsLoading ? (
