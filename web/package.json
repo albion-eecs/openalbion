@@ -6,13 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "clean-csv": "node scripts/clean-csv.js",
     "db:setup": "tsx src/lib/db.ts setup",
     "db:import": "tsx src/lib/db.ts import",
-    "db:all": "npx @better-auth/cli migrate -y && npm run db:setup && npm run db:import"
+    "db:all": "npx @better-auth/cli migrate -y && npm run db:setup && npm run db:import",
+    "seed": "tsx ./scripts/seed.ts"
   },
   "dependencies": {
     "@better-auth/cli": "^1.2.9",
@@ -24,6 +26,7 @@
     "@radix-ui/react-switch": "^1.2.5",
     "@radix-ui/react-tabs": "^1.1.12",
     "@types/better-sqlite3": "^7.6.13",
+    "@types/xlsx": "^0.0.36",
     "better-auth": "^1.2.9",
     "better-sqlite3": "^11.10.0",
     "class-variance-authority": "^0.7.1",
@@ -39,6 +42,7 @@
     "react-hook-form": "^7.58.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
+    "xlsx": "^0.18.5",
     "zod": "^3.25.64"
   },
   "devDependencies": {

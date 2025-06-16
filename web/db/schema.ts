@@ -63,3 +63,25 @@ export const verification = sqliteTable("verification", {
     () => /* @__PURE__ */ new Date()
   ),
 });
+
+export const academicYears = sqliteTable("academic_years", {
+  id: integer("id").primaryKey(),
+  year: text("year").notNull().unique(),
+});
+
+export const enrollment = sqliteTable("enrollment", {
+  id: integer("id").primaryKey(),
+  academicYearId: integer("academic_year_id")
+    .notNull()
+    .references(() => academicYears.id),
+
+  dimension: text("dimension").notNull(),
+  primaryCategory: text("primary_category").notNull(),
+  secondaryCategory: text("secondary_category").notNull(),
+  value: integer("value").notNull(),
+});
+
+export const headcounts = sqliteTable("headcounts", {
+  year: integer("year").primaryKey(),
+  count: integer("count").notNull(),
+});
