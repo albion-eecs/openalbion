@@ -7,14 +7,14 @@
     --font-sans: var(--font-roboto-slab);
     --font-heading: var(--font-roboto-slab);
     --font-mono: var(--font-roboto-slab);
-    
+
     --card: 36 38 48;
     --card-foreground: 249 250 251;
     --popover: 28 30 39;
     --popover-foreground: 249 250 251;
     --primary: 249 250 251;
     --primary-foreground: 28 30 39;
-    --secondary: 149 97 226; 
+    --secondary: 149 97 226;
     --secondary-foreground: 249 250 251;
     --muted: 44 47 59;
     --muted-foreground: 166 173 186;
@@ -26,7 +26,7 @@
     --input: 44 47 59;
     --ring: 149 97 226;
     --radius: 0.75rem;
-    
+
     --sidebar: 222 47% 11%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 265 89% 66%;
@@ -35,14 +35,14 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217 33% 17%;
     --sidebar-ring: 265 89% 66%;
-    
+
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
-  
+
   .dark {
     --background: 0 0% 6.7%;
     --foreground: 0 0% 98%;
@@ -73,19 +73,24 @@
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     letter-spacing: -0.01em;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: -0.02em;
   }
-  
+
   code {
     font-family: var(--font-mono);
   }

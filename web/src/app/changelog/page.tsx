@@ -14,8 +14,8 @@ export default function ChangelogPage() {
         "Updated public assets and folder structure",
         "Added new cleaned dataset types (json, xml)",
         "Fixed robots.txt and sitemaps TLD issues",
-        "Fixed authentication UI input registration bug"
-      ]
+        "Fixed authentication UI input registration bug",
+      ],
     },
     {
       title: "Authentication",
@@ -29,8 +29,8 @@ export default function ChangelogPage() {
         "Added Discord server contact information",
         "Fixed route-related ESLint issues",
         "Resolved miscellaneous type errors",
-        "Fixed dashboard available APIs card error"
-      ]
+        "Fixed dashboard available APIs card error",
+      ],
     },
     {
       title: "UI & Infrastructure Updates",
@@ -42,8 +42,8 @@ export default function ChangelogPage() {
         "Added PGP key",
         "UI enhancements including theme adjustments and logo upgrade",
         "Switched to Roboto Slab font",
-        "Improved deployment configuration and database setup"
-      ]
+        "Improved deployment configuration and database setup",
+      ],
     },
     {
       title: "Initial Release",
@@ -53,19 +53,25 @@ export default function ChangelogPage() {
         "Launched research data portal for Albion College students, faculty, and alumni",
         "Basic authentication with @albion.edu email domains",
         "Released initial API documentation and endpoints",
-        "Early Dashboard implementation"
-      ]
-    }
+        "Early Dashboard implementation",
+      ],
+    },
   ];
 
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '8s' }}></div>
-      <div className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{ animationDuration: '12s' }}></div>
-      
+      <div
+        className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"
+        style={{ animationDuration: "8s" }}
+      ></div>
+      <div
+        className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse"
+        style={{ animationDuration: "12s" }}
+      ></div>
+
       <Header />
-      
+
       {/* Main content */}
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
@@ -74,12 +80,12 @@ export default function ChangelogPage() {
               Changelog
             </span>
           </h1>
-          
+
           <Changelog entries={changelogEntries} />
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
-} 
+}

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { createContext, useContext, ReactNode } from 'react';
-import { authClient } from '@/lib/auth-client';
+import { createContext, useContext, ReactNode } from "react";
+import { authClient } from "@/lib/auth-client";
 
 type User = {
   id: string;
@@ -33,12 +33,12 @@ const ERROR_MESSAGES = {
   USER_EXISTS: "An account with this email already exists",
   PASSWORD_TOO_WEAK: "Password must be at least 8 characters long",
   NETWORK_ERROR: "Network error. Please check your connection and try again",
-  DEFAULT: "An unexpected error occurred. Please try again"
+  DEFAULT: "An unexpected error occurred. Please try again",
 };
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const { data: session, isPending } = authClient.useSession();
-  
+
   const user = session?.user as User | null;
   const loading = isPending;
 
@@ -49,10 +49,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const parseAuthError = (error: AuthError | unknown): string => {
     if (!error) return ERROR_MESSAGES.DEFAULT;
-    
+
     const authError = error as AuthError;
-    
-    if (authError.status === 400 && authError.message?.includes("@albion.edu")) {
+
+    if (
+      authError.status === 400 &&
+      authError.message?.includes("@albion.edu")
+    ) {
       return ERROR_MESSAGES.DOMAIN_VALIDATION;
     } else if (authError.status === 401) {
       return ERROR_MESSAGES.INVALID_CREDENTIALS;
@@ -60,27 +63,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return ERROR_MESSAGES.USER_EXISTS;
     } else if (authError.message?.includes("password")) {
       return ERROR_MESSAGES.PASSWORD_TOO_WEAK;
-    } else if (authError.message?.includes("network") || authError.message?.includes("connect")) {
+    } else if (
+      authError.message?.includes("network") ||
+      authError.message?.includes("connect")
+    ) {
       return ERROR_MESSAGES.NETWORK_ERROR;
     }
-    
+
     return authError.message || ERROR_MESSAGES.DEFAULT;
   };
 
   const signUp = async (email: string, password: string, name: string) => {
     try {
-
       if (!validateAlbionEmail(email)) {
         throw new Error(ERROR_MESSAGES.DOMAIN_VALIDATION);
       }
-      
+
       const { error } = await authClient.signUp.email({
         email,
         password,
         name,
-        callbackURL: "/dashboard"
+        callbackURL: "/dashboard",
       });
-      
+
       if (error) {
         throw error;
       }
@@ -95,9 +100,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         email,
         password,
         callbackURL: "/dashboard",
-        rememberMe: true
+        rememberMe: true,
       });
-      
+
       if (error) {
         throw error;
       }
@@ -121,7 +126,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, signUp, signIn, logout, validateAlbionEmail }}>
+    <AuthContext.Provider
+      value={{ user, loading, signUp, signIn, logout, validateAlbionEmail }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -130,7 +137,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 export function useAuth() {
   const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
-} 
+}

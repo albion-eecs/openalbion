@@ -7,24 +7,29 @@ import { Header } from "@/components/Header";
 export default function SecurityPage() {
   return (
     <div className="flex flex-col min-h-screen relative overflow-hidden">
-      <div className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse" style={{ animationDuration: '8s' }}></div>
-      <div className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse" style={{ animationDuration: '12s' }}></div>
-      
+      <div
+        className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"
+        style={{ animationDuration: "8s" }}
+      ></div>
+      <div
+        className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse"
+        style={{ animationDuration: "12s" }}
+      ></div>
+
       <Header />
-      
+
       {/* Main content */}
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto">
           {/* Hero Section */}
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
-              Security
-            </h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">Security</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              The Albion College EECS Club is committed to ensuring the security and integrity of the OpenAlbion platform.
+              The Albion College EECS Club is committed to ensuring the security
+              and integrity of the OpenAlbion platform.
             </p>
           </div>
-          
+
           {/* Reporting */}
           <Card className="border-secondary/20 mb-8">
             <CardHeader>
@@ -35,29 +40,55 @@ export default function SecurityPage() {
                 <AlertTriangle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    If you discover a security vulnerability, please report it to us immediately:
+                    If you discover a security vulnerability, please report it
+                    to us immediately:
                   </p>
                   <div className="space-y-4">
                     <div className="rounded-lg border border-secondary/20 p-4">
                       <h4 className="font-medium mb-2 text-sm">Email</h4>
                       <p className="text-sm text-muted-foreground">
-                        Send security concerns to <Link href="mailto:security@openalbion.org" className="font-bold text-white hover:underline">security@openalbion.org</Link> with details about the potential vulnerability.
+                        Send security concerns to{" "}
+                        <Link
+                          href="mailto:security@openalbion.org"
+                          className="font-bold text-white hover:underline"
+                        >
+                          security@openalbion.org
+                        </Link>{" "}
+                        with details about the potential vulnerability.
                       </p>
                     </div>
-                    
+
                     <div className="rounded-lg border border-secondary/20 p-4">
-                      <h4 className="font-medium mb-2 text-sm">PGP Encryption</h4>
+                      <h4 className="font-medium mb-2 text-sm">
+                        PGP Encryption
+                      </h4>
                       <p className="text-sm text-muted-foreground">
-                        For sensitive communications, use our PGP key available at <Link href="/.well-known/pgp-key.txt" className="font-bold text-white hover:underline">/.well-known/pgp-key.txt</Link>
+                        For sensitive communications, use our PGP key available
+                        at{" "}
+                        <Link
+                          href="/.well-known/pgp-key.txt"
+                          className="font-bold text-white hover:underline"
+                        >
+                          /.well-known/pgp-key.txt
+                        </Link>
                       </p>
                     </div>
-                    
+
                     <div className="rounded-lg border border-secondary/20 p-4">
-                      <h4 className="font-medium mb-2 text-sm">Reporting Guidelines</h4>
+                      <h4 className="font-medium mb-2 text-sm">
+                        Reporting Guidelines
+                      </h4>
                       <ul className="text-sm text-muted-foreground space-y-2 list-disc pl-5">
-                        <li>Provide sufficient details to reproduce the issue</li>
-                        <li>Allow reasonable time for us to address the issue before public disclosure</li>
-                        <li>Act in good faith to minimize risk to other users</li>
+                        <li>
+                          Provide sufficient details to reproduce the issue
+                        </li>
+                        <li>
+                          Allow reasonable time for us to address the issue
+                          before public disclosure
+                        </li>
+                        <li>
+                          Act in good faith to minimize risk to other users
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -65,7 +96,7 @@ export default function SecurityPage() {
               </div>
             </CardContent>
           </Card>
-          
+
           {/* Commitment */}
           <Card className="border-secondary/20 mb-8">
             <CardHeader>
@@ -76,13 +107,16 @@ export default function SecurityPage() {
                 <Clock className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    The EECS Club is committed to the following security patching guidelines:
+                    The EECS Club is committed to the following security
+                    patching guidelines:
                   </p>
                   <ul className="text-sm text-muted-foreground space-y-3 list-disc pl-5">
                     <li>Acknowledge all security reports within 12 hours</li>
                     <li>Patch critical vulnerabilities within 24 hours</li>
                     <li>Provide updates on the progress of reported issues</li>
-                    <li>Disclose relevant details to affected users once resolved</li>
+                    <li>
+                      Disclose relevant details to affected users once resolved
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -90,8 +124,8 @@ export default function SecurityPage() {
           </Card>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
-} 
+}
