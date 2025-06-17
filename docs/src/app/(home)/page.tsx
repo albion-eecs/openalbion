@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -7,7 +7,7 @@ export default function HomePage() {
         <div className="mb-8">
           <p>Welcome to the OpenAlbion Documentation</p>
           <p>
-            Last Login: {new Date().toUTCString()} on{' '}
+            Last Login: {new Date().toUTCString()} on{" "}
             <span className="text-purple-500">openalbion.local</span>
           </p>
         </div>
@@ -16,10 +16,7 @@ export default function HomePage() {
           <p className="mb-2">Documentation:</p>
           <div className="flex items-center gap-2">
             <span className="text-gray-500">--&gt;</span>
-            <Link
-              href="/docs/api"
-              className="text-primary hover:underline"
-            >
+            <Link href="/docs/api" className="text-primary hover:underline">
               v1 API
             </Link>
           </div>

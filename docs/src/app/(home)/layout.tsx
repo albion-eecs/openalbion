@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
-import { baseOptions } from '@/app/layout.config';
+import type { ReactNode } from "react";
+import { HomeLayout } from "fumadocs-ui/layouts/home";
+import { baseOptions } from "@/app/layout.config";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -8,13 +8,13 @@ export default function Layout({ children }: { children: ReactNode }) {
       {...baseOptions}
       style={
         {
-          '--spacing-fd-container': '1120px',
+          "--spacing-fd-container": "1120px",
         } as object
       }
       links={[
         {
-          text: 'Documentation',
-          url: '/docs/api',
+          text: "Documentation",
+          url: "/docs/api",
         },
       ]}
     >

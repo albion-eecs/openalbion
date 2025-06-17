@@ -1,8 +1,8 @@
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import type { ReactNode } from 'react';
-import { baseOptions } from '@/app/layout.config';
-import { source } from '@/lib/source';
-import { BookText } from 'lucide-react';
+import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import type { ReactNode } from "react";
+import { baseOptions } from "@/app/layout.config";
+import { source } from "@/lib/source";
+import { BookText } from "lucide-react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -11,9 +11,9 @@ export default function Layout({ children }: { children: ReactNode }) {
       {...baseOptions}
       sidebar={{
         tabs: {
-          transform: (option) => {
-            if (option.title === 'API Reference') {
-              const color = '#9561e2';
+          transform: option => {
+            if (option.title === "API Reference") {
+              const color = "#9561e2";
               return {
                 ...option,
                 icon: (
@@ -23,18 +23,18 @@ export default function Layout({ children }: { children: ReactNode }) {
                       {
                         color,
                         borderColor: `color-mix(in oklab, ${color} 50%, transparent)`,
-                        '--tw-ring-color': `color-mix(in oklab, ${color} 20%, transparent)`
+                        "--tw-ring-color": `color-mix(in oklab, ${color} 20%, transparent)`,
                       } as object
                     }
                   >
                     <BookText />
                   </div>
-                )
+                ),
               };
             }
             return option;
-          }
-        }
+          },
+        },
       }}
     >
       {children}
