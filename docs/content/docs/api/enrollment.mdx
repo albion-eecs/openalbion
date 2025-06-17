@@ -1,0 +1,57 @@
+---
+title: Enrollment API
+description: GET enrollment data.
+---
+
+The Enrollment API endpoint provides access to enrollment data for Albion College.
+
+## Endpoint
+
+```
+GET /api/v1/enrollment
+```
+
+## Query Parameters
+
+| Name        | Type   | Description                                                              |
+| :---------- | :----- | :----------------------------------------------------------------------- |
+| `dimension` | string | Optional. Filters the data by a specific dimension, e.g., "Gender".      |
+
+### Available Dimensions
+
+The following values are available for the `dimension` parameter:
+
+- `Ethnicity`
+- `Gender`
+- `State/Country`
+- `Unknown`
+
+## Example Request
+
+Using `curl`:
+
+```bash
+curl -X GET 'https://openalbion.com/api/v1/enrollment?dimension=Gender' \
+-H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Example Response
+
+```json
+[
+  {
+    "year": "2023-2024",
+    "dimension": "Gender",
+    "primaryCategory": "New High School Graduates",
+    "secondaryCategory": "Full-Time",
+    "value": 179
+  },
+  {
+    "year": "2023-2024",
+    "dimension": "Gender",
+    "primaryCategory": "New High School Graduates",
+    "secondaryCategory": "Part-Time",
+    "value": 0
+  }
+]
+``` 

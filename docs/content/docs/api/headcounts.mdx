@@ -1,0 +1,40 @@
+---
+title: Headcounts API
+description: GET student headcounts data.
+---
+
+The Headcounts API endpoint provides access to student headcount data for Albion College.
+
+## Endpoint
+
+```
+GET /api/v1/headcounts
+```
+
+## Query Parameters
+
+This endpoint does not accept any query parameters.
+
+## Example Request
+
+Using `curl`:
+
+```bash
+curl -X GET 'https://openalbion.com/api/v1/headcounts' \
+-H 'Authorization: Bearer <YOUR_API_KEY>'
+```
+
+## Example Response
+
+```json
+[
+  {
+    "year": 2023,
+    "count": 1500
+  },
+  {
+    "year": 2024,
+    "count": 1550
+  }
+]
+``` 
