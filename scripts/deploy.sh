@@ -57,8 +57,11 @@ function healthcheck() {
     retries=$((retries-1))
     if [ $retries -le 0 ]; then
       echo "[ERROR] Health check failed for $url"
+      echo "[DEBUG] Recent web container logs:"
+      docker logs --tail 50 openalbion-$IDLE-web-1 || true
       return 1
     fi
+    echo "[WAIT] $url not healthy yet… ($retries retries left)"
   done
   return 0
 }
