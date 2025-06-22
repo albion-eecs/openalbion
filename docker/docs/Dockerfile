@@ -1,14 +1,14 @@
 FROM node:20-alpine AS base
 
-RUN npm install -g npm@latest pnpm@latest
+RUN npm install -g pnpm@latest
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY source.config.ts ./
-RUN pnpm install --prod --frozen-lockfile
+RUN pnpm install --prod --frozen-lockfile --ignore-scripts
 
 FROM base AS builder
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN npm run build
+RUN pnpm rebuild --recursive --enable-scripts && pnpm exec fumadocs-mdx && pnpm run build
 
 FROM base AS runner
 WORKDIR /app
