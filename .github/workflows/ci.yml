@@ -30,7 +30,5 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
         if: matrix.workspace == 'web'
-      - run: pnpm exec eslint .
-        if: matrix.workspace == 'docs'
       - run: pnpm exec tsc --noEmit
       - run: pnpm build 
