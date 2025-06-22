@@ -28,7 +28,7 @@ jobs:
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
         run: |
           echo "[CI] Triggering remote deployment..."
-          ssh -o SendEnv=BETTER_AUTH_SECRET $VPS_USER@$VPS_HOST "export BETTER_AUTH_SECRET=\"$BETTER_AUTH_SECRET\" && cd /var/www/openalbion/source/scripts && ./deploy.sh"
+          ssh $VPS_USER@$VPS_HOST "export BETTER_AUTH_SECRET=\"$BETTER_AUTH_SECRET\" && cd /var/www/openalbion/source/scripts && ./deploy.sh"
           
       - name: Success
         if: success()

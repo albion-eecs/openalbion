@@ -38,10 +38,6 @@ cd "$SRC_DIR"
 echo "[GIT] Pulling latest code..."
  git pull origin master
 
-if [[ -n "${BETTER_AUTH_SECRET:-}" ]]; then
-  echo "BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET" > .env
-fi
-
 COMPOSE_PROJECT_NAME="openalbion-$IDLE"
 export WEB_PORT=$IDLE_PORT_WEB
 export DOCS_PORT=$IDLE_PORT_DOCS
@@ -67,17 +63,22 @@ function healthcheck() {
 }
 
 echo "[HEALTH] Waiting for web service..."
-healthcheck "http://localhost:$IDLE_PORT_WEB/api/health"
+if ! healthcheck "http://localhost:$IDLE_PORT_WEB/api/health"; then
+  echo "[ROLLBACK] New web service failed health-check. Aborting deploy."
+  exit 1
+fi
 
 echo "[HEALTH] Waiting for docs service..."
-healthcheck "http://localhost:$IDLE_PORT_DOCS/api/health"
+if ! healthcheck "http://localhost:$IDLE_PORT_DOCS/api/health"; then
+  echo "[ROLLBACK] New docs service failed health-check. Aborting deploy."
+  exit 1
+fi
 
 NGINX_UPSTREAM="/etc/nginx/conf.d/upstreams.conf"
 NGINX_SITE_CONF="/etc/nginx/conf.d/openalbion.conf"
-if [ ! -f "$NGINX_SITE_CONF" ]; then
-  echo "[NGINX] Installing site config to $NGINX_SITE_CONF"
-  sudo cp "$SRC_DIR/docker/nginx/conf.d/default.conf" "$NGINX_SITE_CONF"
-fi
+
+echo "[NGINX] Updating site config at $NGINX_SITE_CONF"
+sudo cp "$SRC_DIR/docker/nginx/conf.d/default.conf" "$NGINX_SITE_CONF"
 
 cat > "$NGINX_UPSTREAM" <<EOF
 upstream web_backend { server 127.0.0.1:$IDLE_PORT_WEB; }
