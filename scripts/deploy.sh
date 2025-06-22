@@ -5,8 +5,13 @@ DEPLOY_DIR="/var/www/openalbion"
 SRC_DIR="$DEPLOY_DIR/source"
 STATE_FILE="$DEPLOY_DIR/.env.state"
 
-if [ ! -f "$STATE_FILE" ]; then
+mkdir -p "$DEPLOY_DIR"
+
+if [ ! -d "$SRC_DIR/.git" ]; then
+  echo "[BOOTSTRAP] Cloning repository for the first time…"
+  git clone https://github.com/albion-eecs/openalbion.git "$SRC_DIR"
   echo "LIVE=blue" > "$STATE_FILE"
+  chmod +x "$SRC_DIR/scripts/deploy.sh"
 fi
 
 source "$STATE_FILE"
