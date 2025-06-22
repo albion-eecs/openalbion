@@ -17,7 +17,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN pnpm rebuild --recursive --enable-scripts && pnpm exec fumadocs-mdx && pnpm run build
+RUN pnpm rebuild --recursive --config.enable-scripts=true && pnpm exec fumadocs-mdx && pnpm run build
 
 FROM base AS runner
 WORKDIR /app

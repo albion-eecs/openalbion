@@ -7,7 +7,7 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile --enable-scripts
+RUN pnpm install --frozen-lockfile --config.enable-scripts=true
 
 FROM base AS builder
 WORKDIR /app
@@ -29,7 +29,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g tsx
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --prod --frozen-lockfile --enable-scripts
+RUN pnpm install --prod --frozen-lockfile --config.enable-scripts=true
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
