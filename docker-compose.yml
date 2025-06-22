@@ -2,7 +2,7 @@ services:
   web:
     build:
       context: ./web
-      dockerfile: docker/web/Dockerfile
+      dockerfile: ../docker/web/Dockerfile
     restart: always
     environment:
       - NODE_ENV=production
@@ -20,7 +20,7 @@ services:
   docs:
     build:
       context: ./docs
-      dockerfile: docker/docs/Dockerfile
+      dockerfile: ../docker/docs/Dockerfile
     restart: always
     environment:
       - NODE_ENV=production
