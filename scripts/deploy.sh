@@ -73,6 +73,12 @@ echo "[HEALTH] Waiting for docs service..."
 healthcheck "http://localhost:$IDLE_PORT_DOCS/api/health"
 
 NGINX_UPSTREAM="/etc/nginx/conf.d/upstreams.conf"
+NGINX_SITE_CONF="/etc/nginx/conf.d/openalbion.conf"
+if [ ! -f "$NGINX_SITE_CONF" ]; then
+  echo "[NGINX] Installing site config to $NGINX_SITE_CONF"
+  sudo cp "$SRC_DIR/docker/nginx/conf.d/default.conf" "$NGINX_SITE_CONF"
+fi
+
 cat > "$NGINX_UPSTREAM" <<EOF
 upstream web_backend { server 127.0.0.1:$IDLE_PORT_WEB; }
 upstream docs_backend { server 127.0.0.1:$IDLE_PORT_DOCS; }
