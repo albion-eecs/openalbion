@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Set up SSH
+      - name: Set up SSH Agent
         uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
@@ -21,35 +21,13 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
           
-      - name: Deploy to VPS
+      - name: Trigger deployment script on VPS
         env:
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_USER: ${{ secrets.VPS_USER }}
-          DEPLOY_PATH: /var/www/openalbion
-          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
-          BETTER_AUTH_URL: https://openalbion.org
         run: |
-          echo "[DEPLOYMENT] Initiating deployment sequence..."
-          ssh $VPS_USER@$VPS_HOST "mkdir -p $DEPLOY_PATH"
-          echo "[TRANSFER] Syncing files to production server..."
-          rsync -avz --delete \
-            --exclude '.git' \
-            --exclude '.github' \
-            --exclude 'node_modules' \
-            --exclude '.next' \
-            --exclude 'web/db/*.db' \
-            ./ $VPS_USER@$VPS_HOST:$DEPLOY_PATH
-          
-          echo "[BUILD] Executing build and deployment protocols..."
-          ssh $VPS_USER@$VPS_HOST "cd $DEPLOY_PATH && \
-            echo '[DOCKER] Starting services with rolling updates...' && \
-            docker-compose pull && \
-            BETTER_AUTH_SECRET='$BETTER_AUTH_SECRET' \
-            BETTER_AUTH_URL='$BETTER_AUTH_URL' \
-            NODE_ENV=production \
-            docker-compose up -d --remove-orphans --build && \
-            echo '[STATUS] Verifying container status...' && \
-            docker-compose ps"
+          echo "[CI] Triggering remote deployment..."
+          ssh $VPS_USER@$VPS_HOST "cd /var/www/openalbion/scripts && ./deploy.sh"
           
       - name: Success
         if: success()
@@ -58,8 +36,9 @@ jobs:
           echo "[STATUS] Active deployments:"
           echo "         - https://openalbion.org"
           echo "         - https://docs.openalbion.org"
+
       - name: Failure
         if: failure()
         run: |
-          echo "[FAILURE] Deployment sequence aborted"
-          echo "[DEBUG] Review logs above for error analysis" 
+          echo "[FAILURE] Remote deployment script reported an error"
+          echo "[DEBUG] Review server-side deployment logs for more information" 
