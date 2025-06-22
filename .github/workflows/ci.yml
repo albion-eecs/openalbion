@@ -6,11 +6,16 @@ on:
 
 jobs:
   quality:
+    name: Node ${{ matrix.node }} / ${{ matrix.workspace }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node: [20, 22]
         workspace: [docs, web]
+    defaults:
+      run:
+        working-directory: ${{ matrix.workspace }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -21,11 +26,11 @@ jobs:
           node-version: ${{ matrix.node }}
           cache: pnpm
           cache-dependency-path: ${{ matrix.workspace }}/pnpm-lock.yaml
-      - run: cd ${{ matrix.workspace }} && pnpm install --frozen-lockfile
-      - run: cd ${{ matrix.workspace }} && pnpm format:check
-      - run: cd ${{ matrix.workspace }} && pnpm lint
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
         if: matrix.workspace == 'web'
-      - run: cd ${{ matrix.workspace }} && pnpx eslint .
+      - run: pnpm exec eslint .
         if: matrix.workspace == 'docs'
-      - run: cd ${{ matrix.workspace }} && pnpx tsc --noEmit
-      - run: cd ${{ matrix.workspace }} && pnpm build 
+      - run: pnpm exec tsc --noEmit
+      - run: pnpm build 
