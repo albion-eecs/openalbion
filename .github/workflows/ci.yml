@@ -10,6 +10,7 @@ jobs:
     strategy:
       matrix:
         node: [20, 22]
+        workspace: [docs, web]
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -19,8 +20,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm -r lint
-      - run: pnpm -r test
-      - run: pnpm -r typecheck
-      - run: pnpm -r build 
+          cache-dependency-path: ${{ matrix.workspace }}/pnpm-lock.yaml
+      - run: cd ${{ matrix.workspace }} && pnpm install --frozen-lockfile
+      - run: cd ${{ matrix.workspace }} && pnpm lint
+      - run: cd ${{ matrix.workspace }} && pnpm test
+      - run: cd ${{ matrix.workspace }} && pnpm typecheck
+      - run: cd ${{ matrix.workspace }} && pnpm build 
