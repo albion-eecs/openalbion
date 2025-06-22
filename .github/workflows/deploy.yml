@@ -27,7 +27,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
         run: |
           echo "[CI] Triggering remote deployment..."
-          ssh $VPS_USER@$VPS_HOST "cd /var/www/openalbion/scripts && ./deploy.sh"
+          ssh $VPS_USER@$VPS_HOST "cd /var/www/openalbion/source/scripts && ./deploy.sh"
           
       - name: Success
         if: success()
