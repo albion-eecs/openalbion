@@ -46,8 +46,8 @@ COMPOSE_PROJECT_NAME="openalbion-$IDLE"
 export WEB_PORT=$IDLE_PORT_WEB
 export DOCS_PORT=$IDLE_PORT_DOCS
 
-echo "[DOCKER] Building and starting containers for $IDLE..."
-docker compose -p "$COMPOSE_PROJECT_NAME" up --build -d
+echo "[DOCKER] Building and starting web/docs containers for $IDLE (nginx excluded)…"
+docker compose -p "$COMPOSE_PROJECT_NAME" up --build -d web docs
 
 function healthcheck() {
   local url=$1
