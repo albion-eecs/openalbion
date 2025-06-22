@@ -43,7 +43,7 @@ export WEB_PORT=$IDLE_PORT_WEB
 export DOCS_PORT=$IDLE_PORT_DOCS
 
 echo "[DOCKER] Building and starting containers for $IDLE..."
-docker-compose -p "$COMPOSE_PROJECT_NAME" up --build -d
+docker compose -p "$COMPOSE_PROJECT_NAME" up --build -d
 
 function healthcheck() {
   local url=$1
@@ -80,6 +80,6 @@ echo "LIVE=$IDLE" > "$STATE_FILE"
 OLD_COMPOSE_PROJECT="openalbion-$LIVE"
 
 echo "[DOCKER] Removing old containers ($LIVE)..."
-docker-compose -p "$OLD_COMPOSE_PROJECT" down
+docker compose -p "$OLD_COMPOSE_PROJECT" down
 
 echo "[SUCCESS] Deployment to $IDLE complete." 
