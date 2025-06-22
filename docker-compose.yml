@@ -8,7 +8,6 @@ services:
       - NODE_ENV=production
       - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET}
       - BETTER_AUTH_URL=${BETTER_AUTH_URL}
-      - PORT=${WEB_PORT:-3000}
     volumes:
       - ./web/public:/app/public
       - db:/app/db
@@ -24,7 +23,8 @@ services:
     restart: always
     environment:
       - NODE_ENV=production
-      - PORT=${DOCS_PORT:-4000}
+    volumes:
+      - ./docs/public:/app/public
     networks:
       - app_network
     ports:
