@@ -38,6 +38,10 @@ cd "$SRC_DIR"
 echo "[GIT] Pulling latest code..."
  git pull origin master
 
+if [[ -n "${BETTER_AUTH_SECRET:-}" ]]; then
+  echo "BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET" > .env
+fi
+
 COMPOSE_PROJECT_NAME="openalbion-$IDLE"
 export WEB_PORT=$IDLE_PORT_WEB
 export DOCS_PORT=$IDLE_PORT_DOCS
