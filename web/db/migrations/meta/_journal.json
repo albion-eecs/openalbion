@@ -8,6 +8,34 @@
       "when": 1750044029005,
       "tag": "0000_smart_luke_cage",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1750059637583,
+      "tag": "0001_colossal_power_pack",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1750061786791,
+      "tag": "0002_pale_rictor",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1750066238942,
+      "tag": "0003_cloudy_ronan",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1750067078438,
+      "tag": "0004_workable_bishop",
+      "breakpoints": true
     }
   ]
 }

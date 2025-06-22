@@ -1,23 +1,10 @@
-export const dynamic = "force-dynamic";
-export const runtime = "nodejs";
-
 import { NextRequest, NextResponse } from "next/server";
-import { getUser } from "@/lib/auth-server";
-import { statisticsService } from "@/lib/db-service";
+import { requireUser } from "@/lib/auth-server";
+import * as statisticsService from "@/services/statistics.service";
 
 export async function GET(request: NextRequest) {
   try {
-    const user = await getUser();
-
-    if (!user) {
-      return NextResponse.json(
-        {
-          error: "Unauthorized",
-          message: "You must be logged in to access this endpoint",
-        },
-        { status: 401 }
-      );
-    }
+    const user = await requireUser();
 
     const url = new URL(request.url);
     const searchParams = await url.searchParams;
@@ -38,6 +25,15 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(stats);
   } catch (error) {
+    if (error instanceof Error && error.message === "Unauthorized") {
+      return NextResponse.json(
+        {
+          error: "Unauthorized",
+          message: "You must be logged in to access this endpoint",
+        },
+        { status: 401 }
+      );
+    }
     console.error("Error fetching dashboard stats:", error);
 
     return NextResponse.json(

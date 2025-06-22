@@ -63,3 +63,67 @@ export const verification = sqliteTable("verification", {
     () => /* @__PURE__ */ new Date()
   ),
 });
+
+export const academicYears = sqliteTable("academic_years", {
+  id: integer("id").primaryKey(),
+  year: text("year").notNull().unique(),
+});
+
+export const enrollment = sqliteTable("enrollment", {
+  id: integer("id").primaryKey(),
+  academicYearId: integer("academic_year_id")
+    .notNull()
+    .references(() => academicYears.id),
+
+  dimension: text("dimension").notNull(),
+  primaryCategory: text("primary_category").notNull(),
+  secondaryCategory: text("secondary_category").notNull(),
+  value: integer("value").notNull(),
+});
+
+export const headcounts = sqliteTable("headcounts", {
+  year: integer("year").primaryKey(),
+  count: integer("count").notNull(),
+});
+
+export const apiKeys = sqliteTable("api_keys", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id").notNull(),
+  apiKey: text("api_key").notNull().unique(),
+  name: text("name").notNull(),
+  createdAt: integer("created_at").notNull(),
+  expiresAt: integer("expires_at"),
+  lastUsedAt: integer("last_used_at"),
+  isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
+});
+
+export const userLogs = sqliteTable("user_logs", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" }),
+  action: text("action").notNull(),
+  resourceType: text("resource_type"),
+  resourceId: text("resource_id"),
+  details: text("details"),
+  createdAt: integer("created_at")
+    .$defaultFn(() => new Date().getTime())
+    .notNull(),
+});
+
+export const userPreferences = sqliteTable("user_preferences", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  userId: text("user_id")
+    .notNull()
+    .references(() => user.id, { onDelete: "cascade" })
+    .unique(),
+  apiUsageAlerts: integer("api_usage_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  securityAlerts: integer("security_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+  dataUpdateAlerts: integer("data_update_alerts", { mode: "boolean" })
+    .notNull()
+    .default(true),
+});

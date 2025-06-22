@@ -1,646 +1,634 @@
 [
   {
-    "Year": "1864",
-    "Headcount": "236"
+    "year": 1864,
+    "count": 236
   },
   {
-    "Year": "1865",
-    "Headcount": "292"
+    "year": 1865,
+    "count": 292
   },
   {
-    "Year": "1866",
-    "Headcount": "332"
+    "year": 1866,
+    "count": 332
   },
   {
-    "Year": "1867",
-    "Headcount": "263"
+    "year": 1867,
+    "count": 263
   },
   {
-    "Year": "1868",
-    "Headcount": "258"
+    "year": 1868,
+    "count": 258
   },
   {
-    "Year": "1869",
-    "Headcount": "-"
+    "year": 1870,
+    "count": 178
   },
   {
-    "Year": "1870",
-    "Headcount": "178"
+    "year": 1871,
+    "count": 216
   },
   {
-    "Year": "1871",
-    "Headcount": "216"
+    "year": 1872,
+    "count": 222
   },
   {
-    "Year": "1872",
-    "Headcount": "222"
+    "year": 1873,
+    "count": 201
   },
   {
-    "Year": "1873",
-    "Headcount": "201"
+    "year": 1874,
+    "count": 202
   },
   {
-    "Year": "1874",
-    "Headcount": "202"
+    "year": 1875,
+    "count": 186
   },
   {
-    "Year": "1875",
-    "Headcount": "186"
+    "year": 1876,
+    "count": 185
   },
   {
-    "Year": "1876",
-    "Headcount": "185"
+    "year": 1877,
+    "count": 205
   },
   {
-    "Year": "1877",
-    "Headcount": "205"
+    "year": 1878,
+    "count": 233
   },
   {
-    "Year": "1878",
-    "Headcount": "233"
+    "year": 1879,
+    "count": 248
   },
   {
-    "Year": "1879",
-    "Headcount": "248"
+    "year": 1880,
+    "count": 217
   },
   {
-    "Year": "1880",
-    "Headcount": "217"
+    "year": 1881,
+    "count": 199
   },
   {
-    "Year": "1881",
-    "Headcount": "199"
+    "year": 1882,
+    "count": 262
   },
   {
-    "Year": "1882",
-    "Headcount": "262"
+    "year": 1883,
+    "count": 340
   },
   {
-    "Year": "1883",
-    "Headcount": "340"
+    "year": 1884,
+    "count": 325
   },
   {
-    "Year": "1884",
-    "Headcount": "325"
+    "year": 1885,
+    "count": 365
   },
   {
-    "Year": "1885",
-    "Headcount": "365"
+    "year": 1886,
+    "count": 418
   },
   {
-    "Year": "1886",
-    "Headcount": "418"
+    "year": 1887,
+    "count": 451
   },
   {
-    "Year": "1887",
-    "Headcount": "451"
+    "year": 1888,
+    "count": 460
   },
   {
-    "Year": "1888",
-    "Headcount": "460"
+    "year": 1889,
+    "count": 496
   },
   {
-    "Year": "1889",
-    "Headcount": "496"
+    "year": 1890,
+    "count": 529
   },
   {
-    "Year": "1890",
-    "Headcount": "529"
+    "year": 1891,
+    "count": 610
   },
   {
-    "Year": "1891",
-    "Headcount": "610"
+    "year": 1892,
+    "count": 627
   },
   {
-    "Year": "1892",
-    "Headcount": "627"
+    "year": 1893,
+    "count": 629
   },
   {
-    "Year": "1893",
-    "Headcount": "629"
+    "year": 1895,
+    "count": 589
   },
   {
-    "Year": "1894",
-    "Headcount": "-"
+    "year": 1896,
+    "count": 477
   },
   {
-    "Year": "1895",
-    "Headcount": "589"
+    "year": 1897,
+    "count": 427
   },
   {
-    "Year": "1896",
-    "Headcount": "477"
+    "year": 1898,
+    "count": 452
   },
   {
-    "Year": "1897",
-    "Headcount": "427"
+    "year": 1899,
+    "count": 475
   },
   {
-    "Year": "1898",
-    "Headcount": "452"
+    "year": 1900,
+    "count": 490
   },
   {
-    "Year": "1899",
-    "Headcount": "475"
+    "year": 1901,
+    "count": 425
   },
   {
-    "Year": "1900",
-    "Headcount": "490"
+    "year": 1902,
+    "count": 442
   },
   {
-    "Year": "1901",
-    "Headcount": "425"
+    "year": 1903,
+    "count": 464
   },
   {
-    "Year": "1902",
-    "Headcount": "442"
+    "year": 1905,
+    "count": 483
   },
   {
-    "Year": "1903",
-    "Headcount": "464"
+    "year": 1906,
+    "count": 450
   },
   {
-    "Year": "1904",
-    "Headcount": "-"
+    "year": 1907,
+    "count": 460
   },
   {
-    "Year": "1905",
-    "Headcount": "483"
+    "year": 1908,
+    "count": 452
   },
   {
-    "Year": "1906",
-    "Headcount": "450"
+    "year": 1909,
+    "count": 499
   },
   {
-    "Year": "1907",
-    "Headcount": "460"
+    "year": 1910,
+    "count": 500
   },
   {
-    "Year": "1908",
-    "Headcount": "452"
+    "year": 1911,
+    "count": 512
   },
   {
-    "Year": "1909",
-    "Headcount": "499"
+    "year": 1912,
+    "count": 516
   },
   {
-    "Year": "1910",
-    "Headcount": "500"
+    "year": 1913,
+    "count": 524
   },
   {
-    "Year": "1911",
-    "Headcount": "512"
+    "year": 1914,
+    "count": 505
   },
   {
-    "Year": "1912",
-    "Headcount": "516"
+    "year": 1915,
+    "count": 535
   },
   {
-    "Year": "1913",
-    "Headcount": "524"
+    "year": 1916,
+    "count": 518
   },
   {
-    "Year": "1914",
-    "Headcount": "505"
+    "year": 1917,
+    "count": 413
   },
   {
-    "Year": "1915",
-    "Headcount": "535"
+    "year": 1918,
+    "count": 561
   },
   {
-    "Year": "1916",
-    "Headcount": "518"
+    "year": 1919,
+    "count": 489
   },
   {
-    "Year": "1917",
-    "Headcount": "413"
+    "year": 1920,
+    "count": 530
   },
   {
-    "Year": "1918",
-    "Headcount": "561"
+    "year": 1921,
+    "count": 599
   },
   {
-    "Year": "1919",
-    "Headcount": "489"
+    "year": 1922,
+    "count": 636
   },
   {
-    "Year": "1920",
-    "Headcount": "530"
+    "year": 1923,
+    "count": 727
   },
   {
-    "Year": "1921",
-    "Headcount": "599"
+    "year": 1924,
+    "count": 713
   },
   {
-    "Year": "1922",
-    "Headcount": "636"
+    "year": 1925,
+    "count": 718
   },
   {
-    "Year": "1923",
-    "Headcount": "727"
+    "year": 1926,
+    "count": 765
   },
   {
-    "Year": "1924",
-    "Headcount": "713"
+    "year": 1927,
+    "count": 884
   },
   {
-    "Year": "1925",
-    "Headcount": "718"
+    "year": 1928,
+    "count": 912
   },
   {
-    "Year": "1926",
-    "Headcount": "765"
+    "year": 1929,
+    "count": 885
   },
   {
-    "Year": "1927",
-    "Headcount": "884"
+    "year": 1930,
+    "count": 867
   },
   {
-    "Year": "1928",
-    "Headcount": "912"
+    "year": 1931,
+    "count": 752
   },
   {
-    "Year": "1929",
-    "Headcount": "885"
+    "year": 1932,
+    "count": 708
   },
   {
-    "Year": "1930",
-    "Headcount": "867"
+    "year": 1933,
+    "count": 692
   },
   {
-    "Year": "1931",
-    "Headcount": "752"
+    "year": 1934,
+    "count": 692
   },
   {
-    "Year": "1932",
-    "Headcount": "708"
+    "year": 1935,
+    "count": 754
   },
   {
-    "Year": "1933",
-    "Headcount": "692"
+    "year": 1936,
+    "count": 786
   },
   {
-    "Year": "1934",
-    "Headcount": "692"
+    "year": 1937,
+    "count": 821
   },
   {
-    "Year": "1935",
-    "Headcount": "754"
+    "year": 1938,
+    "count": 860
   },
   {
-    "Year": "1936",
-    "Headcount": "786"
+    "year": 1939,
+    "count": 846
   },
   {
-    "Year": "1937",
-    "Headcount": "821"
+    "year": 1940,
+    "count": 879
   },
   {
-    "Year": "1938",
-    "Headcount": "860"
+    "year": 1941,
+    "count": 803
   },
   {
-    "Year": "1939",
-    "Headcount": "846"
+    "year": 1942,
+    "count": 807
   },
   {
-    "Year": "1940",
-    "Headcount": "879"
+    "year": 1943,
+    "count": 534
   },
   {
-    "Year": "1941",
-    "Headcount": "803"
+    "year": 1944,
+    "count": 651
   },
   {
-    "Year": "1942",
-    "Headcount": "807"
+    "year": 1945,
+    "count": 812
   },
   {
-    "Year": "1943",
-    "Headcount": "534"
+    "year": 1946,
+    "count": 1219
   },
   {
-    "Year": "1944",
-    "Headcount": "651"
+    "year": 1947,
+    "count": 1259
   },
   {
-    "Year": "1945",
-    "Headcount": "812"
+    "year": 1948,
+    "count": 1354
   },
   {
-    "Year": "1946",
-    "Headcount": "1219"
+    "year": 1949,
+    "count": 1332
   },
   {
-    "Year": "1947",
-    "Headcount": "1259"
+    "year": 1950,
+    "count": 1235
   },
   {
-    "Year": "1948",
-    "Headcount": "1354"
+    "year": 1951,
+    "count": 1010
   },
   {
-    "Year": "1949",
-    "Headcount": "1332"
+    "year": 1952,
+    "count": 983
   },
   {
-    "Year": "1950",
-    "Headcount": "1235"
+    "year": 1953,
+    "count": 1074
   },
   {
-    "Year": "1951",
-    "Headcount": "1010"
+    "year": 1954,
+    "count": 1196
   },
   {
-    "Year": "1952",
-    "Headcount": "983"
+    "year": 1955,
+    "count": 1260
   },
   {
-    "Year": "1953",
-    "Headcount": "1074"
+    "year": 1956,
+    "count": 1283
   },
   {
-    "Year": "1954",
-    "Headcount": "1196"
+    "year": 1957,
+    "count": 1349
   },
   {
-    "Year": "1955",
-    "Headcount": "1260"
+    "year": 1958,
+    "count": 1387
   },
   {
-    "Year": "1956",
-    "Headcount": "1283"
+    "year": 1959,
+    "count": 1366
   },
   {
-    "Year": "1957",
-    "Headcount": "1349"
+    "year": 1960,
+    "count": 1377
   },
   {
-    "Year": "1958",
-    "Headcount": "1387"
+    "year": 1961,
+    "count": 1429
   },
   {
-    "Year": "1959",
-    "Headcount": "1366"
+    "year": 1962,
+    "count": 1408
   },
   {
-    "Year": "1960",
-    "Headcount": "1377"
+    "year": 1963,
+    "count": 1356
   },
   {
-    "Year": "1961",
-    "Headcount": "1429"
+    "year": 1964,
+    "count": 1541
   },
   {
-    "Year": "1962",
-    "Headcount": "1408"
+    "year": 1965,
+    "count": 1560
   },
   {
-    "Year": "1963",
-    "Headcount": "1356"
+    "year": 1966,
+    "count": 1657
   },
   {
-    "Year": "1964",
-    "Headcount": "1541"
+    "year": 1967,
+    "count": 1716
   },
   {
-    "Year": "1965",
-    "Headcount": "1560"
+    "year": 1968,
+    "count": 1833
   },
   {
-    "Year": "1966",
-    "Headcount": "1657"
+    "year": 1969,
+    "count": 1870
   },
   {
-    "Year": "1967",
-    "Headcount": "1716"
+    "year": 1970,
+    "count": 1864
   },
   {
-    "Year": "1968",
-    "Headcount": "1833"
+    "year": 1971,
+    "count": 1809
   },
   {
-    "Year": "1969",
-    "Headcount": "1870"
+    "year": 1972,
+    "count": 1818
   },
   {
-    "Year": "1970",
-    "Headcount": "1864"
+    "year": 1973,
+    "count": 1869
   },
   {
-    "Year": "1971",
-    "Headcount": "1809"
+    "year": 1974,
+    "count": 1835
   },
   {
-    "Year": "1972",
-    "Headcount": "1818"
+    "year": 1975,
+    "count": 1817
   },
   {
-    "Year": "1973",
-    "Headcount": "1869"
+    "year": 1976,
+    "count": 1743
   },
   {
-    "Year": "1974",
-    "Headcount": "1835"
+    "year": 1977,
+    "count": 1748
   },
   {
-    "Year": "1975",
-    "Headcount": "1817"
+    "year": 1978,
+    "count": 1843
   },
   {
-    "Year": "1976",
-    "Headcount": "1743"
+    "year": 1979,
+    "count": 1848
   },
   {
-    "Year": "1977",
-    "Headcount": "1748"
+    "year": 1980,
+    "count": 1936
   },
   {
-    "Year": "1978",
-    "Headcount": "1843"
+    "year": 1981,
+    "count": 1939
   },
   {
-    "Year": "1979",
-    "Headcount": "1848"
+    "year": 1982,
+    "count": 1803
   },
   {
-    "Year": "1980",
-    "Headcount": "1936"
+    "year": 1983,
+    "count": 1727
   },
   {
-    "Year": "1981",
-    "Headcount": "1939"
+    "year": 1984,
+    "count": 1635
   },
   {
-    "Year": "1982",
-    "Headcount": "1803"
+    "year": 1985,
+    "count": 1638
   },
   {
-    "Year": "1983",
-    "Headcount": "1727"
+    "year": 1986,
+    "count": 1637
   },
   {
-    "Year": "1984",
-    "Headcount": "1635"
+    "year": 1987,
+    "count": 1682
   },
   {
-    "Year": "1985",
-    "Headcount": "1638"
+    "year": 1988,
+    "count": 1721
   },
   {
-    "Year": "1986",
-    "Headcount": "1637"
+    "year": 1989,
+    "count": 1714
   },
   {
-    "Year": "1987",
-    "Headcount": "1682"
+    "year": 1990,
+    "count": 1670
   },
   {
-    "Year": "1988",
-    "Headcount": "1721"
+    "year": 1991,
+    "count": 1679
   },
   {
-    "Year": "1989",
-    "Headcount": "1714"
+    "year": 1992,
+    "count": 1677
   },
   {
-    "Year": "1990",
-    "Headcount": "1670"
+    "year": 1993,
+    "count": 1701
   },
   {
-    "Year": "1991",
-    "Headcount": "1679"
+    "year": 1994,
+    "count": 1668
   },
   {
-    "Year": "1992",
-    "Headcount": "1677"
+    "year": 1995,
+    "count": 1590
   },
   {
-    "Year": "1993",
-    "Headcount": "1701"
+    "year": 1996,
+    "count": 1558
   },
   {
-    "Year": "1994",
-    "Headcount": "1668"
+    "year": 1997,
+    "count": 1559
   },
   {
-    "Year": "1995",
-    "Headcount": "1590"
+    "year": 1998,
+    "count": 1598
   },
   {
-    "Year": "1996",
-    "Headcount": "1558"
+    "year": 1999,
+    "count": 1526
   },
   {
-    "Year": "1997",
-    "Headcount": "1559"
+    "year": 2000,
+    "count": 1521
   },
   {
-    "Year": "1998",
-    "Headcount": "1598"
+    "year": 2001,
+    "count": 1548
   },
   {
-    "Year": "1999",
-    "Headcount": "1526"
+    "year": 2002,
+    "count": 1658
   },
   {
-    "Year": "2000",
-    "Headcount": "1521"
+    "year": 2003,
+    "count": 1732
   },
   {
-    "Year": "2001",
-    "Headcount": "1548"
+    "year": 2004,
+    "count": 1867
   },
   {
-    "Year": "2002",
-    "Headcount": "1658"
+    "year": 2005,
+    "count": 1979
   },
   {
-    "Year": "2003",
-    "Headcount": "1732"
+    "year": 2006,
+    "count": 1941
   },
   {
-    "Year": "2004",
-    "Headcount": "1867"
+    "year": 2007,
+    "count": 1938
   },
   {
-    "Year": "2005",
-    "Headcount": "1979"
+    "year": 2008,
+    "count": 1860
   },
   {
-    "Year": "2006",
-    "Headcount": "1941"
+    "year": 2009,
+    "count": 1738
   },
   {
-    "Year": "2007",
-    "Headcount": "1938"
+    "year": 2010,
+    "count": 1602
   },
   {
-    "Year": "2008",
-    "Headcount": "1860"
+    "year": 2011,
+    "count": 1514
   },
   {
-    "Year": "2009",
-    "Headcount": "1738"
+    "year": 2012,
+    "count": 1382
   },
   {
-    "Year": "2010",
-    "Headcount": "1602"
+    "year": 2013,
+    "count": 1307
   },
   {
-    "Year": "2011",
-    "Headcount": "1514"
+    "year": 2014,
+    "count": 1268
   },
   {
-    "Year": "2012",
-    "Headcount": "1382"
+    "year": 2015,
+    "count": 1376
   },
   {
-    "Year": "2013",
-    "Headcount": "1307"
+    "year": 2016,
+    "count": 1418
   },
   {
-    "Year": "2014",
-    "Headcount": "1268"
+    "year": 2017,
+    "count": 1568
   },
   {
-    "Year": "2015",
-    "Headcount": "1376"
+    "year": 2018,
+    "count": 1533
   },
   {
-    "Year": "2016",
-    "Headcount": "1418"
+    "year": 2019,
+    "count": 1475
   },
   {
-    "Year": "2017",
-    "Headcount": "1568"
+    "year": 2020,
+    "count": 1506
   },
   {
-    "Year": "2018",
-    "Headcount": "1533"
+    "year": 2021,
+    "count": 1523
   },
   {
-    "Year": "2019",
-    "Headcount": "1475"
+    "year": 2022,
+    "count": 1456
   },
   {
-    "Year": "2020",
-    "Headcount": "1506"
+    "year": 2023,
+    "count": 1354
   },
   {
-    "Year": "2021",
-    "Headcount": "1523"
-  },
-  {
-    "Year": "2022",
-    "Headcount": "1456"
-  },
-  {
-    "Year": "2023",
-    "Headcount": "1354"
-  },
-  {
-    "Year": "2024",
-    "Headcount": "1308"
+    "year": 2024,
+    "count": 1308
   }
 ]

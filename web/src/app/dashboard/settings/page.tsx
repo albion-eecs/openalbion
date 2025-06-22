@@ -15,26 +15,14 @@ import {
 } from "@/components/ui/card";
 import { Loader2, Copy, Trash, ArrowLeft, Key, User } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useAuth } from "@/contexts/AuthContext";
-import { authClient } from "@/lib/auth-client";
+import { useAuth } from "@/contexts/auth-context";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";
-
-type ApiKey = {
-  id: number;
-  userId: string;
-  apiKey: string;
-  name: string;
-  createdAt: number;
-  expiresAt: number | null;
-  lastUsedAt: number | null;
-  isActive: boolean;
-};
+import { ApiKey } from "@/lib/types";
 
 export default function SettingsPage() {
   const router = useRouter();
   const { user, loading } = useAuth();
-  const { data: session } = authClient.useSession();
 
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([]);
   const [apiKeysLoading, setApiKeysLoading] = useState(true);
@@ -55,10 +43,10 @@ export default function SettingsPage() {
   const [prefsLoading, setPrefsLoading] = useState(true);
 
   useEffect(() => {
-    if (!session) {
+    if (!loading && !user) {
       router.push("/");
     }
-  }, [session, router]);
+  }, [user, loading, router]);
 
   useEffect(() => {
     if (user) {
@@ -70,7 +58,7 @@ export default function SettingsPage() {
   const fetchApiKeys = async () => {
     try {
       setApiKeysLoading(true);
-      const response = await fetch("/api/keys", {
+      const response = await fetch("/api/user/keys", {
         cache: "no-store",
       });
 
@@ -124,7 +112,7 @@ export default function SettingsPage() {
     setApiKeysLoading(true);
 
     try {
-      const response = await fetch("/api/keys", {
+      const response = await fetch("/api/user/keys", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -160,8 +148,8 @@ export default function SettingsPage() {
   const handleRevokeApiKey = async (id: number) => {
     try {
       setApiKeysLoading(true);
-      const response = await fetch(`/api/keys?id=${id}&action=revoke`, {
-        method: "PUT",
+      const response = await fetch(`/api/user/keys?id=${id}&action=revoke`, {
+        method: "DELETE",
         cache: "no-store",
       });
 
@@ -186,7 +174,7 @@ export default function SettingsPage() {
   const handleUnrevokeApiKey = async (id: number) => {
     try {
       setApiKeysLoading(true);
-      const response = await fetch(`/api/keys?id=${id}&action=unrevoke`, {
+      const response = await fetch(`/api/user/keys?id=${id}&action=unrevoke`, {
         method: "PUT",
         cache: "no-store",
       });
@@ -210,7 +198,7 @@ export default function SettingsPage() {
   const handleDeleteApiKey = async (id: number) => {
     try {
       setApiKeysLoading(true);
-      const response = await fetch(`/api/keys?id=${id}&action=delete`, {
+      const response = await fetch(`/api/user/keys?id=${id}&action=delete`, {
         method: "DELETE",
         cache: "no-store",
       });
@@ -230,9 +218,16 @@ export default function SettingsPage() {
   };
 
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    alert("API key copied to clipboard!");
-    setTimeout(() => setApiKeyCreated(null), 2000);
+    navigator.clipboard.writeText(text).then(
+      () => {
+        alert("API key copied to clipboard!");
+        setTimeout(() => setApiKeyCreated(null), 2000);
+      },
+      err => {
+        console.error("Failed to copy API key to clipboard", err);
+        alert("Failed to copy API key.");
+      }
+    );
   };
 
   const formatDate = (timestamp: number | null) => {
@@ -271,6 +266,10 @@ export default function SettingsPage() {
       console.error("Error updating notification preferences:", error);
     }
   };
+
+  if (loading || !user) {
+    return null;
+  }
 
   return (
     <div className="container mx-auto py-8">
