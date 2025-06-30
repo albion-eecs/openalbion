@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import * as apiKeyService from "@/services/apiKey.service";
-import { requireUser } from "@/lib/auth-server";
+import { requireUser, requireUserSession } from "@/lib/auth-server";
 import { z } from "zod";
+import { validate, ValidationError } from "@/lib/validation";
 
 const createApiKeySchema = z.object({
   name: z.string().min(1, "API key name is required"),
@@ -14,6 +15,9 @@ const manageApiKeySchema = z.object({
 });
 
 export async function GET() {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
     const apiKeys = await apiKeyService.getApiKeysByUserId(user.id);
@@ -23,12 +27,6 @@ export async function GET() {
       data: apiKeys,
     });
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
-      return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
-      );
-    }
     console.error("Error fetching API keys:", error);
     return NextResponse.json(
       { success: false, error: "Failed to fetch API keys" },
@@ -38,24 +36,16 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest) {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
 
     const body = await req.json();
-    const validatedBody = createApiKeySchema.safeParse(body);
+    const validatedBody = validate(createApiKeySchema, body);
 
-    if (!validatedBody.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Invalid request body",
-          details: validatedBody.error.flatten(),
-        },
-        { status: 400 }
-      );
-    }
-
-    const { name, expiresInDays } = validatedBody.data;
+    const { name, expiresInDays } = validatedBody;
 
     const apiKey = await apiKeyService.createApiKey(
       user.id,
@@ -75,10 +65,14 @@ export async function POST(req: NextRequest) {
       data: apiKey,
     });
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
+    if (error instanceof ValidationError) {
       return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
+        {
+          success: false,
+          error: "Invalid request body",
+          details: error.details.flatten(),
+        },
+        { status: 400 }
       );
     }
     console.error("Error creating API key:", error);
@@ -90,24 +84,16 @@ export async function POST(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
     const searchParams = req.nextUrl.searchParams;
     const query = Object.fromEntries(searchParams.entries());
-    const validatedQuery = manageApiKeySchema.safeParse(query);
+    const validatedQuery = validate(manageApiKeySchema, query);
 
-    if (!validatedQuery.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Invalid query parameters",
-          details: validatedQuery.error.flatten(),
-        },
-        { status: 400 }
-      );
-    }
-
-    const { id: keyId, action = "revoke" } = validatedQuery.data;
+    const { id: keyId, action = "revoke" } = validatedQuery;
     let success: boolean = false;
 
     if (action === "delete") {
@@ -131,10 +117,14 @@ export async function DELETE(req: NextRequest) {
           : "API key revoked successfully",
     });
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
+    if (error instanceof ValidationError) {
       return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
+        {
+          success: false,
+          error: "Invalid query parameters",
+          details: error.details.flatten(),
+        },
+        { status: 400 }
       );
     }
     console.error("Error managing API key:", error);
@@ -146,24 +136,16 @@ export async function DELETE(req: NextRequest) {
 }
 
 export async function PUT(req: NextRequest) {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
     const searchParams = req.nextUrl.searchParams;
     const query = Object.fromEntries(searchParams.entries());
-    const validatedQuery = manageApiKeySchema.safeParse(query);
+    const validatedQuery = validate(manageApiKeySchema, query);
 
-    if (!validatedQuery.success) {
-      return NextResponse.json(
-        {
-          success: false,
-          error: "Invalid query parameters",
-          details: validatedQuery.error.flatten(),
-        },
-        { status: 400 }
-      );
-    }
-
-    const { id: keyId, action } = validatedQuery.data;
+    const { id: keyId, action } = validatedQuery;
 
     if (action !== "unrevoke") {
       return NextResponse.json(
@@ -189,10 +171,14 @@ export async function PUT(req: NextRequest) {
       message: "API key unrevoked successfully",
     });
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
+    if (error instanceof ValidationError) {
       return NextResponse.json(
-        { success: false, error: "Unauthorized" },
-        { status: 401 }
+        {
+          success: false,
+          error: "Invalid query parameters",
+          details: error.details.flatten(),
+        },
+        { status: 400 }
       );
     }
     console.error("Error unrevoking API key:", error);

@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { requireUser } from "@/lib/auth-server";
+import { requireUser, requireUserSession } from "@/lib/auth-server";
 import * as statisticsService from "@/services/statistics.service";
 
 export async function GET(request: NextRequest) {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
 
@@ -25,15 +28,6 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(stats);
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
-      return NextResponse.json(
-        {
-          error: "Unauthorized",
-          message: "You must be logged in to access this endpoint",
-        },
-        { status: 401 }
-      );
-    }
     console.error("Error fetching dashboard stats:", error);
 
     return NextResponse.json(

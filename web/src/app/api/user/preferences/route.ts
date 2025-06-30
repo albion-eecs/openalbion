@@ -1,23 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
-import { requireUser } from "@/lib/auth-server";
+import { requireUser, requireUserSession } from "@/lib/auth-server";
 import * as userPreferenceService from "@/services/userPreference.service";
+import { validate, ValidationError } from "@/lib/validation";
 
 export async function GET() {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
     const preferences = await userPreferenceService.getPreferences(user.id);
 
     return NextResponse.json(preferences);
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
-      return NextResponse.json(
-        {
-          error: "Unauthorized",
-          message: "You must be logged in to access this endpoint",
-        },
-        { status: 401 }
-      );
-    }
     console.error("Error fetching user preferences:", error);
 
     return NextResponse.json(
@@ -31,37 +26,32 @@ export async function GET() {
 }
 
 export async function PUT(request: NextRequest) {
+  const unauthorized = await requireUserSession();
+  if (unauthorized) return unauthorized;
+
   try {
     const user = await requireUser();
     const body = await request.json();
-    const validatedBody =
-      userPreferenceService.preferenceSchema.safeParse(body);
-
-    if (!validatedBody.success) {
-      return NextResponse.json(
-        {
-          error: "Bad Request",
-          message: "Invalid request body",
-          details: validatedBody.error.flatten(),
-        },
-        { status: 400 }
-      );
-    }
+    const validatedBody = validate(
+      userPreferenceService.preferenceSchema,
+      body
+    );
 
     const updatedPreferences = await userPreferenceService.updatePreferences(
       user.id,
-      validatedBody.data
+      validatedBody
     );
 
     return NextResponse.json(updatedPreferences);
   } catch (error) {
-    if (error instanceof Error && error.message === "Unauthorized") {
+    if (error instanceof ValidationError) {
       return NextResponse.json(
         {
-          error: "Unauthorized",
-          message: "You must be logged in to update preferences",
+          error: "Bad Request",
+          message: "Invalid request body",
+          details: error.details.flatten(),
         },
-        { status: 401 }
+        { status: 400 }
       );
     }
     console.error("Error updating user preferences:", error);
