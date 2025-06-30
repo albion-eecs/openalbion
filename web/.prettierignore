@@ -18,4 +18,3 @@ Thumbs.db
 .tmp
 .temp
 /db/migrations
-/src/components/ui
