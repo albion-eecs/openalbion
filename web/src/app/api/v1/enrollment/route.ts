@@ -4,6 +4,7 @@ import {
   enrollmentQuerySchema,
 } from "@/services/enrollment.service";
 import { requireApiKey } from "@/lib/auth-server";
+import { validate, ValidationError } from "@/lib/validation";
 
 export async function GET(request: NextRequest) {
   const authResponse = await requireApiKey(request);
@@ -13,21 +14,20 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const query = Object.fromEntries(searchParams.entries());
 
-    const validatedQuery = enrollmentQuerySchema.safeParse(query);
+    const validatedQuery = validate(enrollmentQuerySchema, query);
 
-    if (!validatedQuery.success) {
+    const data = await getEnrollment(validatedQuery);
+    return NextResponse.json(data);
+  } catch (error) {
+    if (error instanceof ValidationError) {
       return NextResponse.json(
         {
           error: "Invalid query parameters",
-          details: validatedQuery.error.flatten(),
+          details: error.details.flatten(),
         },
         { status: 400 }
       );
     }
-
-    const data = await getEnrollment(validatedQuery.data);
-    return NextResponse.json(data);
-  } catch (error) {
     console.error("Error fetching enrollment data:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
