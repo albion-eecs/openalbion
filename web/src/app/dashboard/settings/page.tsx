@@ -13,7 +13,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Loader2, Copy, Trash, ArrowLeft, Key, User } from "lucide-react";
+import {
+  Loader2,
+  Copy,
+  Trash,
+  ArrowLeft,
+  Key,
+  User,
+  Check,
+} from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/contexts/auth-context";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -34,6 +42,7 @@ export default function SettingsPage() {
     key: string;
   } | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
 
   const [notificationPrefs, setNotificationPrefs] = useState({
     apiUsageAlerts: true,
@@ -220,12 +229,14 @@ export default function SettingsPage() {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(
       () => {
-        alert("API key copied to clipboard!");
-        setTimeout(() => setApiKeyCreated(null), 2000);
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+          setApiKeyCreated(null);
+        }, 2000);
       },
       err => {
         console.error("Failed to copy API key to clipboard", err);
-        alert("Failed to copy API key.");
       }
     );
   };
@@ -478,8 +489,13 @@ export default function SettingsPage() {
                         variant="outline"
                         size="sm"
                         onClick={() => copyToClipboard(apiKeyCreated.key)}
+                        disabled={copied}
                       >
-                        <Copy size={16} />
+                        {copied ? (
+                          <Check className="h-4 w-4 text-green-500" />
+                        ) : (
+                          <Copy size={16} />
+                        )}
                       </Button>
                     </div>
                   </div>

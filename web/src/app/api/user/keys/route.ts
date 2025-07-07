@@ -6,7 +6,7 @@ import { validate, ValidationError } from "@/lib/validation";
 
 const createApiKeySchema = z.object({
   name: z.string().min(1, "API key name is required"),
-  expiresInDays: z.number().optional(),
+  expiresInDays: z.number().int().positive().nullable().optional(),
 });
 
 const manageApiKeySchema = z.object({
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     const apiKey = await apiKeyService.createApiKey(
       user.id,
       name,
-      expiresInDays
+      expiresInDays ?? undefined
     );
 
     if (!apiKey) {

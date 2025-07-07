@@ -11,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import React from "react";
 import { Settings, LogOut, ChevronDown, ExternalLink } from "lucide-react";
 import {
   DropdownMenu,
@@ -265,23 +264,22 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
-                <CardTitle>Headcount Data API</CardTitle>
+                <CardTitle>Headcount Endpoint</CardTitle>
                 <CardDescription>Student headcount reports</CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm mb-4">
-                  Access to student headcount data by demographics, program, and
-                  enrollment status.
+                  Access to student headcount data by year.
                 </p>
                 <Button
                   className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() =>
                     window.open(
-                      "https://docs.openalbion.org/api-endpoints/headcounts",
+                      "https://docs.openalbion.org/docs/api/headcounts",
                       "_blank"
                     )
                   }
-                  title="https://docs.openalbion.org/api-endpoints/headcounts"
+                  title="https://docs.openalbion.org/docs/api/headcounts"
                 >
                   Access API
                   <ExternalLink size={14} className="ml-1" />
@@ -291,112 +289,24 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
-                <CardTitle>Class Size API</CardTitle>
-                <CardDescription>
-                  Course capacity and enrollment
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm mb-4">
-                  Detailed information about class sizes, capacity, and
-                  enrollment statistics for courses at Albion College.
-                </p>
-                <Button
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
-                  onClick={() =>
-                    window.open(
-                      "https://docs.openalbion.org/api-endpoints/class-sizes",
-                      "_blank"
-                    )
-                  }
-                  title="https://docs.openalbion.org/api-endpoints/class-sizes"
-                >
-                  Access API
-                  <ExternalLink size={14} className="ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
-              <CardHeader>
-                <CardTitle>Faculty API</CardTitle>
-                <CardDescription>
-                  Faculty demographic information
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm mb-4">
-                  Aggregated data about faculty characteristics including rank,
-                  diversity, and departmental distribution.
-                </p>
-                <Button
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
-                  onClick={() =>
-                    window.open(
-                      "https://docs.openalbion.org/api-endpoints/faculty",
-                      "_blank"
-                    )
-                  }
-                  title="https://docs.openalbion.org/api-endpoints/faculty"
-                >
-                  Access API
-                  <ExternalLink size={14} className="ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
-              <CardHeader>
-                <CardTitle>Enrollment Reports API</CardTitle>
+                <CardTitle>Enrollment Endpoint</CardTitle>
                 <CardDescription>
                   Enrollment trends and statistics
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-sm mb-4">
-                  Comprehensive enrollment data including admission rates,
-                  retention, and graduation statistics over time.
+                  Comprehensive enrollment data by semester.
                 </p>
                 <Button
                   className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
                   onClick={() =>
                     window.open(
-                      "https://docs.openalbion.org/api-endpoints/enrollment",
+                      "https://docs.openalbion.org/docs/api/enrollment",
                       "_blank"
                     )
                   }
-                  title="https://docs.openalbion.org/api-endpoints/enrollment"
-                >
-                  Access API
-                  <ExternalLink size={14} className="ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
-              <CardHeader>
-                <CardTitle>Departments API</CardTitle>
-                <CardDescription>
-                  Academic department information
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm mb-4">
-                  Detailed information about university departments.
-                </p>
-                <Button
-                  className="bg-gradient-to-r from-secondary to-purple-600 text-white hover:shadow-md hover:shadow-secondary/20 transition-all duration-300 flex items-center gap-1"
-                  onClick={() =>
-                    window.open(
-                      "https://docs.openalbion.org/api-endpoints/departments",
-                      "_blank"
-                    )
-                  }
-                  title="https://docs.openalbion.org/api-endpoints/departments"
+                  title="https://docs.openalbion.org/docs/api/enrollment"
                 >
                   Access API
                   <ExternalLink size={14} className="ml-1" />
