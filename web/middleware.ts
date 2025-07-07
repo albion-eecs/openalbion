@@ -4,7 +4,7 @@ import { getSessionCookie } from "better-auth/cookies";
 export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname.startsWith("/dashboard")) {
     const sessionCookie = getSessionCookie(request, {
-      cookiePrefix: "openalbion",
+      cookiePrefix: "better-auth",
     });
 
     if (!sessionCookie) {
