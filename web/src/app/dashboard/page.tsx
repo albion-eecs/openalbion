@@ -264,7 +264,7 @@ export default function DashboardPage() {
             <Card className="border-secondary/20 group transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg pointer-events-none"></div>
               <CardHeader>
-                <CardTitle>Headcount Endpoint</CardTitle>
+                <CardTitle>Headcounts Endpoint</CardTitle>
                 <CardDescription>Student headcount reports</CardDescription>
               </CardHeader>
               <CardContent>
