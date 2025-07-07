@@ -23,7 +23,6 @@ scripts/deploy.sh
 .prettierignore
 .eslintrc*
 eslint.config.mjs
-*.db
 *.bak
 *.backup
 .npmrc
