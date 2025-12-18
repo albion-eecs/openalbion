@@ -1,4 +1,7 @@
 /node_modules
+.contentlayer
+.content-collections
+.source
 /coverage
 /.next/
 /out/
