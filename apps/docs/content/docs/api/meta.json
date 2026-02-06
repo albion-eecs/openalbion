@@ -1,11 +1,11 @@
 {
-  "title": "API Reference",
-  "root": true,
-  "pages": [
-    "---Introduction---",
-    "index",
-    "---Endpoints---",
-    "enrollment",
-    "headcounts"
-  ]
+	"title": "API Reference",
+	"root": true,
+	"pages": [
+		"---Introduction---",
+		"index",
+		"---Endpoints---",
+		"enrollment",
+		"headcounts"
+	]
 }

@@ -1,10 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server";
-import {
-	getEnrollment,
-	enrollmentQuerySchema,
-} from "@/services/enrollment.service";
 import { requireApiKey } from "@/lib/auth-server";
-import { validate, ValidationError } from "@/lib/validation";
+import { ValidationError, validate } from "@/lib/validation";
+import {
+	enrollmentQuerySchema,
+	getEnrollment,
+} from "@/services/enrollment.service";
 
 export async function GET(request: NextRequest) {
 	const authResponse = await requireApiKey(request);

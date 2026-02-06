@@ -1,7 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { requireUser, requireUserSession } from "@/lib/auth-server";
+import { ValidationError, validate } from "@/lib/validation";
 import * as userPreferenceService from "@/services/userPreference.service";
-import { validate, ValidationError } from "@/lib/validation";
 
 export async function GET() {
 	const unauthorized = await requireUserSession();

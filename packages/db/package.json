@@ -1,32 +1,29 @@
 {
-  "name": "@oa/db",
-  "type": "module",
-  "exports": {
-    ".": {
-      "default": "./src/index.ts"
-    },
-    "./*": {
-      "default": "./src/*.ts"
-    }
-  },
-  "scripts": {
-    "db:local": "turso dev --db-file local.db",
-    "db:push": "drizzle-kit push",
-    "db:generate": "drizzle-kit generate",
-    "db:studio": "drizzle-kit studio",
-    "db:migrate": "drizzle-kit migrate"
-  },
-  "dependencies": {
-    "@libsql/client": "catalog:",
-    "@oa/env": "workspace:*",
-    "dotenv": "catalog:",
-    "drizzle-orm": "catalog:",
-    "libsql": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@oa/config": "workspace:*",
-    "drizzle-kit": "catalog:",
-    "typescript": "catalog:"
-  }
+	"name": "@oa/db",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {
+		"db:local": "turso dev --db-file local.db",
+		"db:push": "drizzle-kit push",
+		"db:generate": "drizzle-kit generate",
+		"db:studio": "drizzle-kit studio",
+		"db:migrate": "drizzle-kit migrate"
+	},
+	"dependencies": {
+		"drizzle-orm": "catalog:"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "catalog:",
+		"@oa/config": "workspace:*",
+		"dotenv": "catalog:",
+		"drizzle-kit": "catalog:",
+		"typescript": "catalog:"
+	}
 }

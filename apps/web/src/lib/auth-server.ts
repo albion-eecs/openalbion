@@ -1,12 +1,19 @@
 "use server";
 
-import { auth } from "@oa/auth";
+import { createAuth } from "@oa/auth";
 import { headers } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
+import { getDb } from "@/lib/db";
 import { validateApiKey } from "@/services/apiKey.service";
+
+async function getAuth() {
+	const db = await getDb();
+	return createAuth(db);
+}
 
 export async function getUser() {
 	try {
+		const auth = await getAuth();
 		const session = await auth.api.getSession({
 			headers: await headers(),
 		});

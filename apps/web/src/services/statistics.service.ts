@@ -1,8 +1,9 @@
-import { db } from "@oa/db";
 import { apiKeys, userLogs } from "@oa/db/schema";
 import { and, count, eq, gte } from "drizzle-orm";
+import { getDb } from "@/lib/db";
 
 export async function getDashboardStats(userId: string) {
+	const db = await getDb();
 	const now = new Date();
 	const thirtyDaysAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 

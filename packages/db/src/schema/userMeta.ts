@@ -1,5 +1,5 @@
 import { relations, sql } from "drizzle-orm";
-import { sqliteTable, text, integer, index } from "drizzle-orm/sqlite-core";
+import { index, integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 import { user } from "./auth";
 
@@ -48,9 +48,12 @@ export const userLogsRelations = relations(userLogs, ({ one }) => ({
 	}),
 }));
 
-export const userPreferencesRelations = relations(userPreferences, ({ one }) => ({
-	user: one(user, {
-		fields: [userPreferences.userId],
-		references: [user.id],
+export const userPreferencesRelations = relations(
+	userPreferences,
+	({ one }) => ({
+		user: one(user, {
+			fields: [userPreferences.userId],
+			references: [user.id],
+		}),
 	}),
-}));
+);

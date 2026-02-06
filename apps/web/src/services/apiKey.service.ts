@@ -1,6 +1,6 @@
-import { db } from "@oa/db";
 import { apiKeys } from "@oa/db/schema";
-import { eq, and } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
+import { getDb } from "@/lib/db";
 
 function generateApiKey(): string {
 	const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -12,6 +12,7 @@ function generateApiKey(): string {
 }
 
 export async function validateApiKey(key: string) {
+	const db = await getDb();
 	const [keyData] = await db
 		.select()
 		.from(apiKeys)
@@ -32,6 +33,7 @@ export async function validateApiKey(key: string) {
 }
 
 export async function getApiKeysByUserId(userId: string) {
+	const db = await getDb();
 	return db.select().from(apiKeys).where(eq(apiKeys.userId, userId));
 }
 
@@ -40,6 +42,7 @@ export async function createApiKey(
 	name: string,
 	expiresInDays?: number,
 ) {
+	const db = await getDb();
 	const key = generateApiKey();
 	const now = new Date();
 	let expiresAt: Date | null = null;
@@ -62,6 +65,7 @@ export async function createApiKey(
 }
 
 export async function deleteApiKey(keyId: number, userId: string) {
+	const db = await getDb();
 	const result = await db
 		.delete(apiKeys)
 		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)));
@@ -69,6 +73,7 @@ export async function deleteApiKey(keyId: number, userId: string) {
 }
 
 export async function revokeApiKey(keyId: number, userId: string) {
+	const db = await getDb();
 	const result = await db
 		.update(apiKeys)
 		.set({ isActive: false })
@@ -77,6 +82,7 @@ export async function revokeApiKey(keyId: number, userId: string) {
 }
 
 export async function unrevokeApiKey(keyId: number, userId: string) {
+	const db = await getDb();
 	const result = await db
 		.update(apiKeys)
 		.set({ isActive: true })

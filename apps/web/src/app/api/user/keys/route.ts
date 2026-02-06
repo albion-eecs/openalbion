@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server";
-import * as apiKeyService from "@/services/apiKey.service";
-import { requireUser, requireUserSession } from "@/lib/auth-server";
 import { z } from "zod";
-import { validate, ValidationError } from "@/lib/validation";
+import { requireUser, requireUserSession } from "@/lib/auth-server";
+import { ValidationError, validate } from "@/lib/validation";
+import * as apiKeyService from "@/services/apiKey.service";
 
 const createApiKeySchema = z.object({
 	name: z.string().min(1, "API key name is required"),
@@ -97,9 +97,15 @@ export async function DELETE(req: NextRequest) {
 		let success = false;
 
 		if (action === "delete") {
-			success = await apiKeyService.deleteApiKey(Number.parseInt(keyId, 10), user.id);
+			success = await apiKeyService.deleteApiKey(
+				Number.parseInt(keyId, 10),
+				user.id,
+			);
 		} else {
-			success = await apiKeyService.revokeApiKey(Number.parseInt(keyId, 10), user.id);
+			success = await apiKeyService.revokeApiKey(
+				Number.parseInt(keyId, 10),
+				user.id,
+			);
 		}
 
 		if (!success) {

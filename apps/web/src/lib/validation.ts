@@ -1,4 +1,4 @@
-import type { ZodSchema, ZodError } from "zod";
+import type { ZodError, ZodSchema } from "zod";
 
 export class ValidationError extends Error {
 	public details: ZodError;

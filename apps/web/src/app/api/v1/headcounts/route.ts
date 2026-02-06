@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server";
-import { getHeadcounts } from "@/services/headcounts.service";
 import { requireApiKey } from "@/lib/auth-server";
+import { getHeadcounts } from "@/services/headcounts.service";
 
 export async function GET(request: NextRequest) {
 	const authResponse = await requireApiKey(request);

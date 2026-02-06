@@ -15,19 +15,19 @@ export function ChangelogEntry({
 		<div className="relative pl-10">
 			<div className="flex items-center gap-4">
 				<div
-					className="absolute left-0 top-[0.80rem] w-3 h-3 rounded-full bg-secondary"
+					className="absolute top-[0.80rem] left-0 h-3 w-3 rounded-full bg-secondary"
 					style={{ transform: "translateX(-50%)" }}
 				/>
 
-				<h2 className="text-xl font-semibold text-white">{title}</h2>
-				<div className="px-3 py-1.5 rounded-md text-sm font-medium bg-secondary/30 text-white border-2 border-secondary/60 shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+				<h2 className="font-semibold text-white text-xl">{title}</h2>
+				<div className="rounded-md border-2 border-secondary/60 bg-secondary/30 px-3 py-1.5 font-medium text-sm text-white shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
 					{version}
 				</div>
 			</div>
 
-			<time className="text-sm text-muted-foreground mt-1 block">{date}</time>
+			<time className="mt-1 block text-muted-foreground text-sm">{date}</time>
 
-			<div className="mt-4 p-4 rounded-lg border border-secondary/10 bg-card/20">
+			<div className="mt-4 rounded-lg border border-secondary/10 bg-card/20 p-4">
 				<ul className="space-y-3 text-muted-foreground">
 					{items.map((item, index) => (
 						<li key={index} className="flex items-start gap-2">
@@ -48,9 +48,9 @@ interface ChangelogTimelineProps {
 export function Changelog({ entries }: ChangelogTimelineProps) {
 	return (
 		<div className="relative">
-			<div className="absolute left-4 top-0 bottom-0 w-px bg-secondary/30" />
+			<div className="absolute top-0 bottom-0 left-4 w-px bg-secondary/30" />
 
-			<div className="space-y-8 ml-4 pt-6 pb-6">
+			<div className="ml-4 space-y-8 pt-6 pb-6">
 				{entries.map((entry, index) => (
 					<ChangelogEntry
 						key={index}

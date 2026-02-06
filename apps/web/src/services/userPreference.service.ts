@@ -1,7 +1,7 @@
-import { db } from "@oa/db";
 import { userPreferences } from "@oa/db/schema";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
+import { getDb } from "@/lib/db";
 
 export const preferenceSchema = z.object({
 	apiUsageAlerts: z.boolean().optional(),
@@ -12,6 +12,7 @@ export const preferenceSchema = z.object({
 export type Preferences = z.infer<typeof preferenceSchema>;
 
 export async function getPreferences(userId: string) {
+	const db = await getDb();
 	const [preferences] = await db
 		.select()
 		.from(userPreferences)
@@ -30,6 +31,7 @@ export async function getPreferences(userId: string) {
 }
 
 export async function updatePreferences(userId: string, data: Preferences) {
+	const db = await getDb();
 	const [updatedPreferences] = await db
 		.update(userPreferences)
 		.set(data)

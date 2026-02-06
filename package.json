@@ -1,38 +1,38 @@
 {
-  "name": "openalbion",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "type": "module",
-  "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "types:check": "turbo types:check",
-    "dev:native": "turbo -F native dev",
-    "dev:web": "turbo -F web dev",
-    "db:push": "turbo -F @oa/db db:push",
-    "db:studio": "turbo -F @oa/db db:studio",
-    "db:generate": "turbo -F @oa/db db:generate",
-    "db:migrate": "turbo -F @oa/db db:migrate",
-    "db:local": "turbo -F @oa/db db:local",
-    "deploy": "turbo -F @oa/infra deploy",
-    "destroy": "turbo -F @oa/infra destroy",
-    "check": "biome check --write ."
-  },
-  "dependencies": {
-    "@oa/env": "workspace:*",
-    "dotenv": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.0",
-    "@cloudflare/workers-types": "catalog:",
-    "@oa/config": "workspace:*",
-    "@types/node": "^22.13.14",
-    "turbo": "^2.6.3",
-    "typescript": "catalog:"
-  },
-  "packageManager": "pnpm@10.18.3"
+	"name": "openalbion",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"type": "module",
+	"scripts": {
+		"dev": "turbo dev",
+		"build": "turbo build",
+		"types:check": "turbo types:check",
+		"dev:native": "turbo -F native dev",
+		"dev:web": "turbo -F web dev",
+		"db:push": "turbo -F @oa/db db:push",
+		"db:studio": "turbo -F @oa/db db:studio",
+		"db:generate": "turbo -F @oa/db db:generate",
+		"db:migrate": "turbo -F @oa/db db:migrate",
+		"db:local": "turbo -F @oa/db db:local",
+		"deploy": "turbo -F @oa/infra deploy",
+		"destroy": "turbo -F @oa/infra destroy",
+		"check": "biome check --write ."
+	},
+	"dependencies": {
+		"@oa/env": "workspace:*",
+		"dotenv": "catalog:",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
+		"@cloudflare/workers-types": "catalog:",
+		"@oa/config": "workspace:*",
+		"@types/node": "^22.13.14",
+		"turbo": "^2.6.3",
+		"typescript": "catalog:"
+	},
+	"packageManager": "pnpm@10.18.3"
 }

@@ -1,49 +1,49 @@
-import Link from "next/link";
 import { AlertTriangle, Clock } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function SecurityPage() {
 	return (
-		<div className="flex flex-col min-h-screen relative overflow-hidden">
+		<div className="relative flex min-h-screen flex-col overflow-hidden">
 			<div
-				className="absolute -top-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-50 animate-pulse"
+				className="absolute -top-20 -right-20 h-96 w-96 animate-pulse rounded-full bg-secondary/10 opacity-50 blur-3xl filter"
 				style={{ animationDuration: "8s" }}
 			/>
 			<div
-				className="absolute top-1/2 -left-48 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl opacity-30 animate-pulse"
+				className="absolute top-1/2 -left-48 h-96 w-96 animate-pulse rounded-full bg-secondary/10 opacity-30 blur-3xl filter"
 				style={{ animationDuration: "12s" }}
 			/>
 
 			<Header />
 
-			<main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-				<div className="max-w-3xl mx-auto">
+			<main className="relative z-10 flex-1 px-4 py-12 sm:px-6 lg:px-8">
+				<div className="mx-auto max-w-3xl">
 					<div className="mb-12 text-center">
-						<h2 className="text-3xl font-bold tracking-tight mb-4">Security</h2>
-						<p className="text-muted-foreground max-w-2xl mx-auto">
+						<h2 className="mb-4 font-bold text-3xl tracking-tight">Security</h2>
+						<p className="mx-auto max-w-2xl text-muted-foreground">
 							The Albion College EECS Club is committed to ensuring the security
 							and integrity of the OpenAlbion platform.
 						</p>
 					</div>
 
-					<Card className="border-secondary/20 mb-8">
+					<Card className="mb-8 border-secondary/20">
 						<CardHeader>
 							<CardTitle>Reporting</CardTitle>
 						</CardHeader>
 						<CardContent>
-							<div className="flex items-start gap-4 mb-6">
-								<AlertTriangle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
+							<div className="mb-6 flex items-start gap-4">
+								<AlertTriangle className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
 								<div>
-									<p className="text-sm text-muted-foreground mb-4">
+									<p className="mb-4 text-muted-foreground text-sm">
 										If you discover a security vulnerability, please report it
 										to us immediately:
 									</p>
 									<div className="space-y-4">
 										<div className="rounded-lg border border-secondary/20 p-4">
-											<h4 className="font-medium mb-2 text-sm">Email</h4>
-											<p className="text-sm text-muted-foreground">
+											<h4 className="mb-2 font-medium text-sm">Email</h4>
+											<p className="text-muted-foreground text-sm">
 												Send security concerns to{" "}
 												<Link
 													href="mailto:security@openalbion.org"
@@ -56,10 +56,10 @@ export default function SecurityPage() {
 										</div>
 
 										<div className="rounded-lg border border-secondary/20 p-4">
-											<h4 className="font-medium mb-2 text-sm">
+											<h4 className="mb-2 font-medium text-sm">
 												PGP Encryption
 											</h4>
-											<p className="text-sm text-muted-foreground">
+											<p className="text-muted-foreground text-sm">
 												For sensitive communications, use our PGP key available
 												at{" "}
 												<Link
@@ -76,19 +76,19 @@ export default function SecurityPage() {
 						</CardContent>
 					</Card>
 
-					<Card className="border-secondary/20 mb-8">
+					<Card className="mb-8 border-secondary/20">
 						<CardHeader>
 							<CardTitle>Commitment</CardTitle>
 						</CardHeader>
 						<CardContent>
 							<div className="flex items-start gap-4">
-								<Clock className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
+								<Clock className="mt-1 h-6 w-6 flex-shrink-0 text-secondary" />
 								<div>
-									<p className="text-sm text-muted-foreground mb-4">
+									<p className="mb-4 text-muted-foreground text-sm">
 										The EECS Club is committed to the following security
 										patching guidelines:
 									</p>
-									<ul className="text-sm text-muted-foreground space-y-3 list-disc pl-5">
+									<ul className="list-disc space-y-3 pl-5 text-muted-foreground text-sm">
 										<li>Acknowledge all security reports within 12 hours</li>
 										<li>Patch critical vulnerabilities within 24 hours</li>
 										<li>Provide updates on the progress of reported issues</li>

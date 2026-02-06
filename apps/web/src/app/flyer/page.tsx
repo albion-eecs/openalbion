@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FlyerPage() {
 	return (
-		<div className="relative w-full h-screen bg-black">
+		<div className="relative h-screen w-full bg-black">
 			<Image
 				src="/assets/flyer.png"
 				alt="EECS Club Flyer"
@@ -14,7 +14,7 @@ export default function FlyerPage() {
 			<a
 				href="/assets/flyer.png"
 				download="eecs_club_flyer.png"
-				className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full transition-colors"
+				className="absolute right-6 bottom-6 flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
 				title="Download Flyer"
 			>
 				<svg
@@ -31,7 +31,7 @@ export default function FlyerPage() {
 						d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
 					/>
 				</svg>
-				<span className="text-sm font-medium">Download</span>
+				<span className="font-medium text-sm">Download</span>
 			</a>
 		</div>
 	);
