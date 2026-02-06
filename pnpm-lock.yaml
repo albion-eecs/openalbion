@@ -367,9 +367,6 @@ importers:
       '@oa/config':
         specifier: workspace:*
         version: link:../config
-      '@oa/infra':
-        specifier: workspace:*
-        version: link:../infra
       '@types/node':
         specifier: ^22.13.14
         version: 22.19.7
