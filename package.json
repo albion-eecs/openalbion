@@ -1,11 +1,16 @@
 {
 	"name": "openalbion",
+	"description": "An open data portal for Albion College institutional research and faculty information.",
+	"license": "GPL-3.0-only",
 	"private": true,
+	"type": "module",
 	"workspaces": [
 		"apps/*",
 		"packages/*"
 	],
-	"type": "module",
+	"engines": {
+		"pnpm": ">=10.18.3"
+	},
 	"scripts": {
 		"dev": "turbo dev",
 		"build": "turbo build",

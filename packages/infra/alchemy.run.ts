@@ -24,7 +24,4 @@ export const docs = await Nextjs("openalbion-docs", {
 	bindings: {},
 });
 
-console.log(`Web  -> ${web.url}`);
-console.log(`Docs -> ${docs.url}`);
-
 await app.finalize();
