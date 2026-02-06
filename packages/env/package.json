@@ -15,7 +15,6 @@
 	},
 	"devDependencies": {
 		"@oa/config": "workspace:*",
-		"@oa/infra": "workspace:*",
 		"@types/node": "^22.13.14",
 		"typescript": "catalog:"
 	}

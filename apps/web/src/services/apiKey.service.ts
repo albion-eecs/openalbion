@@ -3,12 +3,12 @@ import { and, eq } from "drizzle-orm";
 import { getDb } from "@/lib/db";
 
 function generateApiKey(): string {
-	const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
-	let result = "";
-	for (let i = 0; i < 32; i++) {
-		result += chars.charAt(Math.floor(Math.random() * chars.length));
-	}
-	return `oa_${result}`;
+	const bytes = new Uint8Array(24);
+	crypto.getRandomValues(bytes);
+	const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join(
+		"",
+	);
+	return `oa_${hex}`;
 }
 
 export async function validateApiKey(key: string) {

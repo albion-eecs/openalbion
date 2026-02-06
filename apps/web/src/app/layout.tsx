@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "ref",
-	description: "ref",
+	title: "OpenAlbion",
+	description:
+		"An open data portal for Albion College institutional research and faculty information.",
 };
 
 export default function RootLayout({
