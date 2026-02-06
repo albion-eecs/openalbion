@@ -21,9 +21,9 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm biome ci .
+      - run: pnpm run ci
 
-  check:
+  types:
     name: Types
     runs-on: ubuntu-latest
     steps:
@@ -34,7 +34,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm types:check
+      - run: pnpm check:types
 
   build:
     name: Build

@@ -9,7 +9,8 @@
 	"scripts": {
 		"dev": "turbo dev",
 		"build": "turbo build",
-		"types:check": "turbo types:check",
+		"check": "biome check --write .",
+		"check:types": "turbo check:types",
 		"dev:native": "turbo -F native dev",
 		"dev:web": "turbo -F web dev",
 		"db:push": "turbo -F @oa/db db:push",
@@ -19,7 +20,7 @@
 		"db:local": "turbo -F @oa/db db:local",
 		"deploy": "turbo -F @oa/infra deploy",
 		"destroy": "turbo -F @oa/infra destroy",
-		"check": "biome check --write ."
+		"ci": "biome ci ."
 	},
 	"dependencies": {
 		"@oa/env": "workspace:*",
