@@ -1,0 +1,22 @@
+{
+	"name": "@oa/scripts",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"process": "tsx src/process.ts",
+		"seed": "tsx src/seed.ts"
+	},
+	"dependencies": {
+		"@oa/db": "workspace:*",
+		"csv-parse": "catalog:",
+		"csv-stringify": "catalog:",
+		"xlsx": "catalog:",
+		"xml-js": "catalog:"
+	},
+	"devDependencies": {
+		"@oa/config": "workspace:*",
+		"tsx": "catalog:",
+		"typescript": "catalog:"
+	}
+}

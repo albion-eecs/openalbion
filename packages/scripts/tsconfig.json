@@ -1,0 +1,6 @@
+{
+	"extends": "@oa/config/tsconfig.base.json",
+	"compilerOptions": {
+		"outDir": "dist"
+	}
+}
