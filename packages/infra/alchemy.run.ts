@@ -7,7 +7,7 @@ config({ path: "../../apps/web/.env" });
 
 const app = await alchemy("openalbion");
 
-export const web = await Nextjs("openalbion-web", {
+export const web = await Nextjs("openalbion", {
 	cwd: "../../apps/web",
 	bindings: {
 		DATABASE_URL: alchemy.secret.env.DATABASE_URL!,
@@ -18,7 +18,7 @@ export const web = await Nextjs("openalbion-web", {
 });
 
 export const docs = await Nextjs("openalbion-docs", {
-	cwd: "../../apps/fumadocs",
+	cwd: "../../apps/docs",
 	bindings: {},
 });
 

@@ -10,6 +10,7 @@
 		"postinstall": "fumadocs-mdx"
 	},
 	"dependencies": {
+		"@opennextjs/cloudflare": "^1.15.1",
 		"fumadocs-core": "catalog:",
 		"fumadocs-mdx": "catalog:",
 		"fumadocs-ui": "catalog:",
@@ -27,6 +28,7 @@
 		"@types/react-dom": "^19.2.3",
 		"postcss": "catalog:",
 		"tailwindcss": "catalog:",
-		"typescript": "catalog:"
+		"typescript": "catalog:",
+		"wrangler": "^4.60.0"
 	}
 }
