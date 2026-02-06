@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "check-types": "turbo check-types",
+    "types:check": "turbo types:check",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
     "db:push": "turbo -F @oa/db db:push",
