@@ -1,12 +1,14 @@
-import { auth } from "@oa/auth";
+import { createAuth } from "@oa/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
-import { authClient } from "@/lib/auth-client";
+import { getDb } from "@/lib/db";
 
 import Dashboard from "./dashboard";
 
 export default async function DashboardPage() {
+	const db = await getDb();
+	const auth = createAuth(db);
 	const session = await auth.api.getSession({
 		headers: await headers(),
 	});
@@ -15,11 +17,5 @@ export default async function DashboardPage() {
 		redirect("/login");
 	}
 
-	return (
-		<div>
-			<h1>Dashboard</h1>
-			<p>Welcome {session.user.name}</p>
-			<Dashboard session={session} />
-		</div>
-	);
+	return <Dashboard session={session} />;
 }
