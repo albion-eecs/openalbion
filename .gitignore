@@ -13,3 +13,4 @@ dist
 *.log*
 next-env.d.ts
 .alchemy
+.turbo
