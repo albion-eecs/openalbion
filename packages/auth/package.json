@@ -12,7 +12,6 @@
 	"scripts": {},
 	"dependencies": {
 		"@oa/db": "workspace:*",
-		"@oa/env": "workspace:*",
 		"better-auth": "catalog:"
 	},
 	"devDependencies": {
