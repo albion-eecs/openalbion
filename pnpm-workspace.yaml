@@ -8,7 +8,7 @@ catalog:
   typescript: ^5
   "@cloudflare/workers-types": ^4.20251213.0
   better-auth: ^1.4.9
-  alchemy: ^0.82.1
+  alchemy: ^0.84.0
   next: ^16.1.1
   react: ^19.2.3
   react-dom: ^19.2.3
