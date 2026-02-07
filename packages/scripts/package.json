@@ -4,12 +4,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"process": "tsx src/process.ts",
-		"seed": "tsx src/seed.ts"
+		"process": "tsx src/process.ts"
 	},
 	"dependencies": {
-		"@oa/db": "workspace:*",
-		"csv-parse": "catalog:",
 		"csv-stringify": "catalog:",
 		"xlsx": "catalog:",
 		"xml-js": "catalog:"

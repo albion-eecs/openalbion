@@ -13,9 +13,7 @@
 	"dependencies": {
 		"@oa/db": "workspace:*",
 		"@oa/env": "workspace:*",
-		"better-auth": "catalog:",
-		"dotenv": "catalog:",
-		"zod": "catalog:"
+		"better-auth": "catalog:"
 	},
 	"devDependencies": {
 		"@oa/config": "workspace:*",

@@ -14,7 +14,8 @@
 		"db:push": "drizzle-kit push",
 		"db:generate": "drizzle-kit generate",
 		"db:studio": "drizzle-kit studio",
-		"db:migrate": "drizzle-kit migrate"
+		"db:migrate": "drizzle-kit migrate",
+		"db:seed": "tsx src/seed.ts"
 	},
 	"dependencies": {
 		"drizzle-orm": "catalog:"
@@ -24,6 +25,8 @@
 		"@oa/config": "workspace:*",
 		"dotenv": "catalog:",
 		"drizzle-kit": "catalog:",
-		"typescript": "catalog:"
+		"tsx": "catalog:",
+		"typescript": "catalog:",
+		"xlsx": "catalog:"
 	}
 }
