@@ -10,7 +10,7 @@
 		"postinstall": "fumadocs-mdx"
 	},
 	"dependencies": {
-		"@opennextjs/cloudflare": "^1.15.1",
+		"@opennextjs/cloudflare": "^1.16.2",
 		"fumadocs-core": "catalog:",
 		"fumadocs-mdx": "catalog:",
 		"fumadocs-ui": "catalog:",
