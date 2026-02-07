@@ -1,0 +1,35 @@
+{
+	"name": "@oa/db",
+	"type": "module",
+	"exports": {
+		".": {
+			"default": "./src/index.ts"
+		},
+		"./schema": {
+			"default": "./src/schema/index.ts"
+		},
+		"./*": {
+			"default": "./src/*.ts"
+		}
+	},
+	"scripts": {
+		"db:local": "wrangler d1 execute openalbion --local",
+		"db:push": "drizzle-kit push",
+		"db:generate": "drizzle-kit generate",
+		"db:studio": "drizzle-kit studio",
+		"db:migrate": "drizzle-kit migrate",
+		"db:seed": "tsx src/seed.ts"
+	},
+	"dependencies": {
+		"drizzle-orm": "catalog:"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "catalog:",
+		"@oa/config": "workspace:*",
+		"dotenv": "catalog:",
+		"drizzle-kit": "catalog:",
+		"tsx": "catalog:",
+		"typescript": "catalog:",
+		"xlsx": "catalog:"
+	}
+}

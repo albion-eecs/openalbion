@@ -1,0 +1,5 @@
+.wrangler
+.alchemy
+.dev.vars*
+.open-next
+wrangler.jsonc

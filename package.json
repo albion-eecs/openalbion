@@ -1,0 +1,41 @@
+{
+	"name": "openalbion",
+	"description": "An open data portal for Albion College institutional research and faculty information.",
+	"license": "GPL-3.0-only",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"engines": {
+		"pnpm": ">=10.18.3"
+	},
+	"scripts": {
+		"dev": "turbo dev",
+		"build": "turbo build",
+		"check": "biome check --write .",
+		"check:types": "turbo check:types",
+		"dev:native": "turbo -F native dev",
+		"dev:web": "turbo -F web dev",
+		"db:push": "turbo -F @oa/db db:push",
+		"db:studio": "turbo -F @oa/db db:studio",
+		"db:generate": "turbo -F @oa/db db:generate",
+		"db:migrate": "turbo -F @oa/db db:migrate",
+		"db:local": "turbo -F @oa/db db:local",
+		"db:seed": "turbo -F @oa/db db:seed",
+		"deploy": "turbo -F @oa/infra deploy",
+		"destroy": "turbo -F @oa/infra destroy",
+		"ci": "biome ci ."
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
+		"@cloudflare/workers-types": "catalog:",
+		"@oa/config": "workspace:*",
+		"@types/node": "^22.13.14",
+		"turbo": "^2.6.3",
+		"typescript": "catalog:"
+	},
+	"packageManager": "pnpm@10.18.3"
+}
