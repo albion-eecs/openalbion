@@ -9,8 +9,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Deploy
+  cd:
     runs-on: ubuntu-latest
     environment: production
     steps:
