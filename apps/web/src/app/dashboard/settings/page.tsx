@@ -315,7 +315,7 @@ export default function Settings() {
 								</h3>
 								<div className="flex items-center space-x-4">
 									<div className="relative">
-										<div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-secondary to-primary font-bold text-lg text-white">
+										<div className="flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br from-secondary to-primary font-bold text-lg text-white">
 											{user.name
 												? user.name.charAt(0).toUpperCase()
 												: user.email.charAt(0).toUpperCase()}
