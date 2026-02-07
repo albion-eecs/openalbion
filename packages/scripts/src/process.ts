@@ -1,6 +1,6 @@
+import * as fs from "node:fs";
+import * as path from "node:path";
 import { stringify as csvStringify } from "csv-stringify";
-import * as fs from "fs";
-import * as path from "path";
 import * as XLSX from "xlsx";
 import { js2xml } from "xml-js";
 
@@ -133,7 +133,7 @@ function parseEnrollmentSheet(
 	let currentYear = "";
 	for (let i = 1; i < yearHeaders.length; i++) {
 		const year = clean(yearHeaders[i]);
-		if (year && year.match(/\d{4}/)) {
+		if (year?.match(/\d{4}/)) {
 			currentYear = year;
 		}
 		const subCategory = clean(subHeaders[i]);

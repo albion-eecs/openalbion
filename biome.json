@@ -19,7 +19,9 @@
 			"!**/.wrangler",
 			"!**/.alchemy",
 			"!**/wrangler.jsonc",
-			"!**/.source"
+			"!**/.source",
+			"!**/components/ui",
+			"!**/datasets"
 		]
 	},
 	"formatter": {
@@ -44,6 +46,7 @@
 				}
 			},
 			"style": {
+				"noNonNullAssertion": "off",
 				"noParameterAssign": "error",
 				"useAsConstAssertion": "error",
 				"useDefaultParameterLast": "error",

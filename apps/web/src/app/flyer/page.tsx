@@ -24,6 +24,7 @@ export default function FlyerPage() {
 					viewBox="0 0 24 24"
 					stroke="currentColor"
 				>
+					<title>Download</title>
 					<path
 						strokeLinecap="round"
 						strokeLinejoin="round"

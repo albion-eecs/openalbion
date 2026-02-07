@@ -1,6 +1,6 @@
+import * as path from "node:path";
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
-import * as path from "path";
 import * as XLSX from "xlsx";
 import * as schema from "../../db/schema";
 
@@ -50,7 +50,7 @@ function parseComplexSheet(
 	let currentYear = "";
 	for (let i = 1; i < yearHeaders.length; i++) {
 		const year = clean(yearHeaders[i]);
-		if (year && year.match(/\d{4}/)) {
+		if (year?.match(/\d{4}/)) {
 			currentYear = year;
 		}
 		const subCategory = clean(subHeaders[i]);

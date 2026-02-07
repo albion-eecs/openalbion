@@ -10,7 +10,7 @@ import {
 	User,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -52,20 +52,7 @@ export default function SettingsPage() {
 	});
 	const [prefsLoading, setPrefsLoading] = useState(true);
 
-	useEffect(() => {
-		if (!isPending && !user) {
-			router.push("/login");
-		}
-	}, [user, isPending, router]);
-
-	useEffect(() => {
-		if (user) {
-			fetchApiKeys();
-			fetchNotificationPreferences();
-		}
-	}, [user]);
-
-	const fetchApiKeys = async () => {
+	const fetchApiKeys = useCallback(async () => {
 		try {
 			setApiKeysLoading(true);
 			const response = await fetch("/api/user/keys", {
@@ -81,9 +68,9 @@ export default function SettingsPage() {
 		} finally {
 			setApiKeysLoading(false);
 		}
-	};
+	}, []);
 
-	const fetchNotificationPreferences = async () => {
+	const fetchNotificationPreferences = useCallback(async () => {
 		try {
 			setPrefsLoading(true);
 			const response = await fetch("/api/user/preferences", {
@@ -103,7 +90,20 @@ export default function SettingsPage() {
 		} finally {
 			setPrefsLoading(false);
 		}
-	};
+	}, []);
+
+	useEffect(() => {
+		if (!isPending && !user) {
+			router.push("/login");
+		}
+	}, [user, isPending, router]);
+
+	useEffect(() => {
+		if (user) {
+			fetchApiKeys();
+			fetchNotificationPreferences();
+		}
+	}, [user, fetchApiKeys, fetchNotificationPreferences]);
 
 	const handleCreateApiKey = async (e: React.FormEvent) => {
 		e.preventDefault();

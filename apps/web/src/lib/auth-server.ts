@@ -50,10 +50,9 @@ export async function requireUserSession() {
 export async function requireApiKey(request: NextRequest) {
 	const xApiKey = request.headers.get("X-API-Key");
 	const authHeader = request.headers.get("Authorization");
-	const bearerToken =
-		authHeader && authHeader.startsWith("Bearer ")
-			? authHeader.substring(7)
-			: null;
+	const bearerToken = authHeader?.startsWith("Bearer ")
+		? authHeader.substring(7)
+		: null;
 	const queryApiKey = request.nextUrl.searchParams.get("apiKey");
 	const apiKey = xApiKey || bearerToken || queryApiKey;
 
