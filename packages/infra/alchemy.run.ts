@@ -8,13 +8,33 @@ config({ path: "../../apps/web/.env" });
 
 const app = await alchemy("openalbion", {
 	stage: "prod",
-	stateStore: (scope) => new CloudflareStateStore(scope, { scriptName: "state" }),
+	stateStore: (scope) =>
+		new CloudflareStateStore(scope, { scriptName: "state" }),
 });
 
-const database = await D1Database("openalbion-db", { name: "openalbion-db" });
+const database = await D1Database("openalbion-db", {
+	name: "openalbion-db",
+	adopt: true,
+});
+
+const webDoQueue = await DurableObjectNamespace("web-do-queue", {
+	className: "DOQueueHandler",
+	sqlite: true,
+});
+
+const webDoTagCache = await DurableObjectNamespace("web-do-tag-cache", {
+	className: "DOShardedTagCache",
+	sqlite: true,
+});
+
+const webDoCachePurge = await DurableObjectNamespace("web-do-cache-purge", {
+	className: "BucketCachePurge",
+	sqlite: true,
+});
 
 export const web = await Nextjs("openalbion", {
 	name: "openalbion",
+	adopt: true,
 	cwd: "../../apps/web",
 	domains: ["openalbion.org"],
 	bindings: {
@@ -37,7 +57,24 @@ export const web = await Nextjs("openalbion", {
 	},
 });
 
+const docsDoQueue = await DurableObjectNamespace("docs-do-queue", {
+	className: "DOQueueHandler",
+	sqlite: true,
+});
+
+const docsDoTagCache = await DurableObjectNamespace("docs-do-tag-cache", {
+	className: "DOShardedTagCache",
+	sqlite: true,
+});
+
+const docsDoCachePurge = await DurableObjectNamespace("docs-do-cache-purge", {
+	className: "BucketCachePurge",
+	sqlite: true,
+});
+
 export const docs = await Nextjs("openalbion-docs", {
+	name: "openalbion-docs",
+	adopt: true,
 	cwd: "../../apps/docs",
 	domains: ["docs.openalbion.org"],
 	bindings: {

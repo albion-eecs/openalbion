@@ -28,6 +28,7 @@ jobs:
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
           BETTER_AUTH_URL: ${{ vars.BETTER_AUTH_URL }}
           CORS_ORIGIN: ${{ vars.CORS_ORIGIN }}
+          SKIP_ENV_VALIDATION: ${{ vars.SKIP_ENV_VALIDATION }}
           DO_NOT_TRACK: ${{ vars.DO_NOT_TRACK }}
           NEXT_TELEMETRY_DISABLED: ${{ vars.NEXT_TELEMETRY_DISABLED }}
           WRANGLER_SEND_METRICS: ${{ vars.WRANGLER_SEND_METRICS }}
