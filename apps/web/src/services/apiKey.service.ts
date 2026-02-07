@@ -68,8 +68,9 @@ export async function deleteApiKey(keyId: number, userId: string) {
 	const db = await getDb();
 	const result = await db
 		.delete(apiKeys)
-		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)));
-	return result.rowsAffected > 0;
+		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)))
+		.returning({ id: apiKeys.id });
+	return result.length > 0;
 }
 
 export async function revokeApiKey(keyId: number, userId: string) {
@@ -77,8 +78,9 @@ export async function revokeApiKey(keyId: number, userId: string) {
 	const result = await db
 		.update(apiKeys)
 		.set({ isActive: false })
-		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)));
-	return result.rowsAffected > 0;
+		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)))
+		.returning({ id: apiKeys.id });
+	return result.length > 0;
 }
 
 export async function unrevokeApiKey(keyId: number, userId: string) {
@@ -86,6 +88,7 @@ export async function unrevokeApiKey(keyId: number, userId: string) {
 	const result = await db
 		.update(apiKeys)
 		.set({ isActive: true })
-		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)));
-	return result.rowsAffected > 0;
+		.where(and(eq(apiKeys.id, keyId), eq(apiKeys.userId, userId)))
+		.returning({ id: apiKeys.id });
+	return result.length > 0;
 }

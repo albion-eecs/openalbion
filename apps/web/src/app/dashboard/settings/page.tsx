@@ -60,7 +60,7 @@ export default function SettingsPage() {
 			});
 
 			if (response.ok) {
-				const data = await response.json();
+				const data = (await response.json()) as { data: ApiKey[] };
 				setApiKeys(data.data);
 			}
 		} catch (error) {
@@ -78,7 +78,11 @@ export default function SettingsPage() {
 			});
 
 			if (response.ok) {
-				const data = await response.json();
+				const data = (await response.json()) as {
+					apiUsageAlerts: boolean;
+					securityAlerts: boolean;
+					dataUpdateAlerts: boolean;
+				};
 				setNotificationPrefs({
 					apiUsageAlerts: data.apiUsageAlerts,
 					securityAlerts: data.securityAlerts,
@@ -129,7 +133,11 @@ export default function SettingsPage() {
 				cache: "no-store",
 			});
 
-			const data = await response.json();
+			const data = (await response.json()) as {
+				success: boolean;
+				data: ApiKey & { apiKey: string };
+				error?: string;
+			};
 
 			if (data.success) {
 				setApiKeyCreated({ name: newKeyName, key: data.data.apiKey });
@@ -156,7 +164,7 @@ export default function SettingsPage() {
 				cache: "no-store",
 			});
 
-			const data = await response.json();
+			const data = (await response.json()) as { success: boolean };
 
 			if (data.success) {
 				setApiKeys(
@@ -180,7 +188,7 @@ export default function SettingsPage() {
 				cache: "no-store",
 			});
 
-			const data = await response.json();
+			const data = (await response.json()) as { success: boolean };
 
 			if (data.success) {
 				setApiKeys(
@@ -204,7 +212,7 @@ export default function SettingsPage() {
 				cache: "no-store",
 			});
 
-			const data = await response.json();
+			const data = (await response.json()) as { success: boolean };
 
 			if (data.success) {
 				setApiKeys(apiKeys.filter((key) => key.id !== id));
