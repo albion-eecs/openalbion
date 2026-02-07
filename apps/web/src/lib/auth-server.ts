@@ -3,12 +3,13 @@
 import { createAuth } from "@oa/auth";
 import { headers } from "next/headers";
 import { type NextRequest, NextResponse } from "next/server";
-import { getDb } from "@/lib/db";
+import { getCloudflareEnv, getDb } from "@/lib/db";
 import { validateApiKey } from "@/services/apiKey.service";
 
 async function getAuth() {
+	const env = await getCloudflareEnv();
 	const db = await getDb();
-	return createAuth(db);
+	return createAuth(db, env);
 }
 
 export async function getUser() {

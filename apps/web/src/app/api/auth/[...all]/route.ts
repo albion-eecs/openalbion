@@ -1,10 +1,11 @@
 import { createAuth } from "@oa/auth";
 import { toNextJsHandler } from "better-auth/next-js";
-import { getDb } from "@/lib/db";
+import { getCloudflareEnv, getDb } from "@/lib/db";
 
 async function getHandler() {
+	const env = await getCloudflareEnv();
 	const db = await getDb();
-	const auth = createAuth(db);
+	const auth = createAuth(db, env);
 	return toNextJsHandler(auth.handler);
 }
 
