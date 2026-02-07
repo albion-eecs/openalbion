@@ -7,10 +7,10 @@ config({ path: "./.env" });
 config({ path: "../../apps/web/.env" });
 
 const app = await alchemy("openalbion", {
-	stateStore: (scope) => new CloudflareStateStore(scope),
+	stateStore: (scope) => new CloudflareStateStore(scope, { scriptName: "state" }),
 });
 
-const database = await D1Database("openalbion");
+const database = await D1Database("openalbion-db");
 
 export const web = await Nextjs("openalbion", {
 	cwd: "../../apps/web",
