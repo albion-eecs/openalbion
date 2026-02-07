@@ -53,9 +53,7 @@ export default function SignInForm({
 	}
 
 	return (
-		<div className="mx-auto mt-10 w-full max-w-md p-6">
-			<h1 className="mb-6 text-center font-bold text-3xl">Welcome Back</h1>
-
+		<div className="w-full space-y-6">
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
@@ -73,12 +71,13 @@ export default function SignInForm({
 									id={field.name}
 									name={field.name}
 									type="email"
+									placeholder="name@albion.edu"
 									value={field.state.value}
 									onBlur={field.handleBlur}
 									onChange={(e) => field.handleChange(e.target.value)}
 								/>
 								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
+									<p key={error?.message} className="text-red-500 text-sm">
 										{error?.message}
 									</p>
 								))}
@@ -101,7 +100,7 @@ export default function SignInForm({
 									onChange={(e) => field.handleChange(e.target.value)}
 								/>
 								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
+									<p key={error?.message} className="text-red-500 text-sm">
 										{error?.message}
 									</p>
 								))}
@@ -114,24 +113,25 @@ export default function SignInForm({
 					{(state) => (
 						<Button
 							type="submit"
-							className="w-full"
+							className="w-full bg-violet-400 text-white hover:bg-violet-500"
 							disabled={!state.canSubmit || state.isSubmitting}
 						>
-							{state.isSubmitting ? "Submitting..." : "Sign In"}
+							{state.isSubmitting ? "Signing in..." : "Sign In"}
 						</Button>
 					)}
 				</form.Subscribe>
 			</form>
 
-			<div className="mt-4 text-center">
-				<Button
-					variant="link"
+			<p className="text-center text-muted-foreground text-sm">
+				Don&apos;t have an account?{" "}
+				<button
+					type="button"
 					onClick={onSwitchToSignUp}
-					className="text-indigo-600 hover:text-indigo-800"
+					className="text-violet-400 underline-offset-4 hover:text-violet-300 hover:underline"
 				>
-					Need an account? Sign Up
-				</Button>
-			</div>
+					Sign up
+				</button>
+			</p>
 		</div>
 	);
 }

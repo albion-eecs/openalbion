@@ -40,12 +40,12 @@ function ProfileDropdown({
 				}
 			>
 				<div className="relative">
-					<div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-secondary to-primary font-medium text-sm text-white shadow-md shadow-secondary/20">
+					<div className="flex h-10 w-10 items-center justify-center rounded-full bg-violet-400 font-medium text-sm text-white">
 						{user.name
 							? user.name.charAt(0).toUpperCase()
 							: user.email.charAt(0).toUpperCase()}
 					</div>
-					<span className="absolute right-0 bottom-0 h-3 w-3 rounded-full border-2 border-white bg-green-500" />
+					<span className="absolute right-0 bottom-0 h-3 w-3 rounded-full border-2 border-background bg-green-500" />
 				</div>
 				<div className="hidden flex-col items-start md:flex">
 					<span className="font-medium text-sm">
@@ -127,28 +127,17 @@ export default function Dashboard({
 
 	return (
 		<div className="container mx-auto py-8">
-			<div className="pointer-events-none absolute top-0 right-0 h-96 w-96 rounded-full bg-secondary/10 opacity-30 blur-3xl filter" />
-			<div className="pointer-events-none absolute bottom-0 left-0 h-96 w-96 rounded-full bg-secondary/10 opacity-30 blur-3xl filter" />
-
-			<header className="relative mb-8">
-				<div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-gradient-to-r from-secondary/5 to-purple-400/5" />
-
-				<div className="flex flex-col gap-4 rounded-2xl border border-secondary/20 bg-card/50 p-6 shadow-lg backdrop-blur-sm md:flex-row md:items-center md:justify-between">
+			<header className="mb-8">
+				<div className="flex flex-col gap-4 rounded-xl border border-border/60 bg-card/50 p-6 backdrop-blur-sm md:flex-row md:items-center md:justify-between">
 					<div>
-						<h1 className="bg-gradient-to-r from-white to-white bg-clip-text font-bold text-3xl text-transparent tracking-tight">
-							Dashboard
-						</h1>
+						<h1 className="font-bold text-3xl tracking-tight">Dashboard</h1>
 						<p className="mt-1 text-muted-foreground">
 							Welcome back, {user.name || user.email.split("@")[0]}
 						</p>
 					</div>
 					<div className="flex items-center space-x-4">
 						<ProfileDropdown user={user} />
-						<Button
-							variant="outline"
-							className="border-secondary/40 hover:border-secondary/60 hover:bg-secondary/10"
-							onClick={() => router.push("/")}
-						>
+						<Button variant="outline" onClick={() => router.push("/")}>
 							Back to Home
 						</Button>
 					</div>
@@ -157,64 +146,56 @@ export default function Dashboard({
 
 			<main className="space-y-8">
 				<section>
-					<h2 className="relative mb-4 font-semibold text-xl">
-						Overview
-						<span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-20 bg-gradient-to-r from-secondary to-purple-400" />
-					</h2>
+					<h2 className="mb-4 font-semibold text-xl">Overview</h2>
 					<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-						<Card className="group relative overflow-hidden border-secondary/20">
-							<div className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left bg-gradient-to-r from-secondary to-purple-400 transition-transform duration-500 group-hover:scale-x-100" />
+						<Card>
 							<CardHeader className="pb-2">
-								<CardTitle className="text-lg">Total API Keys</CardTitle>
-								<CardDescription>All created API keys</CardDescription>
+								<CardTitle className="text-lg">API Keys</CardTitle>
+								<CardDescription>All created keys</CardDescription>
 							</CardHeader>
 							<CardContent>
 								{statsLoading ? (
-									<div className="h-10 animate-pulse rounded bg-gray-200/20" />
+									<div className="h-10 animate-pulse rounded bg-muted" />
 								) : (
 									<>
 										<p className="font-bold text-3xl">
 											{stats?.totalKeys || 0}
 										</p>
 										<p className="text-muted-foreground text-sm">
-											{stats?.activeKeys || 0} active keys
+											{stats?.activeKeys || 0} active
 										</p>
 									</>
 								)}
 							</CardContent>
 						</Card>
-						<Card className="group relative overflow-hidden border-secondary/20">
-							<div className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left bg-gradient-to-r from-secondary to-purple-400 transition-transform duration-500 group-hover:scale-x-100" />
+						<Card>
 							<CardHeader className="pb-2">
-								<CardTitle className="text-lg">API Calls (30 Days)</CardTitle>
-								<CardDescription>
-									API requests in the last 30 days
-								</CardDescription>
+								<CardTitle className="text-lg">API Calls (30d)</CardTitle>
+								<CardDescription>Recent usage</CardDescription>
 							</CardHeader>
 							<CardContent>
 								{statsLoading ? (
-									<div className="h-10 animate-pulse rounded bg-gray-200/20" />
+									<div className="h-10 animate-pulse rounded bg-muted" />
 								) : (
 									<>
 										<p className="font-bold text-3xl">
 											{stats?.requestsLast30Days || 0}
 										</p>
 										<p className="text-muted-foreground text-sm">
-											{stats?.totalRequests || 0} total requests
+											{stats?.totalRequests || 0} total
 										</p>
 									</>
 								)}
 							</CardContent>
 						</Card>
-						<Card className="group relative overflow-hidden border-secondary/20">
-							<div className="pointer-events-none absolute inset-x-0 top-0 h-1 origin-left bg-gradient-to-r from-secondary to-purple-400 transition-transform duration-500 group-hover:scale-x-100" />
+						<Card>
 							<CardHeader className="pb-2">
-								<CardTitle className="text-lg">Available Data Sets</CardTitle>
-								<CardDescription>Available for query via API</CardDescription>
+								<CardTitle className="text-lg">Datasets</CardTitle>
+								<CardDescription>Available via API</CardDescription>
 							</CardHeader>
 							<CardContent>
 								{statsLoading ? (
-									<div className="h-10 animate-pulse rounded bg-gray-200/20" />
+									<div className="h-10 animate-pulse rounded bg-muted" />
 								) : (
 									<>
 										<p className="font-bold text-3xl">2</p>
@@ -229,23 +210,18 @@ export default function Dashboard({
 				</section>
 
 				<section>
-					<h2 className="relative mb-4 font-semibold text-xl">
-						Available APIs
-						<span className="pointer-events-none absolute -bottom-1 left-0 h-0.5 w-20 bg-gradient-to-r from-secondary to-purple-400" />
-					</h2>
+					<h2 className="mb-4 font-semibold text-xl">Available APIs</h2>
 					<div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-						<Card className="group relative border-secondary/20 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-							<div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+						<Card className="transition-all duration-200 hover:shadow-md">
 							<CardHeader>
-								<CardTitle>Headcounts Endpoint</CardTitle>
-								<CardDescription>Student headcount reports</CardDescription>
+								<CardTitle>Headcounts</CardTitle>
+								<CardDescription>
+									Student headcount data by year
+								</CardDescription>
 							</CardHeader>
 							<CardContent>
-								<p className="mb-4 text-sm">
-									Access to student headcount data by year.
-								</p>
 								<Button
-									className="flex items-center gap-1 bg-gradient-to-r from-secondary to-purple-600 text-white transition-all duration-300 hover:shadow-md hover:shadow-secondary/20"
+									className="flex items-center gap-1 bg-violet-400 text-white hover:bg-violet-500"
 									onClick={() =>
 										window.open(
 											"https://docs.openalbion.org/docs/api/headcounts",
@@ -253,25 +229,19 @@ export default function Dashboard({
 										)
 									}
 								>
-									Access API
+									View Docs
 									<ExternalLink size={14} className="ml-1" />
 								</Button>
 							</CardContent>
 						</Card>
-						<Card className="group relative border-secondary/20 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/10">
-							<div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-br from-secondary/5 to-purple-500/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+						<Card className="transition-all duration-200 hover:shadow-md">
 							<CardHeader>
-								<CardTitle>Enrollment Endpoint</CardTitle>
-								<CardDescription>
-									Enrollment trends and statistics
-								</CardDescription>
+								<CardTitle>Enrollment</CardTitle>
+								<CardDescription>Enrollment data by semester</CardDescription>
 							</CardHeader>
 							<CardContent>
-								<p className="mb-4 text-sm">
-									Comprehensive enrollment data by semester.
-								</p>
 								<Button
-									className="flex items-center gap-1 bg-gradient-to-r from-secondary to-purple-600 text-white transition-all duration-300 hover:shadow-md hover:shadow-secondary/20"
+									className="flex items-center gap-1 bg-violet-400 text-white hover:bg-violet-500"
 									onClick={() =>
 										window.open(
 											"https://docs.openalbion.org/docs/api/enrollment",
@@ -279,7 +249,7 @@ export default function Dashboard({
 										)
 									}
 								>
-									Access API
+									View Docs
 									<ExternalLink size={14} className="ml-1" />
 								</Button>
 							</CardContent>

@@ -34,7 +34,7 @@ export default function SignUpForm({
 				{
 					onSuccess: () => {
 						router.push("/dashboard");
-						toast.success("Sign up successful");
+						toast.success("Account created");
 					},
 					onError: (error) => {
 						toast.error(error.error.message || error.error.statusText);
@@ -56,9 +56,7 @@ export default function SignUpForm({
 	}
 
 	return (
-		<div className="mx-auto mt-10 w-full max-w-md p-6">
-			<h1 className="mb-6 text-center font-bold text-3xl">Create Account</h1>
-
+		<div className="w-full space-y-6">
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
@@ -80,7 +78,7 @@ export default function SignUpForm({
 									onChange={(e) => field.handleChange(e.target.value)}
 								/>
 								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
+									<p key={error?.message} className="text-red-500 text-sm">
 										{error?.message}
 									</p>
 								))}
@@ -98,12 +96,13 @@ export default function SignUpForm({
 									id={field.name}
 									name={field.name}
 									type="email"
+									placeholder="name@albion.edu"
 									value={field.state.value}
 									onBlur={field.handleBlur}
 									onChange={(e) => field.handleChange(e.target.value)}
 								/>
 								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
+									<p key={error?.message} className="text-red-500 text-sm">
 										{error?.message}
 									</p>
 								))}
@@ -126,7 +125,7 @@ export default function SignUpForm({
 									onChange={(e) => field.handleChange(e.target.value)}
 								/>
 								{field.state.meta.errors.map((error) => (
-									<p key={error?.message} className="text-red-500">
+									<p key={error?.message} className="text-red-500 text-sm">
 										{error?.message}
 									</p>
 								))}
@@ -139,24 +138,25 @@ export default function SignUpForm({
 					{(state) => (
 						<Button
 							type="submit"
-							className="w-full"
+							className="w-full bg-violet-400 text-white hover:bg-violet-500"
 							disabled={!state.canSubmit || state.isSubmitting}
 						>
-							{state.isSubmitting ? "Submitting..." : "Sign Up"}
+							{state.isSubmitting ? "Creating account..." : "Create Account"}
 						</Button>
 					)}
 				</form.Subscribe>
 			</form>
 
-			<div className="mt-4 text-center">
-				<Button
-					variant="link"
+			<p className="text-center text-muted-foreground text-sm">
+				Already have an account?{" "}
+				<button
+					type="button"
 					onClick={onSwitchToSignIn}
-					className="text-indigo-600 hover:text-indigo-800"
+					className="text-violet-400 underline-offset-4 hover:text-violet-300 hover:underline"
 				>
-					Already have an account? Sign In
-				</Button>
-			</div>
+					Sign in
+				</button>
+			</p>
 		</div>
 	);
 }

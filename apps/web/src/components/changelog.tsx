@@ -13,30 +13,28 @@ export function ChangelogEntry({
 }: ChangelogEntryProps) {
 	return (
 		<div className="relative pl-10">
-			<div className="flex items-center gap-4">
-				<div
-					className="absolute top-[0.80rem] left-0 h-3 w-3 rounded-full bg-secondary"
-					style={{ transform: "translateX(-50%)" }}
-				/>
+			<div
+				className="absolute top-[0.80rem] left-0 h-3 w-3 rounded-full bg-violet-400"
+				style={{ transform: "translateX(-50%)" }}
+			/>
 
-				<h2 className="font-semibold text-white text-xl">{title}</h2>
-				<div className="rounded-md border-2 border-secondary/60 bg-secondary/30 px-3 py-1.5 font-medium text-sm text-white shadow-[0_0_10px_rgba(168,85,247,0.3)] transition-all">
+			<div className="flex items-center gap-3">
+				<h2 className="font-semibold text-lg tracking-tight">{title}</h2>
+				<span className="font-mono text-muted-foreground text-xs">
 					{version}
-				</div>
+				</span>
 			</div>
 
 			<time className="mt-1 block text-muted-foreground text-sm">{date}</time>
 
-			<div className="mt-4 rounded-lg border border-secondary/10 bg-card/20 p-4">
-				<ul className="space-y-3 text-muted-foreground">
-					{items.map((item, index) => (
-						<li key={index} className="flex items-start gap-2">
-							<span className="text-secondary">•</span>
-							<span>{item}</span>
-						</li>
-					))}
-				</ul>
-			</div>
+			<ul className="mt-3 space-y-1.5 text-muted-foreground text-sm">
+				{items.map((item, index) => (
+					<li key={index} className="flex items-start gap-2">
+						<span className="text-violet-400">•</span>
+						<span>{item}</span>
+					</li>
+				))}
+			</ul>
 		</div>
 	);
 }
@@ -45,12 +43,12 @@ interface ChangelogTimelineProps {
 	entries: ChangelogEntryProps[];
 }
 
-export function Changelog({ entries }: ChangelogTimelineProps) {
+export function Timeline({ entries }: ChangelogTimelineProps) {
 	return (
 		<div className="relative">
-			<div className="absolute top-0 bottom-0 left-4 w-px bg-secondary/30" />
+			<div className="absolute top-0 bottom-0 left-4 w-px bg-violet-400/20" />
 
-			<div className="ml-4 space-y-8 pt-6 pb-6">
+			<div className="ml-4 space-y-10 pt-6 pb-6">
 				{entries.map((entry, index) => (
 					<ChangelogEntry
 						key={index}

@@ -28,7 +28,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { authClient } from "@/lib/auth-client";
 import type { ApiKey } from "@/lib/types";
 
-export default function SettingsPage() {
+export default function Settings() {
 	const router = useRouter();
 	const { data: session, isPending } = authClient.useSession();
 	const user = session?.user ?? null;
@@ -98,7 +98,7 @@ export default function SettingsPage() {
 
 	useEffect(() => {
 		if (!isPending && !user) {
-			router.push("/login");
+			router.push("/");
 		}
 	}, [user, isPending, router]);
 
@@ -305,8 +305,8 @@ export default function SettingsPage() {
 				<TabsContent value="account" className="space-y-6">
 					<Card>
 						<CardHeader>
-							<CardTitle>Account Settings</CardTitle>
-							<CardDescription>Manage your account settings</CardDescription>
+							<CardTitle>Account</CardTitle>
+							<CardDescription>Your profile and preferences</CardDescription>
 						</CardHeader>
 						<CardContent className="space-y-6">
 							<div>
@@ -364,7 +364,7 @@ export default function SettingsPage() {
 												onCheckedChange={(checked) =>
 													handlePreferenceChange("apiUsageAlerts", checked)
 												}
-												className="data-[state=checked]:bg-purple-600"
+												className="data-[state=checked]:bg-violet-400"
 											/>
 										</div>
 										<div className="flex items-center justify-between">
@@ -379,7 +379,7 @@ export default function SettingsPage() {
 												onCheckedChange={(checked) =>
 													handlePreferenceChange("securityAlerts", checked)
 												}
-												className="data-[state=checked]:bg-purple-600"
+												className="data-[state=checked]:bg-violet-400"
 											/>
 										</div>
 										<div className="flex items-center justify-between">
@@ -394,7 +394,7 @@ export default function SettingsPage() {
 												onCheckedChange={(checked) =>
 													handlePreferenceChange("dataUpdateAlerts", checked)
 												}
-												className="data-[state=checked]:bg-purple-600"
+												className="data-[state=checked]:bg-violet-400"
 											/>
 										</div>
 									</div>
@@ -407,10 +407,10 @@ export default function SettingsPage() {
 				<TabsContent value="apikeys" className="space-y-6">
 					<Card>
 						<CardHeader>
-							<CardTitle>Create New API Key</CardTitle>
+							<CardTitle>Create API Key</CardTitle>
 							<CardDescription>
-								Generate a new API key to access the API. Keep your API keys
-								secure!
+								Keep your keys secure. You can only view a key once after
+								creation.
 							</CardDescription>
 						</CardHeader>
 						<form onSubmit={handleCreateApiKey} noValidate>
@@ -464,13 +464,13 @@ export default function SettingsPage() {
 								</div>
 
 								{apiKeyCreated && (
-									<div className="mt-4 rounded-md border border-secondary/20 bg-secondary/10 p-4">
+									<div className="mt-4 rounded-md border border-violet-400/20 bg-violet-400/10 p-4">
 										<p className="mb-2 font-medium text-foreground">
-											Your new API key has been created. Copy it now, you
-											won&apos;t be able to see it again!
+											API key created. Copy it now — you won&apos;t see it
+											again.
 										</p>
 										<div className="flex items-center space-x-2">
-											<code className="flex-1 overflow-x-auto rounded border border-secondary/20 bg-background p-2">
+											<code className="flex-1 overflow-x-auto rounded border border-border/60 bg-background p-2">
 												{apiKeyCreated.key}
 											</code>
 											<Button
@@ -493,7 +493,7 @@ export default function SettingsPage() {
 							<CardFooter>
 								<Button
 									type="submit"
-									className="bg-gradient-to-r from-secondary to-purple-600 text-white"
+									className="bg-violet-400 text-white hover:bg-violet-500"
 									disabled={apiKeysLoading}
 								>
 									{apiKeysLoading ? (
@@ -511,8 +511,8 @@ export default function SettingsPage() {
 
 					<Card>
 						<CardHeader>
-							<CardTitle>Your API Keys</CardTitle>
-							<CardDescription>Manage your existing API keys</CardDescription>
+							<CardTitle>API Keys</CardTitle>
+							<CardDescription>Manage existing keys</CardDescription>
 						</CardHeader>
 						<CardContent>
 							{apiKeysLoading ? (
@@ -531,7 +531,7 @@ export default function SettingsPage() {
 											className={`rounded-lg p-4 ${
 												key.isActive
 													? "border"
-													: "border border-secondary/30 bg-secondary/20"
+													: "border border-red-500/20 bg-red-500/5"
 											}`}
 										>
 											<div className="mb-2 flex items-start justify-between">

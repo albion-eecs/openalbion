@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function FlyerPage() {
+export default function Flyer() {
 	return (
 		<div className="relative h-screen w-full bg-black">
 			<Image
