@@ -64,6 +64,7 @@ const [docsDoQueue, docsDoTagCache, docsDoCachePurge] = await Promise.all([
 ]);
 
 export const docs = await Nextjs("openalbion-docs", {
+	name: "openalbion-docs",
 	adopt: true,
 	cwd: "../../apps/docs",
 	domains: ["docs.openalbion.org"],
