@@ -7,12 +7,14 @@ config({ path: "./.env" });
 config({ path: "../../apps/web/.env" });
 
 const app = await alchemy("openalbion", {
+	stage: "prod",
 	stateStore: (scope) => new CloudflareStateStore(scope, { scriptName: "state" }),
 });
 
-const database = await D1Database("openalbion-db");
+const database = await D1Database("openalbion-db", { name: "openalbion-db" });
 
 export const web = await Nextjs("openalbion", {
+	name: "openalbion",
 	cwd: "../../apps/web",
 	domains: ["openalbion.org"],
 	bindings: {
