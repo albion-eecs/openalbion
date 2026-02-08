@@ -1,5 +1,10 @@
 import alchemy from "alchemy";
-import { D1Database, DurableObjectNamespace, Nextjs } from "alchemy/cloudflare";
+import {
+	D1Database,
+	DurableObjectNamespace,
+	Nextjs,
+	RateLimit,
+} from "alchemy/cloudflare";
 import { CloudflareStateStore } from "alchemy/state";
 import { config } from "dotenv";
 
@@ -15,6 +20,13 @@ const app = await alchemy("openalbion", {
 const database = await D1Database("openalbion-db", {
 	name: "openalbion-db",
 	adopt: true,
+	migrationsDir: "../../packages/db/src/migrations",
+	readReplication: { mode: "auto" },
+});
+
+const apiRateLimit = RateLimit({
+	namespace_id: 1001,
+	simple: { limit: 100, period: 60 },
 });
 
 const [webDoQueue, webDoTagCache, webDoCachePurge] = await Promise.all([
@@ -37,11 +49,30 @@ export const web = await Nextjs("openalbion", {
 	adopt: true,
 	cwd: "../../apps/web",
 	domains: ["openalbion.org"],
+	observability: {
+		enabled: true,
+		headSamplingRate: 1,
+		logs: {
+			enabled: true,
+			headSamplingRate: 1,
+			persist: true,
+			invocationLogs: true,
+		},
+		traces: {
+			enabled: true,
+			persist: true,
+			headSamplingRate: 1,
+		},
+	},
+	placement: { mode: "smart" },
+	previewSubdomains: false,
+	url: false,
 	bindings: {
 		DB: database,
 		CORS_ORIGIN: alchemy.env.CORS_ORIGIN!,
 		BETTER_AUTH_SECRET: alchemy.secret.env.BETTER_AUTH_SECRET!,
 		BETTER_AUTH_URL: alchemy.env.BETTER_AUTH_URL!,
+		API_RATE_LIMIT: apiRateLimit,
 		NEXT_CACHE_DO_QUEUE: webDoQueue,
 		NEXT_TAG_CACHE_DO_SHARDED: webDoTagCache,
 		NEXT_CACHE_DO_PURGE: webDoCachePurge,
@@ -68,6 +99,24 @@ export const docs = await Nextjs("openalbion-docs", {
 	adopt: true,
 	cwd: "../../apps/docs",
 	domains: ["docs.openalbion.org"],
+	observability: {
+		enabled: true,
+		headSamplingRate: 1,
+		logs: {
+			enabled: true,
+			headSamplingRate: 1,
+			persist: true,
+			invocationLogs: true,
+		},
+		traces: {
+			enabled: true,
+			persist: true,
+			headSamplingRate: 1,
+		},
+	},
+	placement: { mode: "smart" },
+	previewSubdomains: false,
+	url: false,
 	bindings: {
 		NEXT_CACHE_DO_QUEUE: docsDoQueue,
 		NEXT_TAG_CACHE_DO_SHARDED: docsDoTagCache,

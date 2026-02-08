@@ -355,6 +355,9 @@ importers:
       alchemy:
         specifier: 'catalog:'
         version: 0.84.0(@aws-sdk/client-dynamodb@3.974.0)(@aws-sdk/client-lambda@3.974.0)(@aws-sdk/client-s3@3.974.0)(@aws-sdk/client-sqs@3.974.0)(@aws-sdk/client-sts@3.398.0)(@libsql/client@0.15.15)(@opennextjs/cloudflare@1.16.3(next@16.1.6(@opentelemetry/api@1.9.0)(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(wrangler@4.60.0(@cloudflare/workers-types@4.20260207.0)))(@opentelemetry/api@1.9.0)(kysely@0.28.10)(workerd@1.20260120.0)(wrangler@4.60.0(@cloudflare/workers-types@4.20260207.0))
+      tsx:
+        specifier: 'catalog:'
+        version: 4.21.0
       typescript:
         specifier: 'catalog:'
         version: 5.9.3

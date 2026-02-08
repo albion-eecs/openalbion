@@ -21,7 +21,8 @@
 			"!**/wrangler.jsonc",
 			"!**/.source",
 			"!**/components/ui",
-			"!**/datasets"
+			"!**/datasets",
+			"!**/migrations"
 		]
 	},
 	"formatter": {
