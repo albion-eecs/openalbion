@@ -49,12 +49,24 @@ export const web = await Nextjs("openalbion", {
 	adopt: true,
 	cwd: "../../apps/web",
 	domains: ["openalbion.org"],
-	placement: { mode: "smart" },
 	observability: {
 		enabled: true,
 		headSamplingRate: 1,
-		logs: { enabled: true, invocationLogs: true },
+		logs: {
+			enabled: true,
+			headSamplingRate: 1,
+			persist: true,
+			invocationLogs: true,
+		},
+		traces: {
+			enabled: true,
+			persist: true,
+			headSamplingRate: 1,
+		},
 	},
+	placement: { mode: "smart" },
+	previewSubdomains: false,
+	url: false,
 	bindings: {
 		DB: database,
 		CORS_ORIGIN: alchemy.env.CORS_ORIGIN!,
@@ -87,12 +99,24 @@ export const docs = await Nextjs("openalbion-docs", {
 	adopt: true,
 	cwd: "../../apps/docs",
 	domains: ["docs.openalbion.org"],
-	placement: { mode: "smart" },
 	observability: {
 		enabled: true,
 		headSamplingRate: 1,
-		logs: { enabled: true, invocationLogs: true },
+		logs: {
+			enabled: true,
+			headSamplingRate: 1,
+			persist: true,
+			invocationLogs: true,
+		},
+		traces: {
+			enabled: true,
+			persist: true,
+			headSamplingRate: 1,
+		},
 	},
+	placement: { mode: "smart" },
+	previewSubdomains: false,
+	url: false,
 	bindings: {
 		NEXT_CACHE_DO_QUEUE: docsDoQueue,
 		NEXT_TAG_CACHE_DO_SHARDED: docsDoTagCache,
