@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "alchemy dev",
-		"deploy": "alchemy deploy",
+		"deploy": "alchemy deploy && tsx annotate.ts",
 		"destroy": "alchemy destroy"
 	},
 	"dependencies": {
@@ -13,6 +13,7 @@
 	"devDependencies": {
 		"@oa/config": "workspace:*",
 		"alchemy": "catalog:",
+		"tsx": "catalog:",
 		"typescript": "catalog:"
 	}
 }
