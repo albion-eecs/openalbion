@@ -34,3 +34,4 @@ jobs:
           NEXT_TELEMETRY_DISABLED: ${{ vars.NEXT_TELEMETRY_DISABLED }}
           WRANGLER_SEND_METRICS: ${{ vars.WRANGLER_SEND_METRICS }}
           DEPLOY_MESSAGE: "${{ github.event.head_commit.message }} (by ${{ github.actor }})"
+          DEPLOY_TRIGGERED_BY: "${{ github.actor }}"
