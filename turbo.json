@@ -44,7 +44,8 @@
 				"CLOUDFLARE_API_TOKEN",
 				"CORS_ORIGIN",
 				"SKIP_ENV_VALIDATION",
-				"DEPLOY_MESSAGE"
+				"DEPLOY_MESSAGE",
+				"DEPLOY_TRIGGERED_BY"
 			]
 		},
 		"destroy": {

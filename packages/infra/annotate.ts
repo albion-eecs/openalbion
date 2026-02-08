@@ -3,6 +3,7 @@ export {};
 const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
 const apiToken = process.env.CLOUDFLARE_API_TOKEN;
 const message = process.env.DEPLOY_MESSAGE;
+const triggeredBy = process.env.DEPLOY_TRIGGERED_BY;
 
 if (!accountId || !apiToken) {
 	console.log("Skipping annotation (missing credentials)");
@@ -20,7 +21,10 @@ for (const script of scripts) {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
-			annotations: { "workers/message": message },
+			annotations: {
+				"workers/message": message,
+				"workers/triggered_by": triggeredBy,
+			},
 		}),
 	});
 
