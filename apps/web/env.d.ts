@@ -4,6 +4,7 @@ declare global {
 		CORS_ORIGIN: string;
 		BETTER_AUTH_SECRET: string;
 		BETTER_AUTH_URL: string;
+		API_RATE_LIMIT: RateLimit;
 	}
 }
 

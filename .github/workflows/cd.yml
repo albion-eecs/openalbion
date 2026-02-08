@@ -23,6 +23,7 @@ jobs:
       - run: pnpm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           ALCHEMY_PASSWORD: ${{ secrets.ALCHEMY_PASSWORD }}
           ALCHEMY_STATE_TOKEN: ${{ secrets.ALCHEMY_STATE_TOKEN }}
           BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
@@ -32,3 +33,4 @@ jobs:
           DO_NOT_TRACK: ${{ vars.DO_NOT_TRACK }}
           NEXT_TELEMETRY_DISABLED: ${{ vars.NEXT_TELEMETRY_DISABLED }}
           WRANGLER_SEND_METRICS: ${{ vars.WRANGLER_SEND_METRICS }}
+          DEPLOY_MESSAGE: "${{ github.event.head_commit.message }} (by ${{ github.actor }})"
